@@ -4,10 +4,10 @@
  */
 var SITE_CONFIG = {
   // Cal.com booking link, the part after cal.com/ (e.g. "danwestmoreland/30min").
-  calLink: "",
+  calLink: "dan-westmoreland/call",
   // HubSpot free CRM portal ID (Settings > Account defaults). Loads the free
   // tracking code, which logs page views and auto-captures the Netlify form.
-  hubspotPortalId: "",
+  hubspotPortalId: "247629889",
   // Microsoft Clarity project ID (free heatmaps and session recordings). Optional.
   clarityId: ""
 };
@@ -84,7 +84,7 @@ var SITE_CONFIG = {
       calLink: SITE_CONFIG.calLink,
       config: { layout: "month_view", theme: "light" }
     });
-    window.Cal.ns.dw("ui", { hideEventTypeDetails: false, layout: "month_view", cssVarsPerTheme: { light: { "cal-brand": "#D9512C" } } });
+    window.Cal.ns.dw("ui", { hideEventTypeDetails: false, layout: "month_view", cssVarsPerTheme: { light: { "cal-brand": "#B8431F" } } });
   }
 
   // 6. HubSpot free tracking code.
