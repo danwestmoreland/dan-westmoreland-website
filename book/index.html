@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book a Call - Dan Westmoreland</title>
+  <meta name="description" content="Book a 30-minute call with Dan Westmoreland about AI implementation, demand gen, or fractional growth leadership for your SaaS company." />
+  <meta property="og:title" content="Book a Call - Dan Westmoreland" />
+  <meta property="og:description" content="Book a 30-minute call with Dan Westmoreland about AI implementation, demand gen, or fractional growth leadership for your SaaS company." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://danwestmoreland.com/book/" />
+  <meta property="og:image" content="https://danwestmoreland.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://danwestmoreland.com/og-image.png" />
+  <link rel="canonical" href="https://danwestmoreland.com/book/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="/assets/site.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="wordmark" href="/">Dan Westmoreland</a>
+    <nav>
+      <a href="/services/">Services</a>
+      <a href="/work/">Work</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/writing/">Writing</a>
+      <a href="/book/" class="nav-cta">Book a call</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-hero" style="padding-bottom:40px">
+      <p class="eyebrow">Book a call</p>
+      <h1>Tell me what's <em>stuck</em>.</h1>
+      <p class="lede">Pick a time for a 30-minute call, or send a note first. Either way, bring your numbers: stage, team size, ARR,
+      and where pipeline comes from today. If I'm not the right fit, I'll say so and recommend someone who is.</p>
+    </section>
+
+    <section style="padding-top:0;border-top:0">
+      <div class="call-intro">
+        <img src="/dan-westmoreland.jpg" alt="Dan Westmoreland" />
+        <div>
+          <h2>What happens on the call</h2>
+          <ol>
+            <li>You walk me through what's stuck and what you've tried. I ask about pipeline, team, and stack.</li>
+            <li>I tell you what I'd fix first, and whether it's a marketing problem at all.</li>
+            <li>If I'm a fit, you get a scoped proposal within two business days. If not, I'll point you to someone who is.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="book-grid">
+        <div class="cal-embed" id="cal-inline">
+          <div class="cal-fallback">
+            <h2>Scheduling</h2>
+            <p>Pick a time by email for now and I'll send an invite within a business day.</p>
+            <a class="btn" href="mailto:dan@danwestmoreland.com?subject=30-minute%20call">Email Dan →</a>
+          </div>
+        </div>
+
+        <form class="form-card" name="contact" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field">
+          <h2>Or send a note first</h2>
+          <p>Goes straight to my inbox. I reply within one business day.</p>
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hp"><label>Leave this empty <input name="bot-field" /></label></p>
+          <div class="field-row">
+            <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required /></div>
+            <div class="field"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required /></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="f-company">Company</label><input id="f-company" name="company" autocomplete="organization" /></div>
+            <div class="field"><label for="f-arr">ARR</label>
+              <select id="f-arr" name="arr">
+                <option value="">Select</option>
+                <option>Under $1M</option><option>$1M-$5M</option><option>$5M-$15M</option><option>$15M+</option>
+              </select>
+            </div>
+          </div>
+          <div class="field"><label for="f-need">What do you need help with?</label>
+            <select id="f-need" name="need">
+              <option value="">Select</option>
+              <option>AI in marketing and sales</option>
+              <option>Demand gen / inbound</option>
+              <option value="fractional-advisor">Fractional: Advisor ($3,000/mo)</option>
+              <option value="fractional-operator">Fractional: Operator ($5,500/mo)</option>
+              <option value="fractional-embedded">Fractional: Embedded (from $7,500/mo)</option>
+              <option value="outbound-engine">Outbound Engine Install ($3,500)</option>
+              <option value="clay-audit">Clay Credit Audit ($2,500)</option>
+              <option value="ai-sdr">AI SDR Install ($12,500)</option>
+              <option>Outbound engine</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field"><label for="f-msg">What's stuck? <span class="hint">and what have you tried?</span></label><textarea id="f-msg" name="message" required></textarea></div>
+          <input type="hidden" name="utm_source" data-attrib="utm_source" />
+          <input type="hidden" name="utm_medium" data-attrib="utm_medium" />
+          <input type="hidden" name="utm_campaign" data-attrib="utm_campaign" />
+          <input type="hidden" name="utm_content" data-attrib="utm_content" />
+          <input type="hidden" name="segment" data-attrib="seg" />
+          <input type="hidden" name="landing_page" data-attrib="landing_page" />
+          <button class="btn" type="submit">Send →</button>
+          <p class="form-note">No newsletter. No sequence. Just a reply from me.</p>
+        </form>
+      </div>
+    </section>
+
+    <section>
+      <div class="quote-block">
+        <img src="/luke-targett.jpg" alt="Luke Targett" loading="lazy" />
+        <div><blockquote>His ability to assess needs and implement strategies that move the needle immediately is uncanny. He also has a long view of strategies such as SEO, and brand.</blockquote><cite><strong>Luke Targett</strong> · Former CMO, Deputy</cite></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Dan Westmoreland</p>
+    <p>
+      <a href="/services/">Services</a> ·
+      <a href="/work/">Work</a> ·
+      <a href="/pricing/">Pricing</a> ·
+      <a href="/writing/">Writing</a> ·
+      <a href="https://www.linkedin.com/in/danwestmoreland/">LinkedIn</a> ·
+      <a href="mailto:dan@danwestmoreland.com">Email</a>
+    </p>
+  </footer>
+
+  <script src="/assets/site.js" defer></script>
+</body>
+</html>

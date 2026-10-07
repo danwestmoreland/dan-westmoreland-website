@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dan Westmoreland - I build the inbound engine your company is missing</title>
+  <meta name="description" content="Marketing operator. Three times I've built the inbound engine a company was missing - once into a Gainsight acquisition. Brand equals demand." />
+
+  <meta property="og:title" content="Dan Westmoreland - Marketing operator" />
+  <meta property="og:description" content="I build the inbound engine your company is missing. Three times now, with the receipts." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://danwestmoreland.com" />
+  <meta property="og:image" content="https://danwestmoreland.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://danwestmoreland.com/og-image.png" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dan Westmoreland",
+    "url": "https://danwestmoreland.com",
+    "jobTitle": "Marketing operator",
+    "description": "Marketing operator and fractional senior leader for funded SaaS startups without a CMO yet. Specializes in inbound engines and AI implementation across sales, marketing, and customer success.",
+    "sameAs": ["https://www.linkedin.com/in/danwestmoreland/"],
+    "knowsAbout": ["GTM engineering", "AI implementation", "B2B marketing", "Inbound marketing", "Fractional CMO", "SaaS growth"],
+    "alumniOf": [
+      { "@type": "Organization", "name": "Marketo" },
+      { "@type": "Organization", "name": "Deputy" },
+      { "@type": "Organization", "name": "Northpass" },
+      { "@type": "Organization", "name": "Moveable Ink" },
+      { "@type": "Organization", "name": "Curve" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What's a fractional CMO, and how is it different from a consultant?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A consultant gives you a deck. A fractional CMO owns marketing strategy and execution 1-3 days a week. Consultants advise; fractional CMOs ship. The good ones bring senior judgment, coach your existing team, and stay long enough to compound results - typically 6-12 months." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does Dan cost?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Three fractional tiers: Advisor at $3,000 a month, Operator at $5,500, and Embedded from $7,500 to $10,000. Fixed-price projects start at $2,500. A fraction of a full-time CMO, with senior judgment, AI implementation, and team coaching included. See danwestmoreland.com/pricing for what each tier includes." }
+      },
+      {
+        "@type": "Question",
+        "name": "What kinds of companies does Dan work with?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Funded SaaS startups, typically $1M-$15M ARR, that don't have a full-time CMO yet. Often: a hungry junior marketing team, a founder who knows marketing matters but isn't sure what to fix, and a sales motion outpacing inbound. If that's you, reach out." }
+      },
+      {
+        "@type": "Question",
+        "name": "What does 'AI implementation' actually mean here?",
+        "acceptedAnswer": { "@type": "Answer", "text": "GTM agents wired into your existing motion - not a white-labeled chatbot. Sales call analysis that surfaces the language that closes. Marketing content and campaigns at scale with real personalization. Outbound targeting actual buyer signals. AI as the leverage that makes your team perform like a team three times its size." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you take on full-time roles?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Fractional engagements only at the moment. If your needs are full-time, I can refer you to people I trust." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a typical engagement last?",
+        "acceptedAnswer": { "@type": "Answer", "text": "6-12 months is the sweet spot. Shorter than 6 and the team doesn't have time to absorb senior judgment. Longer than 18 and you should either convert to full-time or have an explicit transition plan." }
+      },
+      {
+        "@type": "Question",
+        "name": "What does the first month of an engagement look like?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Audit the current motion, identify the 2-3 things that are stuck, pick the highest-leverage place to start, and ship one working system or campaign so your team feels the difference. Strategy and execution, week one." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get started?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Email dan@danwestmoreland.com with what's stuck, what you've already tried, and where you are (stage, team size, ARR). The more specific, the faster I can be useful. If it's a fit, we'll do a 30-minute call. If it's not, I'll tell you and recommend someone else." }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600&display=swap" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body, h1, h2, h3, p, ul, blockquote { margin: 0; }
+    ul { padding: 0; list-style: none; }
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    :root {
+      --bg: #F6F5F1;
+      --bg-elev: #FDFDFB;
+      --ink: #15171A;
+      --ink-soft: #4A4D52;
+      --rule: #E2E1DB;
+      --accent: #B8431F;
+      --accent-ink: #FDFDFB;
+      --accent-bright: #F08A62;
+      --trust: #1F3D36;
+      --on-trust: #F6F5F1;
+
+      --serif: 'Fraunces', 'Georgia', 'Times New Roman', serif;
+      --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+      --maxw: 1100px;
+      --gutter: clamp(20px, 5vw, 56px);
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.55;
+      font-size: 17px;
+    }
+
+    .site-header {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 28px var(--gutter) 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .wordmark {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .site-header nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .site-header nav a {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--ink-soft);
+      transition: color .15s ease;
+    }
+    .site-header nav a:hover { color: var(--ink); }
+    .site-header nav a.nav-cta {
+      color: var(--ink);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 2px;
+    }
+
+    main { display: block; }
+    section {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 96px var(--gutter);
+    }
+    .section-title {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(28px, 4vw, 40px);
+      letter-spacing: -0.02em;
+      margin-bottom: 48px;
+      color: var(--ink);
+    }
+
+    .hero { padding-top: 80px; padding-bottom: 80px; }
+    .hero-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 28px;
+      border: 1px solid var(--rule);
+    }
+    .hero-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .about-photo {
+      display: block;
+      width: 100%;
+      max-width: 420px;
+      height: auto;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 1px solid var(--rule);
+    }
+    .eyebrow {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(40px, 7vw, 84px);
+      line-height: 1.02;
+      letter-spacing: -0.025em;
+      max-width: 18ch;
+      color: var(--ink);
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .lede {
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.5;
+      color: var(--ink-soft);
+      max-width: 56ch;
+      margin-top: 32px;
+    }
+    .lede strong { color: var(--ink); font-weight: 600; }
+    .hero-cta {
+      margin-top: 44px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--ink);
+      color: var(--accent-ink);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      transition: transform .15s ease, background .15s ease;
+    }
+    .btn:hover { background: var(--accent); transform: translateY(-1px); }
+    .btn-ghost {
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      padding: 14px 22px;
+      color: var(--ink);
+      border-bottom: 1px solid var(--ink);
+    }
+    .btn-ghost:hover { color: var(--accent); border-bottom-color: var(--accent); }
+    .btn-big {
+      font-family: var(--serif);
+      font-size: clamp(20px, 2.6vw, 28px);
+      padding: 20px 32px;
+      letter-spacing: -0.01em;
+    }
+
+    .work { border-top: 1px solid var(--rule); }
+    .win {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 56px;
+      padding: 56px 0;
+      border-bottom: 1px solid var(--rule);
+      align-items: start;
+    }
+    .win:last-child { border-bottom: 0; }
+    .win-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .win-company {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 28px;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    .win-role {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .win-stat {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-top: 24px;
+    }
+    .stat-connector {
+      margin: 16px 0 8px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .stat-connector::before {
+      content: '↓';
+      font-size: 18px;
+      letter-spacing: 0;
+      color: var(--accent);
+    }
+    .win-meta .win-stat + .win-stat { margin-top: 0; }
+    .stat-num {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: clamp(28px, 4vw, 44px);
+      letter-spacing: -0.02em;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 14px;
+      color: var(--ink-soft);
+      font-weight: 500;
+    }
+    .win-story p {
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--ink);
+    }
+    .win-story p + p { margin-top: 14px; }
+    .win-story em { font-style: italic; color: var(--accent); font-weight: 500; }
+    .win-story .quoted {
+      font-family: var(--serif);
+      font-style: italic;
+      color: var(--ink);
+    }
+
+    .what { border-top: 1px solid var(--rule); }
+    .what-lede {
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.5;
+      max-width: 60ch;
+      color: var(--ink);
+      margin-bottom: 36px;
+    }
+    .discipline-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 12px;
+      margin-bottom: 36px;
+    }
+    .discipline-list li {
+      font-family: var(--sans);
+      font-size: 15px;
+      font-weight: 500;
+      padding: 10px 16px;
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      background: var(--bg-elev);
+      color: var(--ink);
+    }
+    .what-body {
+      font-size: clamp(17px, 1.8vw, 19px);
+      line-height: 1.65;
+      max-width: 62ch;
+      color: var(--ink);
+      margin-bottom: 24px;
+    }
+    .what-tag {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(18px, 2vw, 22px);
+      color: var(--ink-soft);
+      max-width: 60ch;
+    }
+
+    .section-title em { font-style: italic; color: var(--accent); }
+
+    .ai { border-top: 1px solid var(--rule); }
+    .ai .eyebrow { margin-bottom: 16px; }
+    .ai-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px;
+      margin: 8px 0 40px;
+    }
+    .ai-pillar h3 {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: 22px;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+    .ai-pillar p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--ink-soft);
+      margin: 0;
+    }
+
+    .about { border-top: 1px solid var(--rule); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .about-bio p {
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--ink);
+    }
+    .about-bio p + p { margin-top: 16px; }
+    .about-bio p.about-lead {
+      font-family: var(--serif);
+      font-size: clamp(21px, 2.4vw, 26px);
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+    }
+    .about-bio p.about-lead + p { margin-top: 20px; }
+    .about-bio strong { font-weight: 600; }
+    .about-side {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .about-side h3 {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: 22px;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    .about-side ul { display: flex; flex-direction: column; gap: 8px; }
+    .about-side li {
+      font-size: 16px;
+      color: var(--ink-soft);
+      padding-left: 18px;
+      position: relative;
+    }
+    .about-side li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 11px;
+      width: 8px; height: 2px;
+      background: var(--accent);
+    }
+
+    .testimonial { border-top: 1px solid var(--rule); }
+    .testimonial-list {
+      display: flex;
+      flex-direction: column;
+      gap: 72px;
+      max-width: 80ch;
+    }
+    .testimonial-quote {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(22px, 3vw, 30px);
+      line-height: 1.35;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+      margin: 0 0 24px;
+    }
+    .testimonial-attribution {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: var(--accent);
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 0.02em;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .cite-name {
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--ink);
+      display: block;
+    }
+    .cite-role {
+      font-family: var(--sans);
+      font-size: 14px;
+      color: var(--ink-soft);
+      display: block;
+    }
+
+    .about-proof { border-top: 1px solid var(--rule); }
+    .about-proof .eyebrow { margin-bottom: 24px; }
+    .about-proof .testimonial-quote { max-width: 28ch; font-size: clamp(24px, 3.4vw, 34px); }
+    .about-proof .hero-cta { margin-top: 40px; }
+
+    .faq { border-top: 1px solid var(--rule); }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+      max-width: 70ch;
+    }
+    .faq-item h3 {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(20px, 2.2vw, 24px);
+      line-height: 1.25;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+    .faq-item p {
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--ink-soft);
+      margin: 0;
+    }
+    .faq-item p strong { color: var(--ink); font-weight: 600; }
+
+    .contact { text-align: center; padding-top: 120px; padding-bottom: 120px; }
+    .contact .section-title { text-align: center; }
+    .contact p {
+      font-size: clamp(17px, 1.8vw, 20px);
+      color: var(--ink-soft);
+      max-width: 50ch;
+      margin: 0 auto 36px;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--rule);
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 32px var(--gutter);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 14px;
+      color: var(--ink-soft);
+    }
+    .site-footer a {
+      text-decoration: none;
+      color: var(--ink-soft);
+    }
+    .site-footer a:hover { color: var(--accent); }
+
+    .case-link { margin-top: 18px; }
+    .case-link a { font-weight: 600; font-size: 15px; text-decoration: none; border-bottom: 1px solid var(--ink); }
+    .case-link a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+    .contact .contact-alt { margin: 20px auto 0; font-size: 15px; }
+
+    .proof-strip { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 22px; padding-top: 20px; border-top: 1px solid var(--rule); margin-top: 48px; }
+    .proof-strip .label { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); }
+    .proof-strip .co { font-family: var(--serif); font-weight: 500; font-size: 19px; color: var(--ink); }
+    .proof-strip .co small { font-family: var(--sans); font-size: 13px; color: var(--trust); font-weight: 600; }
+    .hero-cta .btn-ghost-pricing { font-weight: 500; font-size: 16px; color: var(--ink-soft); text-decoration: none; }
+    .hero-cta .btn-ghost-pricing:hover { color: var(--accent); }
+
+    @media (max-width: 800px) {
+      .site-header { flex-wrap: wrap; row-gap: 14px; }
+      .site-header nav { gap: 14px; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 4px; scrollbar-width: none; }
+      .site-header nav::-webkit-scrollbar { display: none; }
+      .site-header nav a { white-space: nowrap; font-size: 14px; }
+      .site-header nav a.nav-cta { margin-left: auto; } .site-header nav a[href$="#ai"], .site-header nav a[href$="#about"] { display: none; }
+      section { padding: 64px var(--gutter); }
+      .win { grid-template-columns: 1fr; gap: 24px; padding: 40px 0; }
+      .win-stat { margin-top: 4px; }
+      .about-grid { grid-template-columns: 1fr; gap: 32px; }
+      .ai-pillars { grid-template-columns: 1fr; gap: 24px; }
+      .contact { padding-top: 80px; padding-bottom: 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="wordmark" href="/">Dan Westmoreland</a>
+    <nav>
+      <a href="/services/">Services</a>
+      <a href="/work/">Work</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="#ai">AI</a>
+      <a href="#about">About</a>
+      <a href="/writing/">Writing</a>
+      <a href="/book/" class="nav-cta">Book a call</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-avatar"><img src="/dan-westmoreland.jpg" alt="Dan Westmoreland" /></div>
+      <p class="eyebrow">Marketing operator · Creative problem solver</p>
+      <h1>I build the inbound engine your company is <em>missing</em>.</h1>
+      <p class="lede">
+        Done it three times. One ended in a <strong>Gainsight acquisition</strong>.
+      </p>
+      <div class="hero-cta">
+        <a href="/book/" class="btn">Tell me what's stuck →</a>
+        <a href="/work/" class="btn-ghost">See the receipts</a>
+        <a href="/pricing/" class="btn-ghost-pricing">Pricing from $2,500 →</a>
+      </div>
+      <div class="proof-strip">
+        <span class="label">Growth engines built at</span>
+        <span class="co">Marketo</span><span class="co">Deputy</span><span class="co">Fountain</span>
+        <span class="co">Northpass <small>acquired by Gainsight</small></span><span class="co">Movable Ink</span><span class="co">Curve Dental</span>
+      </div>
+    </section>
+
+    <section id="work" class="work">
+      <h2 class="section-title">The receipts</h2>
+
+      <article class="win">
+        <div class="win-meta">
+          <span class="win-company">Deputy</span>
+          <span class="win-role">Inbound &amp; growth</span>
+          <div class="win-stat">
+            <span class="stat-num">0 → 100K</span>
+            <span class="stat-label">monthly blog visitors</span>
+          </div>
+          <div class="stat-connector">retargeting</div>
+          <div class="win-stat">
+            <span class="stat-num">800</span>
+            <span class="stat-label">inbound trial requests/mo</span>
+          </div>
+        </div>
+        <div class="win-story">
+          <p>
+            Australian workforce-management SaaS that had just launched into the American market.
+            They had an inbound engine running in APAC. The Americas needed one from scratch.
+          </p>
+          <p>
+            I built it. SEO targeting the people who actually hire hourly workers - fast-food
+            franchisees, retail ops, anyone running hourly labor. Top-of-funnel searches the ICP
+            was already typing into Google. <span class="quoted">"How to manage retail
+            inventory."</span> That kind of thing.
+          </p>
+          <p>
+            Win the searches, cookie everyone who lands, retarget into a trial. Most people at the
+            company didn't see what I was building until it was working. By then, the Americas had
+            its inbound engine.
+          </p>
+          <p class="case-link"><a href="/work/deputy">Read the full case study →</a></p>
+        </div>
+      </article>
+
+      <article class="win">
+        <div class="win-meta">
+          <span class="win-company">Northpass</span>
+          <span class="win-role">Marketing, positioning, exec team</span>
+          <div class="win-stat">
+            <span class="stat-num">Acquired by Gainsight</span>
+            <span class="stat-label">after a full pandemic-era repositioning</span>
+          </div>
+        </div>
+        <div class="win-story">
+          <p>
+            COVID hit. Our customers - gig-economy operators - couldn't afford software anymore.
+            The obvious move was to wait it out. The move we made instead was to repoint the
+            entire company at a different buyer.
+          </p>
+          <p>
+            We repositioned the product, the website, and the GTM motion to sell
+            <em>customer education software</em> into the customer success departments of software
+            companies. It worked. Gainsight bought the company.
+          </p>
+          <p class="case-link"><a href="/work/northpass">Read the full case study →</a></p>
+        </div>
+      </article>
+
+      <article class="win">
+        <div class="win-meta">
+          <span class="win-company">Curve</span>
+          <span class="win-role">Head of growth</span>
+          <div class="win-stat">
+            <span class="stat-num">200 inbound demos/mo</span>
+            <span class="stat-label">a first in the company's history</span>
+          </div>
+        </div>
+        <div class="win-story">
+          <p>
+            Started as their consultant. They hired me full-time. Same playbook, sharper tools -
+            Clay integration campaigns wired into the funnel, content tuned to the ICP, every
+            channel measured against the only number that matters: qualified pipeline.
+          </p>
+          <p>
+            Got them from mostly-outbound to mostly-inbound. Record revenue. Healthy spend.
+            Tight headcount.
+          </p>
+          <p class="case-link"><a href="/work/curve">Read the full case study →</a></p>
+        </div>
+      </article>
+    </section>
+
+    <section class="testimonial">
+      <div class="testimonial-list">
+
+        <div class="testimonial-item">
+          <p class="testimonial-quote">Dan's ability to take a long view of needs and weed through the institutional noise is unparalleled. His depth of knowledge regarding marketing automation and sales gave him unique insight into what we were missing. His implementation and patience in teaching saved us time, energy and a lot of headaches.</p>
+          <div class="testimonial-attribution">
+            <div class="avatar"><img src="ben-tanksley.jpg" alt="Benjamin Tanksley" loading="lazy" /></div>
+            <div>
+              <span class="cite-name">Benjamin Tanksley</span>
+              <span class="cite-role">Driving growth at the intersection of demand gen, opps &amp; ai</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="what" class="what">
+      <h2 class="section-title">What I'm called in for</h2>
+      <p class="what-lede">
+        Founders call me when something's stuck and they're not sure what kind of problem it is.
+        Half the time the "marketing problem" is actually a product problem, or a
+        customer-success-handoff problem, or a positioning problem nobody's named yet. I'm wired
+        to find the pattern across the org, not just in the marketing column.
+      </p>
+      <ul class="discipline-list">
+        <li>Brand</li>
+        <li>Demand gen</li>
+        <li>Performance marketing</li>
+        <li>Growth</li>
+        <li>Product marketing</li>
+        <li>Product</li>
+        <li>Customer success</li>
+        <li>Lifecycle marketing</li>
+        <li>Viral loops</li>
+        <li>Go-to-market engineering</li>
+        <li>AI implementation</li>
+      </ul>
+      <p class="what-body">
+        All of these usually get drawn as separate columns. They're not. The &ldquo;marketing
+        problem&rdquo; is often a CS handoff problem. The growth slump is a product onboarding
+        gap. The brand work is the demand work. I see this without trying - patterns jump
+        columns whether I asked them to or not.
+      </p>
+      <p class="what-tag">
+        That's how ADHD brains work. It's why we make great creative problem solvers.
+        Not a deficit. The asset.
+      </p>
+    </section>
+
+    <section id="ai" class="ai">
+      <p class="eyebrow">AI implementation</p>
+      <h2 class="section-title">AI doesn't replace your team. It <em>up-levels</em> them.</h2>
+      <p class="what-lede">
+        Every AI vendor is selling fewer humans. I implement the opposite: agents that come
+        alongside the team you already have and raise their ceiling - across sales, marketing,
+        and customer success. Not a white-labeled chatbot. Real GTM agents wired into the work.
+      </p>
+
+      <div class="ai-pillars">
+        <div class="ai-pillar">
+          <h3>Sales agents</h3>
+          <p>Call analysis that surfaces the language that closes. Playbooks that adapt to who's
+          in the room. Pattern recognition for the AHA moments from AE calls. Follow-up that
+          goes out faster and sharper than a human alone.</p>
+        </div>
+        <div class="ai-pillar">
+          <h3>Marketing agents</h3>
+          <p>Content, demand gen, and conversion-rate work where AI handles the scale and the
+          operator handles the judgment. Personalization at real volume - not &ldquo;Hi
+          {first_name}&rdquo; theater.</p>
+        </div>
+        <div class="ai-pillar">
+          <h3>GTM &amp; outbound agents</h3>
+          <p>Signal-driven outbound, built at scale, personalized to the prospect's actual
+          situation. Where GTM engineering meets your AEs and lifts the whole motion.</p>
+        </div>
+      </div>
+
+      <p class="what-tag">
+        Built for funded SaaS founders with a hungry team and no CMO yet - senior
+        pattern-recognition plus AI leverage punches well above headcount.
+      </p>
+    </section>
+
+    <section id="about" class="about">
+      <h2 class="section-title">About</h2>
+      <div class="about-grid">
+        <div class="about-bio">
+          <p class="about-lead">
+            I wasn't lost the first 18 years of my life - I was figuring out what I loved.
+            Turned out to be marketing and sales.
+          </p>
+          <p>
+            I started selling TVs at Fry's, then used Cisco gear over the phone, then landed at
+            <strong>Marketo</strong>.
+          </p>
+          <p>
+            At Marketo, I wrote a blog post called "How to Implement Marketo in Your Business."
+            It hit page one of Google and generated dozens of inbound calls a week from people who'd
+            bought the software and had no idea what to do with it. That's when the thesis clicked:
+            <strong>brand equals demand</strong>. Build a brand with authority that speaks
+            directly to your persona and ICP, and the demand finds you.
+          </p>
+          <p>
+            After Marketo: a year of independent Marketo consulting, then
+            <strong>Deputy</strong>, <strong>Fountain</strong>, <strong>Northpass</strong>,
+            enterprise time at <strong>Moveable Ink</strong>, then <strong>Curve</strong>. A
+            few consulting stops in between. Every job taught me something. Fountain taught me that
+            vision and buy-in beat being right. Marketo taught me a good blog post can outwork an
+            SDR team.
+          </p>
+          <p>
+            I have the heart of a teacher. Runs in the family - my mom and my sister both teach. I'm
+            a strong public speaker. I learn fast and I solve problems creatively, which is the
+            polite way of saying I'm ADHD and I'm good at it.
+          </p>
+        </div>
+        <aside class="about-side">
+          <img class="about-photo" src="/dan-atlanta-united.jpg" width="840" height="1050" loading="lazy"
+            alt="Dan in an Atlanta United jersey on matchday, red smoke behind him" />
+          <div>
+          <h3>Outside the work</h3>
+          <ul>
+            <li>Atlanta roots. Atlanta United on matchday.</li>
+            <li>Dog dad to Rocky, a Frenchie.</li>
+            <li>Mean ping-pong player.</li>
+            <li>Championship bocce player.</li>
+            <li>Average drummer. Average guitarist.</li>
+            <li>Plays piano like a guitar player.</li>
+          </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="about-proof">
+      <p class="eyebrow">What it's like to work with me</p>
+      <p class="testimonial-quote">His ability to assess needs and implement strategies that move the needle immediately is uncanny.</p>
+      <div class="testimonial-attribution">
+        <div class="avatar"><img src="luke-targett.jpg" alt="Luke Targett" loading="lazy" /></div>
+        <div>
+          <span class="cite-name">Luke Targett</span>
+          <span class="cite-role">Former CMO, Deputy</span>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="/book/" class="btn">Tell me what's stuck →</a>
+        <a href="/work/" class="btn-ghost">See the receipts</a>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <p class="eyebrow">Frequently asked</p>
+      <h2 class="section-title">Questions founders ask before reaching out.</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>What's a fractional CMO, and how is it different from a consultant?</h3>
+          <p>A consultant gives you a deck. A fractional CMO owns marketing strategy and execution 1-3 days a week. Consultants advise; fractional CMOs ship. The good ones bring senior judgment, coach your existing team, and stay long enough to compound results - typically 6-12 months.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How much does Dan cost?</h3>
+          <p>Three fractional tiers: <strong>Advisor at $3,000 a month</strong>, <strong>Operator at $5,500</strong>, and <strong>Embedded from $7,500</strong>. Fixed-price projects start at $2,500. A fraction of a full-time CMO, with senior judgment, AI implementation, and team coaching included. <a href="/pricing/">See what each tier includes</a>.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What kinds of companies does Dan work with?</h3>
+          <p>Funded SaaS startups, typically <strong>$1M-$15M ARR</strong>, that don't have a full-time CMO yet. Often: a hungry junior marketing team, a founder who knows marketing matters but isn't sure what to fix, and a sales motion outpacing inbound. If that's you, reach out.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What does "AI implementation" actually mean here?</h3>
+          <p>GTM agents wired into your existing motion - not a white-labeled chatbot. Sales call analysis that surfaces the language that closes. Marketing content and campaigns at scale with real personalization. Outbound targeting actual buyer signals. AI as the leverage that makes your team perform like a team three times its size.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do you take on full-time roles?</h3>
+          <p>Fractional engagements only at the moment. If your needs are full-time, I can refer you to people I trust.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How long does a typical engagement last?</h3>
+          <p><strong>6-12 months</strong> is the sweet spot. Shorter than 6 and the team doesn't have time to absorb senior judgment. Longer than 18 and you should either convert to full-time or have an explicit transition plan.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What does the first month of an engagement look like?</h3>
+          <p>Audit the current motion, identify the 2-3 things that are stuck, pick the highest-leverage place to start, and ship one working system or campaign so your team feels the difference. Strategy and execution, week one.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How do I get started?</h3>
+          <p><a href="/book/">Book a call</a> or email <a href="mailto:dan@danwestmoreland.com">dan@danwestmoreland.com</a> with what's stuck, what you've already tried, and where you are (stage, team size, ARR). The more specific, the faster I can be useful. If it's a fit, we'll do a 30-minute call. If it's not, I'll tell you and recommend someone else.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2 class="section-title">Got something stuck?</h2>
+      <p>
+        Grab 30 minutes or send a note. Tell me what's not working and what you've already tried -
+        the more specific, the faster I can be useful.
+      </p>
+      <a href="/book/" class="btn btn-big">Book a 30-minute call →</a>
+      <p class="contact-alt">Or email <a href="mailto:dan@danwestmoreland.com">dan@danwestmoreland.com</a></p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Dan Westmoreland</p>
+    <p>
+      <a href="https://www.linkedin.com/in/danwestmoreland/">LinkedIn</a>
+      ·
+      <a href="mailto:dan@danwestmoreland.com">Email</a>
+    </p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="/assets/site.js" defer></script>
+</body>
+</html>

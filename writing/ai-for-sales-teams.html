@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI for Sales Teams: How to Make Your AEs Sound Like Senior Reps - Dan Westmoreland</title>
+  <meta name="description" content="AI as a sales coach, not a sales replacement. How to implement AI for AE call analysis, follow-up, scripts, and pattern recognition - so your junior reps perform like seniors." />
+
+  <meta property="og:title" content="AI for Sales Teams: How to Make Your AEs Sound Like Senior Reps" />
+  <meta property="og:description" content="AI as a sales coach, not a replacement. The implementation playbook." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://danwestmoreland.com/writing/ai-for-sales-teams" />
+  <meta property="og:image" content="https://danwestmoreland.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://danwestmoreland.com/og-image.png" />
+  <meta property="article:author" content="Dan Westmoreland" />
+  <meta property="article:published_time" content="2026-05-15" />
+
+  <link rel="canonical" href="https://danwestmoreland.com/writing/ai-for-sales-teams" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600&display=swap" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI for Sales Teams: How to Make Your AEs Sound Like Senior Reps",
+    "description": "AI as a sales coach, not a replacement. How to implement AI for AE call analysis, follow-up, scripts, and pattern recognition.",
+    "author": {
+      "@type": "Person", "name": "Dan Westmoreland", "url": "https://danwestmoreland.com",
+      "jobTitle": "Marketing operator",
+      "sameAs": ["https://www.linkedin.com/in/danwestmoreland/"]
+    },
+    "datePublished": "2026-05-15",
+    "dateModified": "2026-05-15",
+    "mainEntityOfPage": "https://danwestmoreland.com/writing/ai-for-sales-teams",
+    "publisher": { "@type": "Person", "name": "Dan Westmoreland" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Will AI replace my AEs?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No - not the ones who can run a live conversation. AI replaces the prep work, the follow-up writing, the script drafting, and the post-call analysis. The conversation itself stays with the human." }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the fastest AI win for a sales team?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Call-by-call analysis that surfaces the exact language and questions correlating with closed deals. Two weeks of data and a working prompt is enough to start coaching the team with it." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need Gong or Chorus for this?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You need recorded calls with transcripts. Gong and Chorus are the easiest path; Fathom, Fireflies, and Granola also work. The recording platform matters less than what you do with the transcripts." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get my AEs to actually use the AI tools?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Make them save time, not create more work. If using the AI takes longer than the manual version, they'll abandon it. The first implementation should give 30 minutes back per AE per day. After that, adoption is self-reinforcing." }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body, h1, h2, h3, h4, p, ul, ol, blockquote { margin: 0; }
+    ul, ol { padding: 0; }
+    a { color: inherit; }
+    :root {
+      --bg: #F6F5F1; --bg-elev: #FDFDFB; --ink: #15171A; --ink-soft: #4A4D52;
+      --rule: #E2E1DB; --accent: #B8431F; --accent-ink: #FDFDFB;
+      --accent-bright: #F08A62;
+      --trust: #1F3D36;
+      --on-trust: #F6F5F1;
+      --serif: 'Fraunces', 'Georgia', serif; --sans: 'Inter', system-ui, sans-serif;
+      --maxw: 720px; --gutter: clamp(20px, 5vw, 56px);
+    }
+    body { font-family: var(--sans); background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; line-height: 1.6; font-size: 18px; }
+    .site-header { max-width: 1100px; margin: 0 auto; padding: 28px var(--gutter) 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .wordmark { font-family: var(--serif); font-weight: 700; font-size: 20px; letter-spacing: -0.01em; text-decoration: none; color: var(--ink); }
+    .site-header nav { display: flex; align-items: center; gap: 28px; }
+    .site-header nav a { text-decoration: none; font-weight: 500; font-size: 15px; color: var(--ink-soft); transition: color .15s ease; }
+    .site-header nav a:hover { color: var(--ink); }
+    .site-header nav a.is-active, .site-header nav a.nav-cta { color: var(--ink); border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
+    main { max-width: var(--maxw); margin: 0 auto; padding: 80px var(--gutter) 96px; }
+    .article-meta { display: flex; gap: 14px; align-items: center; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 28px; }
+    .article-meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
+    h1.article-title { font-family: var(--serif); font-weight: 500; font-size: clamp(34px, 5.6vw, 54px); line-height: 1.06; letter-spacing: -0.025em; color: var(--ink); margin-bottom: 28px; }
+    h1.article-title em { font-style: italic; color: var(--accent); }
+    .article-dek { font-family: var(--serif); font-size: clamp(20px, 2.4vw, 24px); line-height: 1.4; color: var(--ink-soft); font-style: italic; margin-bottom: 56px; max-width: 56ch; }
+    article p { font-size: 18px; line-height: 1.7; margin-bottom: 22px; color: var(--ink); }
+    article p strong { font-weight: 600; }
+    article p em { font-style: italic; }
+    article h2 { font-family: var(--serif); font-weight: 500; font-size: clamp(26px, 3.5vw, 34px); line-height: 1.15; letter-spacing: -0.02em; color: var(--ink); margin: 56px 0 20px; }
+    article h3 { font-family: var(--sans); font-weight: 600; font-size: 19px; color: var(--ink); margin: 32px 0 12px; }
+    article ul, article ol { margin: 0 0 22px 0; padding-left: 24px; }
+    article li { font-size: 18px; line-height: 1.65; margin-bottom: 10px; color: var(--ink); }
+    article li strong { font-weight: 600; }
+    article blockquote { border-left: 3px solid var(--accent); padding: 8px 0 8px 24px; margin: 32px 0; font-family: var(--serif); font-style: italic; font-size: clamp(20px, 2.4vw, 24px); line-height: 1.4; color: var(--ink); }
+    .author-card { margin-top: 80px; padding: 32px; background: var(--bg-elev); border: 1px solid var(--rule); border-radius: 18px; display: grid; grid-template-columns: 64px 1fr; gap: 20px; align-items: start; }
+    .author-avatar { width: 64px; height: 64px; border-radius: 50%; background: var(--ink); color: var(--accent); font-family: var(--serif); font-weight: 700; font-size: 28px; display: flex; align-items: center; justify-content: center; }
+    .author-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 50%; }
+    .author-card h4 { font-family: var(--serif); font-weight: 600; font-size: 20px; color: var(--ink); margin-bottom: 8px; }
+    .author-card p { font-size: 16px; line-height: 1.55; color: var(--ink-soft); margin-bottom: 12px; }
+    .author-card a { font-weight: 600; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); }
+    .article-cta { margin-top: 56px; padding: 40px 32px; background: var(--ink); color: var(--bg); border-radius: 18px; text-align: center; }
+    .article-cta h3 { font-family: var(--serif); font-weight: 500; font-size: clamp(24px, 3vw, 30px); letter-spacing: -0.015em; color: var(--bg); margin-bottom: 12px; }
+    .article-cta p { font-size: 17px; color: var(--bg); opacity: 0.85; margin-bottom: 24px; max-width: 50ch; margin-left: auto; margin-right: auto; }
+    .article-cta a.btn { display: inline-block; background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 500; font-size: 17px; padding: 14px 24px; border-radius: 999px; }
+    .related { margin-top: 56px; padding: 28px; border: 1px solid var(--rule); border-radius: 14px; }
+    .related h4 { font-family: var(--sans); font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    .related a { font-family: var(--serif); font-size: 19px; color: var(--ink); text-decoration: none; font-weight: 500; }
+    .related a:hover { color: var(--accent); }
+    .site-footer { border-top: 1px solid var(--rule); max-width: 1100px; margin: 0 auto; padding: 32px var(--gutter); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 14px; color: var(--ink-soft); }
+    .site-footer a { text-decoration: none; color: var(--ink-soft); }
+    .site-footer a:hover { color: var(--accent); }
+    @media (max-width: 800px) {
+      .site-header { flex-wrap: wrap; row-gap: 14px; }
+      .site-header nav { gap: 14px; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 4px; scrollbar-width: none; }
+      .site-header nav::-webkit-scrollbar { display: none; }
+      .site-header nav a { white-space: nowrap; font-size: 14px; }
+      .site-header nav a.nav-cta { margin-left: auto; } .site-header nav a[href$="#ai"], .site-header nav a[href$="#about"] { display: none; }
+      main { padding-top: 56px; padding-bottom: 64px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="wordmark" href="/">Dan Westmoreland</a>
+    <nav>
+      <a href="/services/">Services</a>
+      <a href="/work/">Work</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/#ai">AI</a>
+      <a href="/#about">About</a>
+      <a href="/writing/" class="is-active">Writing</a>
+      <a href="/book/" class="nav-cta">Book a call</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="article-meta">
+      <span>AI for sales</span>
+      <span class="dot" aria-hidden="true"></span>
+      <time datetime="2026-05-15">May 15, 2026</time>
+    </div>
+
+    <h1 class="article-title">AI for Sales Teams: How to Make Your AEs <em>Sound Like Senior Reps</em></h1>
+
+    <p class="article-dek">
+      AI as a sales coach, not a sales replacement. The playbook for using AI to compress the
+      experience curve - so a rep on their fifth call sounds like a rep on their fiftieth.
+    </p>
+
+    <article>
+
+      <p>
+        Most "AI for sales" pitches you'll hear right now are some version of: replace the
+        SDRs, automate the outreach, fire half your AEs. The math sounds compelling on a slide
+        deck. In practice, the sales motion that gets driven by AI alone produces high-volume
+        slop, lowers reply rates, and confuses your buyers about who they're actually talking
+        to.
+      </p>
+
+      <p>
+        Here's the version that actually works: AI as the layer that compresses the
+        rep-experience curve. Your AEs still run the conversations. AI does the prep, the
+        post-call analysis, the follow-up writing, the script tuning, and the pattern
+        recognition that normally takes five years on the job to develop.
+      </p>
+
+      <blockquote>
+        AI doesn't replace your reps. It makes them sound like seniors on their fifth call,
+        not their fiftieth.
+      </blockquote>
+
+      <h2>What "sound like a senior rep" actually means</h2>
+
+      <p>
+        Senior reps do four things juniors don't, and all four are exactly the kind of work
+        AI compresses well:
+      </p>
+
+      <ol>
+        <li><strong>They read the room faster.</strong> They know which questions signal a
+          deal is moving and which signal someone's just researching. AI can pattern-match this
+          from your historical call data in days.</li>
+        <li><strong>Their follow-up is tailored.</strong> They don't send templates. They
+          reference the actual objection raised, the specific use case discussed, the personal
+          aside the buyer mentioned. AI generates this from the transcript in 30 seconds.</li>
+        <li><strong>They use the language that closes.</strong> They've internalized which
+          phrases land and which don't. AI can mine your closed-won calls to surface those
+          phrases, then coach the team on them.</li>
+        <li><strong>They know when to push and when to wait.</strong> Timing instinct. Harder
+          for AI alone, but AI can flag the signals that should trigger a push email or a
+          pause - decision still belongs to the rep.</li>
+      </ol>
+
+      <h2>The five highest-leverage AI use cases for sales</h2>
+
+      <h3>1. Call-by-call analysis</h3>
+      <p>
+        After every AE call, an LLM summarizes the conversation, extracts the buyer's stated
+        problem, identifies objections raised, flags the questions the rep didn't handle well,
+        and proposes the next-step email. The AE reviews and ships - five minutes instead of
+        forty.
+      </p>
+      <p>
+        <strong>Stack:</strong> Gong, Chorus, Fathom, Granola, or Fireflies for recording.
+        Custom prompt or a tool like Aviso, Pocus, or Default routing transcripts to an LLM.
+      </p>
+
+      <h3>2. Language-that-closes mining</h3>
+      <p>
+        Take your last 50 closed-won calls and your last 50 closed-lost calls. Feed both to an
+        LLM with a prompt: <em>"Identify phrases, questions, and framings that consistently
+        appear in won deals but not in lost ones."</em> Two hours of work yields a coaching
+        document worth more than most sales training.
+      </p>
+
+      <h3>3. Personalized follow-up at scale</h3>
+      <p>
+        Every email after a call gets generated from the actual conversation transcript, not a
+        template. The AE edits for tone in 90 seconds and ships. Result: follow-up that
+        actually references what the buyer said.
+      </p>
+
+      <h3>4. Pre-call brief generation</h3>
+      <p>
+        Before every meeting, an agent pulls public information about the prospect, identifies
+        recent triggers (funding, hiring, news), drafts a 5-question discovery list tailored
+        to their situation, and surfaces relevant case studies from your library. The AE walks
+        in five minutes more prepared than they would otherwise.
+      </p>
+
+      <h3>5. Pipeline review augmentation</h3>
+      <p>
+        Instead of pipeline review meetings where reps justify their deals with vibes, an
+        agent reads every deal's recent activity and flags the ones that smell off (no
+        meaningful customer-side activity in 14 days, single-threaded buyer, missing budget
+        confirmation). Manager comes to the review with a list to dig into, not a vibe-check.
+      </p>
+
+      <h2>What NOT to do</h2>
+
+      <ul>
+        <li><strong>Don't have AI write outbound emails the rep didn't read.</strong> The
+          buyer can tell. Reply rates fall. Sender reputation degrades.</li>
+        <li><strong>Don't replace the discovery conversation.</strong> Chat interfaces and AI
+          SDRs work for some commodity products but they kill complex B2B deals.</li>
+        <li><strong>Don't roll out everything at once.</strong> Pick one use case, ship it,
+          measure adoption. Add the next one in 4-6 weeks.</li>
+        <li><strong>Don't ignore the change management.</strong> If reps fear AI is coming for
+          their job, they sandbag the rollout. Frame and prove "AI does the work you hate."</li>
+      </ul>
+
+      <h2>How fast you'll see results</h2>
+
+      <ul>
+        <li><strong>Week 1-2:</strong> Call analysis live, AEs reviewing their own
+          AI-generated summaries.</li>
+        <li><strong>Week 3-4:</strong> Language-mining doc circulated; first coaching
+          conversations referencing it.</li>
+        <li><strong>Week 5-8:</strong> Follow-up email automation in production. AE time
+          savings measurable.</li>
+        <li><strong>Month 3+:</strong> Pipeline review process upgraded. Forecast accuracy
+          improves measurably. Junior rep ramp time drops 30-50%.</li>
+      </ul>
+
+      <h2>FAQ</h2>
+
+      <h3>Will AI replace my AEs?</h3>
+      <p>
+        No - not the ones who can run a live conversation. AI replaces the prep, the
+        follow-up, the script drafting, and the analysis. The conversation stays with the
+        human.
+      </p>
+
+      <h3>What's the fastest AI win for a sales team?</h3>
+      <p>
+        Call-by-call analysis that surfaces the exact language and questions correlating with
+        closed deals. Two weeks of data and a working prompt is enough to start coaching the
+        team.
+      </p>
+
+      <h3>Do I need Gong or Chorus for this?</h3>
+      <p>
+        You need recorded calls with transcripts. Gong and Chorus are the easiest path;
+        Fathom, Fireflies, and Granola also work. The recording tool matters less than what
+        you do with the transcripts.
+      </p>
+
+      <h3>How do I get my AEs to actually use the AI tools?</h3>
+      <p>
+        Make them save time, not create more work. If using the AI takes longer than the
+        manual version, they'll abandon it. The first implementation should give 30 minutes
+        back per AE per day. After that, adoption is self-reinforcing.
+      </p>
+
+      <h2>The bottom line</h2>
+
+      <p>
+        AI for sales isn't about replacing the people who close. It's about compressing the
+        five-year experience curve into a five-month one. Your seniors keep their edge. Your
+        juniors stop fumbling. The team's average performance shifts up without changing the
+        org chart.
+      </p>
+
+      <p>That's the implementation that actually pays back.</p>
+
+      <div class="article-cta">
+        <h3>Got a sales team that's leaving money on the table?</h3>
+        <p>If your AEs are bottlenecked by prep, follow-up, or pattern-recognition gaps that AI can compress - that's the shape of work I take on. Tell me what's stuck.</p>
+        <a class="btn" href="/book/">Book a 30-minute call →</a>
+      </div>
+
+      <div class="related">
+        <h4>Related</h4>
+        <a href="/writing/how-to-implement-ai-in-b2b-marketing">How to Actually Implement AI in B2B Marketing (Without Replacing Your Team) →</a>
+      </div>
+
+      <div class="author-card">
+        <div class="author-avatar"><img src="/dan-westmoreland.jpg" alt="Dan Westmoreland" /></div>
+        <div>
+          <h4>Dan Westmoreland</h4>
+          <p>
+            Marketing operator. Built inbound engines at Deputy, Northpass (acquired by
+            Gainsight), and Curve. Believes brand equals demand, and demand that comes to you
+            compounds. <a href="https://www.linkedin.com/in/danwestmoreland/">LinkedIn</a>
+          </p>
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Dan Westmoreland</p>
+    <p>
+      <a href="https://www.linkedin.com/in/danwestmoreland/">LinkedIn</a>
+      ·
+      <a href="mailto:dan@danwestmoreland.com">Email</a>
+    </p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="/assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GTM Engineer vs Marketing Ops vs RevOps: Who Owns What - Dan Westmoreland</title>
+  <meta name="description" content="Three roles, constantly confused. Here's the clean distinction between GTM engineer, marketing ops, and RevOps, plus a buyer's guide on which one you actually need." />
+
+  <meta property="og:title" content="GTM Engineer vs Marketing Ops vs RevOps: Who Owns What" />
+  <meta property="og:description" content="Three roles, constantly confused. The clean distinction and a buyer's guide on which you actually need." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://danwestmoreland.com/writing/gtm-engineer-vs-marketing-ops-vs-revops" />
+  <meta property="og:image" content="https://danwestmoreland.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://danwestmoreland.com/og-image.png" />
+  <meta property="article:author" content="Dan Westmoreland" />
+  <meta property="article:published_time" content="2026-05-15" />
+
+  <link rel="canonical" href="https://danwestmoreland.com/writing/gtm-engineer-vs-marketing-ops-vs-revops" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600&display=swap" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "GTM Engineer vs Marketing Ops vs RevOps: Who Owns What",
+    "description": "Three roles, constantly confused. The clean distinction between GTM engineer, marketing ops, and RevOps, plus a buyer's guide on which one you actually need.",
+    "author": {
+      "@type": "Person",
+      "name": "Dan Westmoreland",
+      "url": "https://danwestmoreland.com",
+      "jobTitle": "Marketing operator",
+      "sameAs": ["https://www.linkedin.com/in/danwestmoreland/"]
+    },
+    "datePublished": "2026-05-15",
+    "dateModified": "2026-05-15",
+    "mainEntityOfPage": "https://danwestmoreland.com/writing/gtm-engineer-vs-marketing-ops-vs-revops",
+    "publisher": { "@type": "Person", "name": "Dan Westmoreland" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does a GTM engineer do that marketing ops doesn't?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Marketing ops keeps the platforms running and the campaigns deploying. GTM engineering builds new automated workflows between platforms - the stuff that didn't exist last quarter. Different work, same org chart neighborhood." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is RevOps the same as GTM engineering?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. RevOps owns alignment between marketing, sales, and customer success - territories, comp, forecasting, handoffs. GTM engineering owns the automation between systems. RevOps is strategic and analytical; GTM engineering is technical and operational." }
+      },
+      {
+        "@type": "Question",
+        "name": "Which should I hire first: marketing ops, RevOps, or a GTM engineer?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Marketing ops first if you don't have one. RevOps when you cross $5M ARR or when handoffs between functions become messy. GTM engineering when you have the foundations in place and need to build the automated motion that scales." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can one person hold all three roles?",
+        "acceptedAnswer": { "@type": "Answer", "text": "At seed or early Series A, yes - and often a head of growth or fractional senior operator covers all three. By Series B, the work splits and you need at least two of the three." }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body, h1, h2, h3, h4, p, ul, ol, blockquote, table { margin: 0; }
+    ul, ol { padding: 0; }
+    a { color: inherit; }
+    :root {
+      --bg: #F6F5F1; --bg-elev: #FDFDFB; --ink: #15171A; --ink-soft: #4A4D52;
+      --rule: #E2E1DB; --accent: #B8431F; --accent-ink: #FDFDFB;
+      --accent-bright: #F08A62;
+      --trust: #1F3D36;
+      --on-trust: #F6F5F1;
+      --serif: 'Fraunces', 'Georgia', serif; --sans: 'Inter', system-ui, sans-serif;
+      --maxw: 720px; --gutter: clamp(20px, 5vw, 56px);
+    }
+    body { font-family: var(--sans); background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; line-height: 1.6; font-size: 18px; }
+    .site-header { max-width: 1100px; margin: 0 auto; padding: 28px var(--gutter) 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .wordmark { font-family: var(--serif); font-weight: 700; font-size: 20px; letter-spacing: -0.01em; text-decoration: none; color: var(--ink); }
+    .site-header nav { display: flex; align-items: center; gap: 28px; }
+    .site-header nav a { text-decoration: none; font-weight: 500; font-size: 15px; color: var(--ink-soft); transition: color .15s ease; }
+    .site-header nav a:hover { color: var(--ink); }
+    .site-header nav a.is-active, .site-header nav a.nav-cta { color: var(--ink); border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
+    main { max-width: var(--maxw); margin: 0 auto; padding: 80px var(--gutter) 96px; }
+    .article-meta { display: flex; gap: 14px; align-items: center; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 28px; }
+    .article-meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
+    h1.article-title { font-family: var(--serif); font-weight: 500; font-size: clamp(34px, 5.6vw, 54px); line-height: 1.06; letter-spacing: -0.025em; color: var(--ink); margin-bottom: 28px; }
+    h1.article-title em { font-style: italic; color: var(--accent); }
+    .article-dek { font-family: var(--serif); font-size: clamp(20px, 2.4vw, 24px); line-height: 1.4; color: var(--ink-soft); font-style: italic; margin-bottom: 56px; max-width: 56ch; }
+    article p { font-size: 18px; line-height: 1.7; margin-bottom: 22px; color: var(--ink); }
+    article p strong { font-weight: 600; }
+    article p em { font-style: italic; }
+    article h2 { font-family: var(--serif); font-weight: 500; font-size: clamp(26px, 3.5vw, 34px); line-height: 1.15; letter-spacing: -0.02em; color: var(--ink); margin: 56px 0 20px; }
+    article h3 { font-family: var(--sans); font-weight: 600; font-size: 19px; color: var(--ink); margin: 32px 0 12px; }
+    article ul, article ol { margin: 0 0 22px 0; padding-left: 24px; }
+    article li { font-size: 18px; line-height: 1.65; margin-bottom: 10px; color: var(--ink); }
+    article li strong { font-weight: 600; }
+    article blockquote { border-left: 3px solid var(--accent); padding: 8px 0 8px 24px; margin: 32px 0; font-family: var(--serif); font-style: italic; font-size: clamp(20px, 2.4vw, 24px); line-height: 1.4; color: var(--ink); }
+    .role-table { width: 100%; border-collapse: collapse; margin: 24px 0 32px; font-size: 15px; }
+    .role-table th, .role-table td { padding: 14px 16px; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+    .role-table th { font-weight: 600; color: var(--ink); background: var(--bg-elev); }
+    .role-table td:first-child { font-weight: 600; color: var(--ink); }
+    .role-table td { color: var(--ink-soft); line-height: 1.5; }
+    .author-card { margin-top: 80px; padding: 32px; background: var(--bg-elev); border: 1px solid var(--rule); border-radius: 18px; display: grid; grid-template-columns: 64px 1fr; gap: 20px; align-items: start; }
+    .author-avatar { width: 64px; height: 64px; border-radius: 50%; background: var(--ink); color: var(--accent); font-family: var(--serif); font-weight: 700; font-size: 28px; display: flex; align-items: center; justify-content: center; }
+    .author-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 50%; }
+    .author-card h4 { font-family: var(--serif); font-weight: 600; font-size: 20px; color: var(--ink); margin-bottom: 8px; }
+    .author-card p { font-size: 16px; line-height: 1.55; color: var(--ink-soft); margin-bottom: 12px; }
+    .author-card a { font-weight: 600; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); }
+    .article-cta { margin-top: 56px; padding: 40px 32px; background: var(--ink); color: var(--bg); border-radius: 18px; text-align: center; }
+    .article-cta h3 { font-family: var(--serif); font-weight: 500; font-size: clamp(24px, 3vw, 30px); letter-spacing: -0.015em; color: var(--bg); margin-bottom: 12px; }
+    .article-cta p { font-size: 17px; color: var(--bg); opacity: 0.85; margin-bottom: 24px; max-width: 50ch; margin-left: auto; margin-right: auto; }
+    .article-cta a.btn { display: inline-block; background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 500; font-size: 17px; padding: 14px 24px; border-radius: 999px; }
+    .related { margin-top: 56px; padding: 28px; border: 1px solid var(--rule); border-radius: 14px; }
+    .related h4 { font-family: var(--sans); font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    .related a { font-family: var(--serif); font-size: 19px; color: var(--ink); text-decoration: none; font-weight: 500; }
+    .related a:hover { color: var(--accent); }
+    .site-footer { border-top: 1px solid var(--rule); max-width: 1100px; margin: 0 auto; padding: 32px var(--gutter); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 14px; color: var(--ink-soft); }
+    .site-footer a { text-decoration: none; color: var(--ink-soft); }
+    .site-footer a:hover { color: var(--accent); }
+    @media (max-width: 800px) {
+      .site-header { flex-wrap: wrap; row-gap: 14px; }
+      .site-header nav { gap: 14px; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 4px; scrollbar-width: none; }
+      .site-header nav::-webkit-scrollbar { display: none; }
+      .site-header nav a { white-space: nowrap; font-size: 14px; }
+      .site-header nav a.nav-cta { margin-left: auto; } .site-header nav a[href$="#ai"], .site-header nav a[href$="#about"] { display: none; }
+      main { padding-top: 56px; padding-bottom: 64px; }
+      .role-table { font-size: 14px; }
+      .role-table th, .role-table td { padding: 10px 8px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="wordmark" href="/">Dan Westmoreland</a>
+    <nav>
+      <a href="/services/">Services</a>
+      <a href="/work/">Work</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/#ai">AI</a>
+      <a href="/#about">About</a>
+      <a href="/writing/" class="is-active">Writing</a>
+      <a href="/book/" class="nav-cta">Book a call</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="article-meta">
+      <span>Go-to-market engineering</span>
+      <span class="dot" aria-hidden="true"></span>
+      <time datetime="2026-05-15">May 15, 2026</time>
+    </div>
+
+    <h1 class="article-title">GTM Engineer vs Marketing Ops vs RevOps: <em>Who Owns What</em></h1>
+
+    <p class="article-dek">
+      Three roles, constantly confused, increasingly important. Here's the clean distinction
+      between them - and a buyer's guide on which one you actually need first.
+    </p>
+
+    <article>
+
+      <p>
+        Founders mix these three up all the time. Recruiters write job descriptions that fold
+        them together. Vendors pitch the same product to all three buyers. The category
+        confusion is real, and it costs you in two ways: you hire the wrong role, or you ask
+        the right role to do the wrong work.
+      </p>
+
+      <p>Here's the version that's actually true after years inside this stack.</p>
+
+      <h2>The clean distinction</h2>
+
+      <table class="role-table">
+        <thead>
+          <tr>
+            <th>Role</th>
+            <th>Owns</th>
+            <th>Ships</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Marketing ops</td>
+            <td>Platforms, data hygiene, campaign deployment, reporting</td>
+            <td>The work that keeps existing motion running</td>
+          </tr>
+          <tr>
+            <td>RevOps</td>
+            <td>Alignment, comp plans, forecasting, attribution, handoffs</td>
+            <td>Strategy and analytics that connect functions</td>
+          </tr>
+          <tr>
+            <td>GTM engineering</td>
+            <td>Automation between systems, custom integrations, signal-to-action pipelines</td>
+            <td>New automated workflows that didn't exist last quarter</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        Said another way: marketing ops keeps the lights on, RevOps decides where to point the
+        lights, GTM engineering builds the system that lets you flip ten more lights on without
+        ten more humans.
+      </p>
+
+      <h2>Day-to-day, what each one looks like</h2>
+
+      <h3>A marketing ops manager's day</h3>
+      <p>
+        Lead routing rules in HubSpot. UTM hygiene. List uploads from a webinar. Salesforce
+        sync issues. New campaign deployment. Reporting dashboards. Tickets from the marketing
+        team that need fixing. The discipline is operational, the cadence is reactive, the
+        value is reliability.
+      </p>
+
+      <h3>A RevOps leader's day</h3>
+      <p>
+        Territory planning with the VP Sales. Forecast review with the CFO. Attribution model
+        debate with the CMO. Pipeline stage definitions with sales and marketing. Customer
+        success metric alignment. The discipline is strategic, the cadence is cyclical, the
+        value is coherence across functions.
+      </p>
+
+      <h3>A GTM engineer's day</h3>
+      <p>
+        Mornings: monitor the running automations. Afternoons: ship a new workflow. A fresh
+        Clay table for a new ICP segment. A custom enrichment pipeline from a signal source the
+        team just identified. A LinkedIn-to-email-to-CRM workflow that didn't exist last week.
+        The discipline is technical, the cadence is project-based, the value is leverage.
+      </p>
+
+      <h2>The most common confusion (and why it costs you)</h2>
+
+      <p>
+        The #1 mistake: hiring a marketing ops manager and expecting them to do GTM engineering.
+        They're related but the skill sets diverge. Marketing ops people are platform
+        specialists; GTM engineers are integration builders who think like marketers. A great
+        marketing ops manager might level up into GTM engineering, but most don't, and pushing
+        them into it gets you brittle workflows owned by someone who hates building them.
+      </p>
+
+      <p>
+        The #2 mistake: hiring a RevOps person and asking them to build automation. RevOps
+        leaders are typically strategic; they pull data and align functions, but they're not
+        the people writing Python or shipping Clay tables. They can manage a GTM engineer well,
+        but they shouldn't be one.
+      </p>
+
+      <h2>Which should you hire first?</h2>
+
+      <p>Order of operations for a SaaS company growing through the stages:</p>
+
+      <ol>
+        <li><strong>Under $2M ARR:</strong> You don't need any of them as a dedicated hire.
+          Your head of growth or marketing leader covers it. Use contractors or a fractional
+          senior operator for the heavy lifts.</li>
+        <li><strong>$2M to $5M ARR:</strong> Hire marketing ops first. The lights need to stay
+          on, and they will not stay on without someone owning it.</li>
+        <li><strong>$5M to $10M ARR:</strong> Add RevOps. The alignment problem becomes a real
+          tax on the org. RevOps pays for itself by killing the forecasting and attribution
+          fights.</li>
+        <li><strong>$10M ARR+:</strong> Hire (or contract) a GTM engineer. The motion is mature
+          enough that automation leverage matters more than building new motion. By now your
+          marketing ops + RevOps foundation can support the work.</li>
+      </ol>
+
+      <p>
+        Exception: if you're under $10M ARR but your growth is bottlenecked by manual outbound
+        or unintegrated tooling, hire the GTM engineer earlier. Stage matters less than where
+        the actual constraint is.
+      </p>
+
+      <h2>Compensation reality (rough US bands)</h2>
+
+      <ul>
+        <li><strong>Marketing ops manager:</strong> $90K to $140K base. Senior/director:
+          $140K to $190K.</li>
+        <li><strong>RevOps leader:</strong> $140K to $200K base for senior IC.
+          VP-level: $200K to $300K+ with equity.</li>
+        <li><strong>GTM engineer:</strong> $120K to $180K base for senior. Contractors:
+          $150 to $250 per hour. Compensation rising fast as the role gets named.</li>
+      </ul>
+
+      <h2>FAQ</h2>
+
+      <h3>What does a GTM engineer do that marketing ops doesn't?</h3>
+      <p>
+        Marketing ops keeps the platforms running and the campaigns deploying. GTM engineering
+        builds new automated workflows between platforms - the stuff that didn't exist last
+        quarter. Different work, same org chart neighborhood.
+      </p>
+
+      <h3>Is RevOps the same as GTM engineering?</h3>
+      <p>
+        No. RevOps owns alignment between marketing, sales, and customer success - territories,
+        comp, forecasting, handoffs. GTM engineering owns the automation between systems.
+        RevOps is strategic and analytical; GTM engineering is technical and operational.
+      </p>
+
+      <h3>Which should I hire first?</h3>
+      <p>
+        Marketing ops first if you don't have one. RevOps when you cross $5M ARR or when
+        handoffs between functions become messy. GTM engineering when you have the foundations
+        in place and need to build the automated motion that scales.
+      </p>
+
+      <h3>Can one person hold all three roles?</h3>
+      <p>
+        At seed or early Series A, yes - and often a head of growth or fractional senior
+        operator covers all three. By Series B the work splits and you need at least two of
+        the three.
+      </p>
+
+      <h2>The bottom line</h2>
+
+      <p>
+        These are three different roles with three different skill sets, three different
+        cadences, and three different value propositions. Hire the one your actual constraint
+        calls for, not the one whose title sounds the most current. If you're early-stage and
+        you can only afford one human, a fractional senior operator who's worn all three hats
+        is often the right move - they tell you which of the three you actually need next.
+      </p>
+
+      <div class="article-cta">
+        <h3>Not sure which one your team needs?</h3>
+        <p>If you're a funded founder trying to figure out the right ops/RevOps/GTM-engineering hiring order, that's a 30-minute conversation, not a quarter-long puzzle. Tell me where you're stuck.</p>
+        <a class="btn" href="/book/">Book a 30-minute call →</a>
+      </div>
+
+      <div class="related">
+        <h4>Related</h4>
+        <a href="/writing/what-is-gtm-engineering">What GTM Engineering Actually Is (And Why You Need One) →</a>
+      </div>
+
+      <div class="author-card">
+        <div class="author-avatar"><img src="/dan-westmoreland.jpg" alt="Dan Westmoreland" /></div>
+        <div>
+          <h4>Dan Westmoreland</h4>
+          <p>
+            Marketing operator. Built inbound engines at Deputy, Northpass (acquired by
+            Gainsight), and Curve. Believes brand equals demand, and demand that comes to you
+            compounds. <a href="https://www.linkedin.com/in/danwestmoreland/">LinkedIn</a>
+          </p>
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Dan Westmoreland</p>
+    <p>
+      <a href="https://www.linkedin.com/in/danwestmoreland/">LinkedIn</a>
+      ·
+      <a href="mailto:dan@danwestmoreland.com">Email</a>
+    </p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="/assets/site.js" defer></script>
+</body>
+</html>

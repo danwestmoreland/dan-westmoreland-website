@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Writing - Dan Westmoreland</title>
+  <meta name="description" content="Operator notes on GTM engineering, AI in B2B marketing, inbound engines, and the work of turning marketing motion into systems. Written by Dan Westmoreland." />
+
+  <meta property="og:title" content="Writing - Dan Westmoreland" />
+  <meta property="og:description" content="Operator notes on GTM engineering, AI in B2B marketing, and the work of turning marketing motion into systems." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://danwestmoreland.com/writing/" />
+  <meta property="og:image" content="https://danwestmoreland.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://danwestmoreland.com/og-image.png" />
+
+  <link rel="canonical" href="https://danwestmoreland.com/writing/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600&display=swap" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body, h1, h2, h3, p, ul, li { margin: 0; }
+    ul { padding: 0; list-style: none; }
+    a { color: inherit; }
+
+    :root {
+      --bg: #F6F5F1;
+      --bg-elev: #FDFDFB;
+      --ink: #15171A;
+      --ink-soft: #4A4D52;
+      --rule: #E2E1DB;
+      --accent: #B8431F;
+      --accent-ink: #FDFDFB;
+      --accent-bright: #F08A62;
+      --trust: #1F3D36;
+      --on-trust: #F6F5F1;
+      --serif: 'Fraunces', 'Georgia', 'Times New Roman', serif;
+      --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --maxw: 900px;
+      --gutter: clamp(20px, 5vw, 56px);
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.55;
+      font-size: 17px;
+    }
+
+    .site-header {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px var(--gutter) 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .wordmark {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .site-header nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .site-header nav a {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--ink-soft);
+      transition: color .15s ease;
+    }
+    .site-header nav a:hover { color: var(--ink); }
+    .site-header nav a.is-active {
+      color: var(--ink);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 2px;
+    }
+    .site-header nav a.nav-cta {
+      color: var(--ink);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 2px;
+    }
+
+    main {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 80px var(--gutter) 96px;
+    }
+
+    .page-eyebrow {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-bottom: 24px;
+    }
+
+    h1.page-title {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(40px, 6vw, 64px);
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+      margin-bottom: 24px;
+    }
+    h1.page-title em { font-style: italic; color: var(--accent); }
+
+    .page-lede {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(20px, 2.4vw, 24px);
+      line-height: 1.4;
+      color: var(--ink-soft);
+      max-width: 56ch;
+      margin-bottom: 72px;
+    }
+
+    .article-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .article-row {
+      display: block;
+      padding: 36px 0;
+      border-top: 1px solid var(--rule);
+      text-decoration: none;
+      color: inherit;
+      transition: padding .15s ease;
+    }
+    .article-row:last-child { border-bottom: 1px solid var(--rule); }
+    .article-row:hover {
+      padding-left: 12px;
+    }
+    .article-row-meta {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-bottom: 14px;
+    }
+    .article-row-meta .dot {
+      width: 4px; height: 4px; border-radius: 50%;
+      background: var(--accent);
+    }
+    .article-row h2 {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(24px, 3vw, 32px);
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+    .article-row p {
+      font-size: 17px;
+      line-height: 1.55;
+      color: var(--ink-soft);
+      max-width: 65ch;
+    }
+    .article-row .arrow {
+      display: inline-block;
+      margin-top: 14px;
+      font-weight: 600;
+      color: var(--accent);
+      font-size: 15px;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--rule);
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px var(--gutter);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 14px;
+      color: var(--ink-soft);
+    }
+    .site-footer a {
+      text-decoration: none;
+      color: var(--ink-soft);
+    }
+    .site-footer a:hover { color: var(--accent); }
+
+    @media (max-width: 800px) {
+      .site-header { flex-wrap: wrap; row-gap: 14px; }
+      .site-header nav { gap: 14px; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 4px; scrollbar-width: none; }
+      .site-header nav::-webkit-scrollbar { display: none; }
+      .site-header nav a { white-space: nowrap; font-size: 14px; }
+      .site-header nav a.nav-cta { margin-left: auto; } .site-header nav a[href$="#ai"], .site-header nav a[href$="#about"] { display: none; }
+      main { padding-top: 56px; padding-bottom: 64px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="wordmark" href="/">Dan Westmoreland</a>
+    <nav>
+      <a href="/services/">Services</a>
+      <a href="/work/">Work</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/#ai">AI</a>
+      <a href="/#about">About</a>
+      <a href="/writing/" class="is-active">Writing</a>
+      <a href="/book/" class="nav-cta">Book a call</a>
+    </nav>
+  </header>
+
+  <main>
+    <p class="page-eyebrow">Operator notes</p>
+    <h1 class="page-title">Writing on the work of building <em>inbound engines</em>.</h1>
+    <p class="page-lede">
+      GTM engineering. AI in B2B marketing. Brand and demand. Notes from inside the work - what
+      actually moves the needle, and what most companies are still doing the hard way.
+    </p>
+
+    <div class="article-list">
+
+      <a class="article-row" href="/writing/fractional-cmo-cost">
+        <div class="article-row-meta">
+          <span>Founder framework</span>
+          <span class="dot" aria-hidden="true"></span>
+          <time datetime="2026-05-15">May 15, 2026</time>
+        </div>
+        <h2>How Much Does a Fractional CMO Cost in 2026?</h2>
+        <p>
+          Direct answer on pricing tiers, what's included at each, ROI math, and red flags. Most
+          engagements run $5K to $20K per month.
+        </p>
+        <span class="arrow">Read →</span>
+      </a>
+
+      <a class="article-row" href="/writing/when-to-hire-a-cmo">
+        <div class="article-row-meta">
+          <span>Founder framework</span>
+          <span class="dot" aria-hidden="true"></span>
+          <time datetime="2026-05-15">May 15, 2026</time>
+        </div>
+        <h2>When Should a SaaS Startup Hire a CMO?</h2>
+        <p>
+          Stage-by-stage guidance on when to hire full-time CMO vs fractional, the signs you're
+          ready, the signs you're not, and the hidden cost of hiring too early.
+        </p>
+        <span class="arrow">Read →</span>
+      </a>
+
+      <a class="article-row" href="/writing/what-does-a-fractional-cmo-do">
+        <div class="article-row-meta">
+          <span>Founder framework</span>
+          <span class="dot" aria-hidden="true"></span>
+          <time datetime="2026-05-15">May 15, 2026</time>
+        </div>
+        <h2>What Does a Fractional CMO Actually Do? A Realistic Day-by-Day</h2>
+        <p>
+          The real work, the meetings that matter, the deliverables to expect, and what a
+          fractional CMO won't do for you.
+        </p>
+        <span class="arrow">Read →</span>
+      </a>
+
+      <a class="article-row" href="/writing/fractional-cmo-vs-consultant-vs-agency">
+        <div class="article-row-meta">
+          <span>Founder framework</span>
+          <span class="dot" aria-hidden="true"></span>
+          <time datetime="2026-05-15">May 15, 2026</time>
+        </div>
+        <h2>Fractional CMO vs Marketing Consultant vs Agency: What's the Difference?</h2>
+        <p>
+          Three different shapes for buying outside marketing help. When each is right, what they
+          cost, and the biggest founder mistake (hiring an agency when you need a fractional CMO).
+        </p>
+        <span class="arrow">Read →</span>
+      </a>
+
+      <a class="article-row" href="/writing/fractional-cmo-engagement-length">
+        <div class="article-row-meta">
+          <span>Founder framework</span>
+          <span class="dot" aria-hidden="true"></span>
+          <time datetime="2026-05-15">May 15, 2026</time>
+        </div>
+        <h2>How Long Does a Fractional CMO Engagement Last?</h2>
+        <p>
+          The 6-12 month sweet spot, why shorter doesn't compound, why longer needs a plan, and
+          the four phases of a real engagement.
+        </p>
+        <span class="arrow">Read →</span>
+      </a>
+
+      <a class="article-row" href="/writing/fractional-cmo-vs-full-time-vs-ai-augmented">
+        <div class="article-row-meta">
+          <span>Founder framework</span>
+          <span class="dot" aria-hidden="true"></span>
+          <time datetime="2026-05-15">May 15, 2026</time>
+        </div>
+        <h2>Fractional CMO vs Full-Time CMO vs AI-Augmented Operator: A Founder's Framework</h2>
+        <p>
+          Three ways to get senior marketing leadership into a funded startup. Cost,
+          capability, and a decision framework for which one fits your stage.
+        </p>
+        <span class="arrow">Read →</span>
+      </a>
+
+      <a class="article-row" href="/writing/ai-for-sales-teams">
+        <div class="article-row-meta">
+          <span>AI for sales</span>
+          <span class="dot" aria-hidden="true"></span>
+          <time datetime="2026-05-15">May 15, 2026</time>
+        </div>
+        <h2>AI for Sales Teams: How to Make Your AEs Sound Like Senior Reps</h2>
+        <p>
+          AI as a sales coach, not a sales replacement. The five highest-leverage use cases,
+          what NOT to do, and the rollout timeline that actually gets adoption.
+        </p>
+        <span class="arrow">Read →</span>
+      </a>
+
+      <a class="article-row" href="/writing/gtm-engineer-vs-marketing-ops-vs-revops">
+        <div class="article-row-meta">
+          <span>Go-to-market engineering</span>
+          <span class="dot" aria-hidden="true"></span>
+          <time datetime="2026-05-15">May 15, 2026</time>
+        </div>
+        <h2>GTM Engineer vs Marketing Ops vs RevOps: Who Owns What</h2>
+        <p>
+          Three roles, constantly confused. The clean distinction between them and a buyer's
+          guide on which you actually need first.
+        </p>
+        <span class="arrow">Read →</span>
+      </a>
+
+      <a class="article-row" href="/writing/how-to-implement-ai-in-b2b-marketing">
+        <div class="article-row-meta">
+          <span>AI implementation</span>
+          <span class="dot" aria-hidden="true"></span>
+          <time datetime="2026-05-15">May 15, 2026</time>
+        </div>
+        <h2>How to Actually Implement AI in B2B Marketing (Without Replacing Your Team)</h2>
+        <p>
+          An AI implementation playbook that augments your existing team instead of replacing
+          them. The 3-pillar framework, the order of operations, and the part most articles
+          won't tell you - built for funded founders without a CMO yet.
+        </p>
+        <span class="arrow">Read →</span>
+      </a>
+
+      <a class="article-row" href="/writing/what-is-gtm-engineering">
+        <div class="article-row-meta">
+          <span>Go-to-market engineering</span>
+          <span class="dot" aria-hidden="true"></span>
+          <time datetime="2026-05-15">May 15, 2026</time>
+        </div>
+        <h2>What GTM Engineering Actually Is (And Why You Need One)</h2>
+        <p>
+          GTM engineering is the discipline of turning go-to-market motion into automated,
+          instrumented systems. Here's what it actually is, what GTM engineers do, and when you
+          need one - with a worked example from Curve.
+        </p>
+        <span class="arrow">Read →</span>
+      </a>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Dan Westmoreland</p>
+    <p>
+      <a href="https://www.linkedin.com/in/danwestmoreland/">LinkedIn</a>
+      ·
+      <a href="mailto:dan@danwestmoreland.com">Email</a>
+    </p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="/assets/site.js" defer></script>
+</body>
+</html>

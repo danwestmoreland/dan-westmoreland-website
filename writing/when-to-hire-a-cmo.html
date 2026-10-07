@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>When Should a SaaS Startup Hire a CMO? - Dan Westmoreland</title>
+  <meta name="description" content="When to hire a full-time CMO for your SaaS startup, signs you're ready, signs you're not, and what to do before you cross the threshold." />
+
+  <meta property="og:title" content="When Should a SaaS Startup Hire a CMO?" />
+  <meta property="og:description" content="Stage thresholds, signs you're ready, what to do before you cross them." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://danwestmoreland.com/writing/when-to-hire-a-cmo" />
+  <meta property="og:image" content="https://danwestmoreland.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://danwestmoreland.com/og-image.png" />
+  <meta property="article:author" content="Dan Westmoreland" />
+  <meta property="article:published_time" content="2026-05-15" />
+
+  <link rel="canonical" href="https://danwestmoreland.com/writing/when-to-hire-a-cmo" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600&display=swap" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org", "@type": "Article",
+    "headline": "When Should a SaaS Startup Hire a CMO?",
+    "description": "Stage thresholds, signs you're ready, signs you're not, and what to do before you cross them.",
+    "author": { "@type": "Person", "name": "Dan Westmoreland", "url": "https://danwestmoreland.com", "jobTitle": "Marketing operator", "sameAs": ["https://www.linkedin.com/in/danwestmoreland/"] },
+    "datePublished": "2026-05-15", "dateModified": "2026-05-15",
+    "mainEntityOfPage": "https://danwestmoreland.com/writing/when-to-hire-a-cmo",
+    "publisher": { "@type": "Person", "name": "Dan Westmoreland" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org", "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "At what ARR should a SaaS startup hire a CMO?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most B2B SaaS companies should hire a full-time CMO between $15M and $25M ARR, when the marketing function needs full-time leadership and a team of 8+ people. Earlier than that, fractional engagements are usually the better call." } },
+      { "@type": "Question", "name": "Is it ever right to hire a CMO before $10M ARR?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sometimes, in product-led or category-defining startups where brand and category creation are core to the business model. Even then, the founder needs to be able to support a senior hire with budget, team, and authority - otherwise the CMO leaves in 12 months." } },
+      { "@type": "Question", "name": "What should I do instead of hiring a CMO before $15M ARR?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Hire a fractional CMO or AI-augmented operator. You get senior judgment without the salary commitment, your team gets coaching, and you'll know in 6-12 months whether the engagement should convert to full-time or stay fractional." } }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body, h1, h2, h3, h4, p, ul, ol, blockquote { margin: 0; }
+    ul, ol { padding: 0; }
+    a { color: inherit; }
+    :root {
+      --bg: #F6F5F1; --bg-elev: #FDFDFB; --ink: #15171A; --ink-soft: #4A4D52;
+      --rule: #E2E1DB; --accent: #B8431F; --accent-ink: #FDFDFB;
+      --accent-bright: #F08A62;
+      --trust: #1F3D36;
+      --on-trust: #F6F5F1;
+      --serif: 'Fraunces', 'Georgia', serif; --sans: 'Inter', system-ui, sans-serif;
+      --maxw: 720px; --gutter: clamp(20px, 5vw, 56px);
+    }
+    body { font-family: var(--sans); background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; line-height: 1.6; font-size: 18px; }
+    .site-header { max-width: 1100px; margin: 0 auto; padding: 28px var(--gutter) 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .wordmark { font-family: var(--serif); font-weight: 700; font-size: 20px; letter-spacing: -0.01em; text-decoration: none; color: var(--ink); }
+    .site-header nav { display: flex; align-items: center; gap: 28px; }
+    .site-header nav a { text-decoration: none; font-weight: 500; font-size: 15px; color: var(--ink-soft); transition: color .15s ease; }
+    .site-header nav a:hover { color: var(--ink); }
+    .site-header nav a.is-active, .site-header nav a.nav-cta { color: var(--ink); border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
+    main { max-width: var(--maxw); margin: 0 auto; padding: 80px var(--gutter) 96px; }
+    .article-meta { display: flex; gap: 14px; align-items: center; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 28px; }
+    .article-meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
+    h1.article-title { font-family: var(--serif); font-weight: 500; font-size: clamp(32px, 5vw, 48px); line-height: 1.08; letter-spacing: -0.025em; color: var(--ink); margin-bottom: 24px; }
+    h1.article-title em { font-style: italic; color: var(--accent); }
+    .article-dek { font-family: var(--serif); font-size: clamp(19px, 2.2vw, 22px); line-height: 1.4; color: var(--ink-soft); font-style: italic; margin-bottom: 48px; max-width: 56ch; }
+    article p { font-size: 18px; line-height: 1.7; margin-bottom: 22px; color: var(--ink); }
+    article p strong { font-weight: 600; }
+    article p em { font-style: italic; }
+    article h2 { font-family: var(--serif); font-weight: 500; font-size: clamp(24px, 3.2vw, 30px); line-height: 1.15; letter-spacing: -0.02em; color: var(--ink); margin: 48px 0 16px; }
+    article h3 { font-family: var(--sans); font-weight: 600; font-size: 18px; color: var(--ink); margin: 28px 0 10px; }
+    article ul, article ol { margin: 0 0 22px 0; padding-left: 24px; }
+    article li { font-size: 18px; line-height: 1.65; margin-bottom: 8px; color: var(--ink); }
+    article li strong { font-weight: 600; }
+    article blockquote { border-left: 3px solid var(--accent); padding: 8px 0 8px 24px; margin: 32px 0; font-family: var(--serif); font-style: italic; font-size: clamp(20px, 2.4vw, 24px); line-height: 1.4; color: var(--ink); }
+    .author-card { margin-top: 64px; padding: 32px; background: var(--bg-elev); border: 1px solid var(--rule); border-radius: 18px; display: grid; grid-template-columns: 64px 1fr; gap: 20px; align-items: start; }
+    .author-avatar { width: 64px; height: 64px; border-radius: 50%; background: var(--ink); color: var(--accent); font-family: var(--serif); font-weight: 700; font-size: 28px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .author-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 50%; }
+    .author-card h4 { font-family: var(--serif); font-weight: 600; font-size: 20px; color: var(--ink); margin-bottom: 8px; }
+    .author-card p { font-size: 16px; line-height: 1.55; color: var(--ink-soft); margin-bottom: 12px; }
+    .author-card a { font-weight: 600; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); }
+    .article-cta { margin-top: 48px; padding: 36px 32px; background: var(--ink); color: var(--bg); border-radius: 18px; text-align: center; }
+    .article-cta h3 { font-family: var(--serif); font-weight: 500; font-size: clamp(22px, 2.8vw, 28px); letter-spacing: -0.015em; color: var(--bg); margin-bottom: 12px; }
+    .article-cta p { font-size: 17px; color: var(--bg); opacity: 0.85; margin-bottom: 22px; max-width: 50ch; margin-left: auto; margin-right: auto; }
+    .article-cta a.btn { display: inline-block; background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 500; font-size: 17px; padding: 14px 24px; border-radius: 999px; }
+    .related { margin-top: 48px; padding: 24px; border: 1px solid var(--rule); border-radius: 14px; }
+    .related h4 { font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+    .related a { font-family: var(--serif); font-size: 18px; color: var(--ink); text-decoration: none; font-weight: 500; display: block; margin-bottom: 6px; }
+    .related a:hover { color: var(--accent); }
+    .site-footer { border-top: 1px solid var(--rule); max-width: 1100px; margin: 0 auto; padding: 32px var(--gutter); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 14px; color: var(--ink-soft); }
+    .site-footer a { text-decoration: none; color: var(--ink-soft); }
+    .site-footer a:hover { color: var(--accent); }
+    @media (max-width: 800px) {
+      .site-header { flex-wrap: wrap; row-gap: 14px; }
+      .site-header nav { gap: 14px; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 4px; scrollbar-width: none; }
+      .site-header nav::-webkit-scrollbar { display: none; }
+      .site-header nav a { white-space: nowrap; font-size: 14px; }
+      .site-header nav a.nav-cta { margin-left: auto; } .site-header nav a[href$="#ai"], .site-header nav a[href$="#about"] { display: none; }
+      main { padding-top: 56px; padding-bottom: 64px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="wordmark" href="/">Dan Westmoreland</a>
+    <nav>
+      <a href="/services/">Services</a>
+      <a href="/work/">Work</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/#ai">AI</a>
+      <a href="/#about">About</a>
+      <a href="/writing/" class="is-active">Writing</a>
+      <a href="/book/" class="nav-cta">Book a call</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="article-meta">
+      <span>Founder framework</span>
+      <span class="dot" aria-hidden="true"></span>
+      <time datetime="2026-05-15">May 15, 2026</time>
+    </div>
+
+    <h1 class="article-title">When Should a SaaS Startup Hire a <em>CMO</em>?</h1>
+
+    <p class="article-dek">Direct answer: between $15M and $25M ARR for most B2B SaaS. The earlier you hire, the more likely it ends in a mismatch. Here's why and what to do instead.</p>
+
+    <article>
+
+      <p>
+        <strong>For most B2B SaaS companies, hire a full-time CMO between $15M and $25M ARR.</strong> Earlier than that, the math almost never works out: you can't give a senior CMO the budget, team, or authority they need to do the job, and they leave in 12-18 months. Later than that, you've usually lost a year of compounding growth you can't get back.
+      </p>
+
+      <p>Here's the stage-by-stage version.</p>
+
+      <h2>Under $2M ARR: Don't even think about it</h2>
+
+      <p>
+        You're still finding product-market fit. The marketing problem is fluid - what worked last month might not work this month. A CMO will build infrastructure for a motion you haven't proven yet. Use the founder, plus contractors for specific projects, plus maybe a part-time growth marketer.
+      </p>
+
+      <h2>$2M-$5M ARR: Hire your first marketing operator (not a CMO)</h2>
+
+      <p>
+        You need someone who'll run campaigns, manage HubSpot, and own the funnel. Title: head of marketing, head of growth, or director of marketing. Salary: $130K-$180K base. They report to the founder. Don't title them CMO - the title-creep mismatch hurts both sides.
+      </p>
+
+      <p>If you need senior judgment beyond what this hire can provide, layer in a fractional CMO 1-2 days a week.</p>
+
+      <h2>$5M-$15M ARR: Fractional CMO + a marketing team</h2>
+
+      <p>
+        The sweet spot for fractional. You have a small marketing team (2-6 people), the motion is starting to stabilize, but you're not ready to commit $300K-$500K of all-in CMO compensation. A fractional CMO at $8K-$15K/month gets you senior judgment, executive presence, and team coaching without the full burn.
+      </p>
+
+      <p>
+        Use this stage to figure out what kind of CMO you'd actually want. The fractional engagement is also an extended audition - if they're great and your scale grows, you might convert them to full-time later.
+      </p>
+
+      <h2>$15M-$25M ARR: Time to hire full-time</h2>
+
+      <p>
+        Marketing is now a team of 8+. The function needs daily leadership, not 1-3 days a week. You can afford the all-in cost. You have enough motion stability that a CMO won't be rebuilding the strategy every 90 days. Hire.
+      </p>
+
+      <p>
+        Profile to look for: someone who's been a CMO or VP marketing at a company 2-3x your size, ideally in your category. Avoid hiring CMOs from companies 10x bigger - they'll bring a playbook you can't execute at your scale.
+      </p>
+
+      <h2>$25M ARR+: You should already have one</h2>
+
+      <p>
+        If you're past $25M ARR and still don't have a full-time CMO, growth is almost certainly being capped by marketing leadership absence. Hire now. The cost of waiting another quarter is bigger than the cost of getting the hire wrong.
+      </p>
+
+      <h2>Signs you're ready (regardless of stage)</h2>
+
+      <ul>
+        <li>Marketing is a team of 8+ people that needs daily leadership</li>
+        <li>The motion is stable enough that you're optimizing, not still finding</li>
+        <li>You can fund a $300K-$500K all-in compensation package without strain</li>
+        <li>You have authority and budget to support the role - the CMO can actually do their job</li>
+        <li>Your last few senior hires worked out (you trust your hiring instinct)</li>
+      </ul>
+
+      <h2>Signs you're not ready</h2>
+
+      <ul>
+        <li>You're still rewriting your ICP every quarter</li>
+        <li>The marketing team is 1-3 people</li>
+        <li>Funding is tight and the cost would force trade-offs in other functions</li>
+        <li>You can't articulate what the CMO would own that's different from what the founder owns now</li>
+        <li>You're hoping the CMO will tell you what to do (they shouldn't have to - that's what fractional is for)</li>
+      </ul>
+
+      <h2>The hidden cost of hiring too early</h2>
+
+      <p>
+        Founders hire CMOs at $4M-$6M ARR thinking "marketing is the problem, this senior hire will fix it." Usually what happens: the CMO comes from a $50M ARR company, builds a team you can't afford, plans campaigns at a scale you can't fund, and either leaves frustrated or gets pushed out at month 14. Cost: ~$500K all-in plus 14 months of lost momentum.
+      </p>
+
+      <p>The fractional CMO at $10K/month would have produced more, faster, with less risk.</p>
+
+      <h2>The honest bottom line</h2>
+
+      <p>
+        Marketing leadership is one of the most expensive hires in a startup, and one of the easiest to get wrong. Match the role to your stage. When in doubt, go fractional first - it's the cheapest way to find out what kind of full-time leader you'll eventually need.
+      </p>
+
+      <div class="article-cta">
+        <h3>Trying to figure out where you are on this curve?</h3>
+        <p>If you're somewhere between $2M and $15M ARR and weighing the CMO question - that's a 30-minute conversation. I'll give you a straight answer.</p>
+        <a class="btn" href="/book/">Book a 30-minute call →</a>
+      </div>
+
+      <div class="related">
+        <h4>Related</h4>
+        <a href="/writing/fractional-cmo-cost">How Much Does a Fractional CMO Cost in 2026? →</a>
+        <a href="/writing/fractional-cmo-vs-full-time-vs-ai-augmented">Fractional CMO vs Full-Time CMO vs AI-Augmented Operator →</a>
+      </div>
+
+      <div class="author-card">
+        <div class="author-avatar"><img src="/dan-westmoreland.jpg" alt="Dan Westmoreland" /></div>
+        <div>
+          <h4>Dan Westmoreland</h4>
+          <p>
+            Marketing operator. Built inbound engines at Deputy, Northpass (acquired by Gainsight), and Curve. Believes brand equals demand, and demand that comes to you compounds. <a href="https://www.linkedin.com/in/danwestmoreland/">LinkedIn</a>
+          </p>
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Dan Westmoreland</p>
+    <p>
+      <a href="https://www.linkedin.com/in/danwestmoreland/">LinkedIn</a>
+      ·
+      <a href="mailto:dan@danwestmoreland.com">Email</a>
+    </p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="/assets/site.js" defer></script>
+</body>
+</html>
