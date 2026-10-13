@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Weekly GTM Play - Dan Westmoreland</title>
+  <meta name="description" content="One real GTM engineering play a week from Dan Westmoreland: what it does, the stack, the steps, and what broke. Built to copy." />
+  <meta property="og:title" content="The Weekly GTM Play - Dan Westmoreland" />
+  <meta property="og:description" content="One real GTM engineering play a week from Dan Westmoreland: what it does, the stack, the steps, and what broke. Built to copy." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://danwestmoreland.com/newsletter/" />
+  <meta property="og:image" content="https://danwestmoreland.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://danwestmoreland.com/og-image.png" />
+  <link rel="canonical" href="https://danwestmoreland.com/newsletter/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="/assets/site.css" />
+  <style>
+    .nl-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 56px; align-items: start; }
+    .nl-list { display: flex; flex-direction: column; gap: 22px; }
+    .nl-list li { display: grid; grid-template-columns: 34px 1fr; gap: 14px; }
+    .nl-list .n { font-family: var(--serif); font-size: 22px; color: var(--accent); line-height: 1.2; }
+    .nl-list strong { display: block; font-weight: 600; margin-bottom: 2px; }
+    .nl-list span.d { color: var(--ink-soft); font-size: 16px; }
+    .nl-sub { font-family: var(--serif); font-weight: 500; font-size: 26px; margin-bottom: 22px; }
+    .nl-queue { margin-top: 44px; padding-top: 32px; border-top: 1px solid var(--rule); }
+    .nl-queue li { padding: 12px 0; border-bottom: 1px solid var(--rule); color: var(--ink-soft); font-size: 16px; }
+    .nl-queue li b { color: var(--ink); font-weight: 600; }
+    .form-card .btn { width: 100%; border: 0; cursor: pointer; font-family: inherit; }
+    .form-note { font-size: 14px; color: var(--ink-soft); margin-top: 14px; }
+    .hp { position: absolute; left: -9999px; }
+    @media (max-width: 820px) { .nl-grid { grid-template-columns: 1fr; gap: 40px; } .nl-grid .form-card { order: -1; } }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="wordmark" href="/">Dan Westmoreland</a>
+    <nav>
+      <a href="/services/">Services</a>
+      <a href="/work/">Work</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/writing/">Writing</a>
+      <a href="/book/" class="nav-cta">Book a call</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-hero" style="padding-bottom:40px">
+      <p class="eyebrow">Newsletter</p>
+      <h1>One real GTM engineering play. <em>Every week</em>.</h1>
+      <p class="lede">Not a trend report. Each issue is one play I actually built: what it does, the tools, the steps, and what broke along the way. Short enough to read in five minutes, specific enough to copy by Friday.</p>
+    </section>
+
+    <section style="padding-top:0;border-top:0">
+      <div class="nl-grid">
+        <div>
+          <h2 class="nl-sub">What's in every issue</h2>
+          <ul class="nl-list">
+            <li><span class="n">1</span><div><strong>The play</strong><span class="d">One system that creates pipeline, described in a paragraph. Who it's for and when it's worth building.</span></div></li>
+            <li><span class="n">2</span><div><strong>The build</strong><span class="d">The stack, the steps in order, and the prompts or formulas. Free tools wherever a free tool does the job.</span></div></li>
+            <li><span class="n">3</span><div><strong>The mock</strong><span class="d">A working example you can click through, built on a made-up company so nothing is hidden behind an NDA.</span></div></li>
+            <li><span class="n">4</span><div><strong>What broke</strong><span class="d">The part that failed the first time, and what I changed. This is usually the useful bit.</span></div></li>
+          </ul>
+
+          <div class="nl-queue">
+            <h2 class="nl-sub">First plays in the queue</h2>
+            <ul>
+              <li><b>Account pages from one table.</b> A personalized landing page for every target account, driven by a single spreadsheet.</li>
+              <li><b>Visitor ID to Slack.</b> Know which companies hit your pricing page, and get them to a rep the same hour.</li>
+              <li><b>The outbound engine for under $100 a month.</b> Domains, warmed inboxes, and a sequencer, set up in a weekend.</li>
+            </ul>
+          </div>
+        </div>
+
+        <form class="form-card" name="newsletter" method="POST" action="/newsletter/thanks/" data-netlify="true" netlify-honeypot="bot-field">
+          <h2>Get the weekly play</h2>
+          <p>One email a week. No pitch in it.</p>
+          <input type="hidden" name="form-name" value="newsletter" />
+          <p class="hp"><label>Leave this empty <input name="bot-field" /></label></p>
+          <div class="field"><label for="n-name">First name</label><input id="n-name" name="name" autocomplete="given-name" required /></div>
+          <div class="field"><label for="n-email">Work email</label><input id="n-email" name="email" type="email" autocomplete="email" required /></div>
+          <div class="field"><label for="n-role">What do you do? <span class="hint">optional</span></label>
+            <select id="n-role" name="role">
+              <option value="">Select</option>
+              <option>Founder or CEO</option><option>Marketing</option><option>Sales</option><option>RevOps or GTM engineering</option><option>Something else</option>
+            </select>
+          </div>
+          <input type="hidden" name="utm_source" data-attrib="utm_source" />
+          <input type="hidden" name="utm_medium" data-attrib="utm_medium" />
+          <input type="hidden" name="utm_campaign" data-attrib="utm_campaign" />
+          <input type="hidden" name="landing_page" data-attrib="landing_page" />
+          <button class="btn" type="submit">Send me the plays →</button>
+          <p class="form-note">Unsubscribe with one reply. I won't share your email with anyone.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Dan Westmoreland</p>
+    <p>
+      <a href="/services/">Services</a> ·
+      <a href="/work/">Work</a> ·
+      <a href="/pricing/">Pricing</a> ·
+      <a href="/writing/">Writing</a> ·
+      <a href="/newsletter/">Newsletter</a> ·
+      <a href="https://www.linkedin.com/in/danwestmoreland/">LinkedIn</a> ·
+      <a href="mailto:dan@danwestmoreland.com">Email</a>
+    </p>
+  </footer>
+
+  <script src="/assets/site.js" defer></script>
+</body>
+</html>
