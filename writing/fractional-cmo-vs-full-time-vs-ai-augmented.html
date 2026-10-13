@@ -142,7 +142,28 @@
       .compare-table th, .compare-table td { padding: 10px 8px; }
     }
     @media (max-width: 800px) { .compare-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; } }
-  </style>
+  
+/* Resources dropdown */
+.nav-dd { position: relative; }
+.nav-dd-btn { font: inherit; font-weight: 500; font-size: 15px; color: var(--ink-soft); background: none; border: 0; padding: 0; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: color .15s ease; }
+.nav-dd-btn svg { width: 10px; height: 10px; transition: transform .15s ease; }
+.nav-dd:hover .nav-dd-btn, .nav-dd.open .nav-dd-btn, .nav-dd:focus-within .nav-dd-btn, .nav-dd-btn.is-active { color: var(--ink); }
+.nav-dd:hover .nav-dd-btn svg, .nav-dd.open .nav-dd-btn svg, .nav-dd:focus-within .nav-dd-btn svg { transform: rotate(180deg); }
+.nav-dd-menu { position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%); min-width: 240px; background: var(--bg-elev); border: 1px solid var(--rule); border-radius: 14px; padding: 8px; box-shadow: 0 12px 32px rgba(21,23,26,.08); display: none; flex-direction: column; z-index: 20; }
+.nav-dd-menu::before { content: ""; position: absolute; top: -14px; left: 0; right: 0; height: 14px; }
+.nav-dd:hover .nav-dd-menu, .nav-dd.open .nav-dd-menu, .nav-dd:focus-within .nav-dd-menu { display: flex; }
+.site-header nav .nav-dd-menu a { display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; border-radius: 9px; color: var(--ink); font-size: 15px; }
+.site-header nav .nav-dd-menu a span { font-size: 13px; font-weight: 400; color: var(--ink-soft); }
+.site-header nav .nav-dd-menu a:hover { background: var(--bg); }
+.site-header nav .nav-dd-menu a:hover span { color: var(--ink-soft); }
+@media (max-width: 800px) {
+  .nav-dd { display: contents; }
+  .nav-dd-btn { display: none; }
+  .nav-dd-menu { display: contents; }
+  .site-header nav .nav-dd-menu a { padding: 0; white-space: nowrap; font-size: 14px; color: var(--ink-soft); }
+  .site-header nav .nav-dd-menu a span { display: none; }
+}
+</style>
 </head>
 <body>
 
@@ -154,7 +175,7 @@
       <a href="/pricing/">Pricing</a>
       <a href="/#ai">AI</a>
       <a href="/#about">About</a>
-      <a href="/writing/" class="is-active">Writing</a>
+      <div class="nav-dd"><button type="button" class="nav-dd-btn is-active" aria-haspopup="true" aria-expanded="false" onclick="var p=this.parentNode;p.classList.toggle('open');this.setAttribute('aria-expanded',p.classList.contains('open'))">Resources <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3.5 5 7.5 9 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-menu"><a href="/plays/">Plays <span>One built system a week</span></a><a href="/writing/">Writing <span>Essays on GTM and AI</span></a><a href="/newsletter/">Newsletter <span>Get the weekly play by email</span></a></div></div>
       <a href="/book/" class="nav-cta">Book a call</a>
     </nav>
   </header>
