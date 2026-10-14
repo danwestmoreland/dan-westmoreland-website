@@ -312,3 +312,13 @@ a.play-item:hover h3 { color: var(--accent); }
   .site-header nav .nav-dd-menu a { flex-direction: row; gap: 8px; align-items: baseline; padding: 14px 0; border-radius: 0; }
   .site-header nav .nav-dd-menu a span { display: inline; font-size: 14px; }
 }
+
+/* Wordmark with mark, sticky header */
+.wordmark { display: inline-flex; align-items: center; gap: 10px; }
+.wordmark .mark { width: 30px; height: 30px; flex: none; color: var(--ink); }
+.site-header { position: sticky; top: 0; z-index: 50; transition: padding .2s ease; }
+.site-header::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 100vw; transform: translateX(-50%); background: var(--bg); z-index: -1; transition: box-shadow .2s ease; }
+.site-header.is-stuck { padding-top: 12px; padding-bottom: 12px; }
+.site-header.is-stuck::before { box-shadow: 0 1px 0 var(--rule), 0 8px 24px rgba(21,23,26,.06); }
+.site-header.is-stuck .wordmark .mark { width: 26px; height: 26px; }
+@media (max-width: 860px) { .site-header.menu-open { padding-bottom: 16px; } }

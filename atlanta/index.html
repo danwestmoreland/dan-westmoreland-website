@@ -16,6 +16,8 @@
   <meta name="twitter:image" content="https://danwestmoreland.com/og-image.png" />
   <link rel="canonical" href="https://danwestmoreland.com/atlanta/" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600&display=swap" />
@@ -187,7 +189,7 @@
 <body>
 
   <header class="site-header">
-    <a class="wordmark" href="/">Dan Westmoreland</a>
+    <a class="wordmark" href="/"><svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><g id="m" transform="translate(14 81) scale(0.044286 -0.044286) translate(19 0)"><path d="M-19 7Q-19 11 -16.5 13.0Q-14 15 -7 16L79 26Q98 28 108.5 34.0Q119 40 126.0 51.0Q133 62 137 79Q154 137 176.5 220.0Q199 303 226.5 402.0Q254 501 283.0 607.0Q312 713 340.5 818.5Q369 924 395.5 1020.0Q422 1116 443.0 1194.0Q464 1272 477 1324Q484 1348 477.0 1358.5Q470 1369 445 1372L356 1384Q346 1386 342.5 1388.0Q339 1390 339 1394Q339 1397 342.0 1398.5Q345 1400 351 1400H879Q1005 1400 1107.0 1358.0Q1209 1316 1276.5 1231.5Q1344 1147 1367.5 1021.0Q1391 895 1361 726Q1332 566 1259.0 433.5Q1186 301 1074.5 204.0Q963 107 818.5 53.5Q674 0 501 0H-8Q-14 0 -16.5 2.0Q-19 4 -19 7ZM510 18Q607 18 699.5 62.0Q792 106 872.5 195.5Q953 285 1014.5 421.0Q1076 557 1113 739Q1146 908 1141.0 1030.0Q1136 1152 1101.0 1230.5Q1066 1309 1007.5 1346.5Q949 1384 873 1384H791Q763 1384 740.5 1364.5Q718 1345 706 1300Q690 1243 668.5 1165.0Q647 1087 622.0 995.5Q597 904 571.0 807.0Q545 710 518.5 612.5Q492 515 468.0 426.0Q444 337 424.0 261.5Q404 186 390 133Q374 76 388.0 47.0Q402 18 446 18Z" fill="currentColor"/></g><circle cx="83" cy="75" r="7.5" fill="var(--accent)"/></svg><span>Dan Westmoreland</span></a>
     <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var h=this.closest('.site-header');h.classList.toggle('menu-open');this.setAttribute('aria-expanded',h.classList.contains('menu-open'))"><svg class="ic-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><svg class="ic-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     <nav>
       <a href="/services/" aria-current="page">Services</a>
@@ -304,5 +306,6 @@
   </footer>
 
   <script src="/assets/site.js" defer></script>
+<script>(function(){var h=document.querySelector('.site-header');if(!h)return;var t=false;function u(){var s=window.scrollY>24;if(s!==t){t=s;h.classList.toggle('is-stuck',s);}}window.addEventListener('scroll',u,{passive:true});u();})();</script>
 </body>
 </html>
