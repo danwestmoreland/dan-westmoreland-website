@@ -1,0 +1,39 @@
+session_id,day,domain,company,industry,headcount,state,country,person_title,pages
+s001,2026-10-06,northstarauto.ca,Northstar Auto Group,auto dealer group,230,ON,CA,,/blog/scheduling-tips
+s002,2026-10-06,rivalsched.example,RivalSched,software,120,CA,US,Owner,/product/calendar
+s003,2026-10-06,harborlightclinics.com,Harborlight Clinics,physical therapy group,60,WA,US,,/pricing
+s004,2026-10-06,harborlightclinics.com,Harborlight Clinics,physical therapy group,60,WA,US,Owner,/about
+s005,2026-10-06,cobblestonefreight.com,Cobblestone Freight & Co.,freight brokerage,95,TX,US,Operations Director,/
+s006,2026-10-06,marigolddental.com,Marigold Dental Partners,dental group,180,GA,US,,/
+s007,2026-10-07,bluefern.io,Bluefern Labs,software,14,CA,US,Owner,/demo|/pricing
+s008,2026-10-07,oakridgevet.com,Oakridge Veterinary,veterinary group,75,NC,US,VP Operations,/pricing
+s009,2026-10-07,harborlightclinics.com,Harborlight Clinics,physical therapy group,60,WA,US,Owner,/pricing|/about
+s010,2026-10-07,harborlightclinics.com,Harborlight Clinics,physical therapy group,60,WA,US,Operations Director,/about|/blog/scheduling-tips
+s011,2026-10-07,stateu.edu,State University,education,5000,GA,US,,/pricing|/product/dispatch
+s012,2026-10-08,lumenhome.com,Lumen Home Services,home services,140,AZ,US,Owner,/pricing
+s013,2026-10-08,zebrawood.example,Zebrawood,software,40,GA,US,,/customers|/product/dispatch
+s014,2026-10-08,cobblestonefreight.com,Cobblestone Freight & Co.,freight brokerage,95,TX,US,Operations Director,/pricing|/demo|/about
+s015,2026-10-08,tinyshop.example,Tiny Shop,retail,4,NY,US,Owner,/pricing
+s016,2026-10-08,bristolbay.co.uk,Bristol Bay Clinics,clinics,90,,GB,Owner,/product/calendar|/about
+s017,2026-10-08,bristolbay.co.uk,Bristol Bay Clinics,clinics,90,,GB,Operations Director,/pricing|/about
+s018,2026-10-09,lumenhome.com,Lumen Home Services,home services,140,AZ,US,Owner,/pricing|/|/product/calendar|/blog/scheduling-tips
+s019,2026-10-09,oakridgevet.com,Oakridge Veterinary,veterinary group,75,NC,US,Office Manager,/product/dispatch|/blog/scheduling-tips
+s020,2026-10-09,marigolddental.com,Marigold Dental Partners,dental group,180,GA,US,Operations Director,/product/calendar|/demo
+s021,2026-10-09,marigolddental.com,Marigold Dental Partners,dental group,180,GA,US,,/pricing
+s022,2026-10-09,tinyshop.example,Tiny Shop,retail,4,NY,US,Operations Director,/customers|/pricing
+s023,2026-10-10,rivalsched.example,RivalSched,software,120,CA,US,Office Manager,/demo|/blog/scheduling-tips
+s024,2026-10-10,lumenhome.com,Lumen Home Services,home services,140,AZ,US,,/product/calendar|/blog/scheduling-tips
+s025,2026-10-10,cobblestonefreight.com,Cobblestone Freight & Co.,freight brokerage,95,TX,US,,/pricing
+s026,2026-10-10,marigolddental.com,Marigold Dental Partners,dental group,180,GA,US,,/pricing|/product/dispatch
+s027,2026-10-10,tinyshop.example,Tiny Shop,retail,4,NY,US,Owner,/product/calendar|/about|/pricing
+s028,2026-10-10,stateu.edu,State University,education,5000,GA,US,Operations Director,/|/customers|/blog/scheduling-tips|/product/calendar
+s029,2026-10-11,tinyshop.example,Tiny Shop,retail,4,NY,US,Operations Director,/blog/scheduling-tips|/pricing
+s030,2026-10-11,marigolddental.com,Marigold Dental Partners,dental group,180,GA,US,Operations Director,/pricing
+s031,2026-10-11,pinecreststaffing.com,Pinecrest Staffing,staffing agency,420,OH,US,,/product/calendar
+s032,2026-10-11,marigolddental.com,Marigold Dental Partners,dental group,180,GA,US,,/demo|/pricing|/about
+s033,2026-10-11,harborlightclinics.com,Harborlight Clinics,physical therapy group,60,WA,US,Office Manager,/pricing|/demo|/product/calendar
+s034,2026-10-12,stateu.edu,State University,education,5000,GA,US,Operations Director,/customers|/pricing
+s035,2026-10-12,zebrawood.example,Zebrawood,software,40,GA,US,,/pricing|/product/dispatch
+s036,2026-10-12,lumenhome.com,Lumen Home Services,home services,140,AZ,US,,/product/dispatch|/customers
+s037,2026-10-12,rivalsched.example,RivalSched,software,120,CA,US,Owner,/integrations
+s038,2026-10-12,northstarauto.ca,Northstar Auto Group,auto dealer group,230,ON,CA,Owner,/about

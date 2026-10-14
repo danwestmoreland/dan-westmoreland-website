@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Visitor ID to Slack - GTM Play No. 2 - Dan Westmoreland</title>
+  <meta name="description" content="Know which companies hit your pricing page and get them to the right rep the same hour. A visitor identification pipeline on free tools, with the routing rules, the Slack message, and a mock you can click." />
+  <meta property="og:title" content="Visitor ID to Slack - GTM Play No. 2 - Dan Westmoreland" />
+  <meta property="og:description" content="Know which companies hit your pricing page and get them to the right rep the same hour. Built on free tools, with a mock you can click." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://danwestmoreland.com/plays/visitor-id-to-slack/" />
+  <meta property="og:image" content="https://danwestmoreland.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://danwestmoreland.com/og-image.png" />
+  <link rel="canonical" href="https://danwestmoreland.com/plays/visitor-id-to-slack/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="/assets/site.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://danwestmoreland.com/#dan",
+  "name": "Dan Westmoreland",
+  "url": "https://danwestmoreland.com/",
+  "image": "https://danwestmoreland.com/dan-westmoreland.jpg",
+  "jobTitle": "Fractional marketing leader and GTM engineer",
+  "description": "Fractional marketing leader and GTM engineer for B2B software companies. Ten years running demand generation as a VP and Head of at software companies. Builds inbound engines, outbound systems, and AI SDRs. Based in Atlanta, Georgia.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Atlanta",
+    "addressRegion": "GA",
+    "addressCountry": "US"
+  },
+  "email": "mailto:dan@danwestmoreland.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/danwestmoreland/"
+  ],
+  "knowsAbout": [
+    "GTM engineering",
+    "Demand generation",
+    "Fractional CMO",
+    "AI SDR",
+    "Outbound email systems",
+    "Clay",
+    "HubSpot",
+    "B2B SaaS marketing"
+  ],
+  "alumniOf": [
+    {
+      "@type": "Organization",
+      "name": "Marketo"
+    },
+    {
+      "@type": "Organization",
+      "name": "Deputy"
+    },
+    {
+      "@type": "Organization",
+      "name": "Fountain"
+    },
+    {
+      "@type": "Organization",
+      "name": "Northpass"
+    },
+    {
+      "@type": "Organization",
+      "name": "Movable Ink"
+    },
+    {
+      "@type": "Organization",
+      "name": "Curve Dental"
+    }
+  ]
+}
+  </script>
+  <style>
+    .slack { background: #FDFDFB; border: 1px solid var(--rule); border-radius: 14px; padding: 16px 18px; font-size: 15px; line-height: 1.5; margin: 0 0 22px; }
+    .slack .who { display: flex; gap: 10px; align-items: center; margin-bottom: 8px; }
+    .slack .bot { width: 36px; height: 36px; border-radius: 8px; background: var(--trust); color: var(--on-trust); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
+    .slack .name { font-weight: 700; }
+    .slack .app { font-size: 11px; font-weight: 600; background: var(--rule); border-radius: 4px; padding: 1px 5px; margin-left: 6px; color: var(--ink-soft); }
+    .slack .ts { color: var(--ink-soft); font-size: 13px; margin-left: 8px; }
+    .slack .row { display: flex; gap: 10px; margin: 4px 0; }
+    .slack .row b { min-width: 86px; font-weight: 600; color: var(--ink-soft); }
+    .slack .btns { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+    .slack .btns span { border: 1px solid var(--rule); border-radius: 6px; padding: 5px 10px; font-size: 13px; font-weight: 600; }
+    .slack .btns span.pri { background: #1D7A4A; color: #fff; border-color: #1D7A4A; }
+    .rules { width: 100%; border-collapse: collapse; font-size: 15px; margin: 0 0 22px; }
+    .rules th, .rules td { text-align: left; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+    .rules th { font-weight: 600; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
+    .flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin: 0 0 24px; }
+    .flow div { background: var(--bg-elev); border: 1px solid var(--rule); border-radius: 12px; padding: 14px 12px; font-size: 14px; }
+    .flow b { display: block; font-weight: 600; margin-bottom: 4px; }
+    .flow small { color: var(--ink-soft); }
+    @media (max-width: 760px) { .flow { grid-template-columns: 1fr; } .rules { font-size: 14px; } }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="wordmark" href="/"><svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><g id="m" transform="translate(14 81) scale(0.044286 -0.044286) translate(19 0)"><path d="M-19 7Q-19 11 -16.5 13.0Q-14 15 -7 16L79 26Q98 28 108.5 34.0Q119 40 126.0 51.0Q133 62 137 79Q154 137 176.5 220.0Q199 303 226.5 402.0Q254 501 283.0 607.0Q312 713 340.5 818.5Q369 924 395.5 1020.0Q422 1116 443.0 1194.0Q464 1272 477 1324Q484 1348 477.0 1358.5Q470 1369 445 1372L356 1384Q346 1386 342.5 1388.0Q339 1390 339 1394Q339 1397 342.0 1398.5Q345 1400 351 1400H879Q1005 1400 1107.0 1358.0Q1209 1316 1276.5 1231.5Q1344 1147 1367.5 1021.0Q1391 895 1361 726Q1332 566 1259.0 433.5Q1186 301 1074.5 204.0Q963 107 818.5 53.5Q674 0 501 0H-8Q-14 0 -16.5 2.0Q-19 4 -19 7ZM510 18Q607 18 699.5 62.0Q792 106 872.5 195.5Q953 285 1014.5 421.0Q1076 557 1113 739Q1146 908 1141.0 1030.0Q1136 1152 1101.0 1230.5Q1066 1309 1007.5 1346.5Q949 1384 873 1384H791Q763 1384 740.5 1364.5Q718 1345 706 1300Q690 1243 668.5 1165.0Q647 1087 622.0 995.5Q597 904 571.0 807.0Q545 710 518.5 612.5Q492 515 468.0 426.0Q444 337 424.0 261.5Q404 186 390 133Q374 76 388.0 47.0Q402 18 446 18Z" fill="currentColor"/></g><circle cx="83" cy="75" r="7.5" fill="var(--accent)"/></svg><span>Dan Westmoreland</span></a>
+    <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var h=this.closest('.site-header');h.classList.toggle('menu-open');this.setAttribute('aria-expanded',h.classList.contains('menu-open'))"><svg class="ic-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><svg class="ic-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    <nav>
+      <a href="/services/">Services</a>
+      <a href="/work/">Work</a>
+      <a href="/pricing/">Pricing</a>
+      <div class="nav-dd"><button type="button" class="nav-dd-btn" aria-haspopup="true" aria-expanded="false" onclick="var p=this.parentNode;p.classList.toggle('open');this.setAttribute('aria-expanded',p.classList.contains('open'))">Resources <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3.5 5 7.5 9 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-menu"><a href="/plays/">Plays <span>One built system a week</span></a><a href="/writing/">Writing <span>Essays on GTM and AI</span></a><a href="/newsletter/">Newsletter <span>Get the weekly play by email</span></a><a href="/speaking/">Speaking <span>Keynotes, panels, team sessions</span></a></div></div>
+      <a href="/book/" class="nav-cta">Book a call</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-hero" style="padding-bottom:40px">
+      <p class="eyebrow"><a href="/plays/">Plays</a> · No. 2</p>
+      <h1>Visitor ID <em>to Slack</em>.</h1>
+      <p class="lede">Know which companies are on your pricing page, and get the right rep a message about it inside the hour. No new SDR, no new tool your reps have to open. The signal shows up where they already are.</p>
+      <div class="play-meta"><span><b>For:</b> B2B teams with 2 to 10 reps and real website traffic</span><span><b>Stack:</b> a visitor ID script, a spreadsheet, a routing step, a Slack webhook</span><span><b>Cost:</b> $0 to start, about $80/month at volume</span><span><b>Build time:</b> one afternoon, two if you add enrichment</span></div>
+    </section>
+
+    <section style="padding-top:0;border-top:0">
+      <div class="play-article">
+        <h2>The play</h2>
+        <p>Somebody at a company you'd love to sell to just read your pricing page twice. Right now that fact lives in an analytics dashboard nobody checks, as an anonymous session. Visitor identification tools turn that session into a company name, and sometimes a person. That part is a product you buy. The play is what happens next: getting the name to the one rep who should act on it, with enough context to act, before lunch.</p>
+        <p>Most teams that buy a visitor ID tool stop at the dashboard. The dashboard is where leads go to die. The version that creates pipeline is a Slack message that says who, from where, what they looked at, and a button to claim it.</p>
+
+        <h2>Who it's for</h2>
+        <ul>
+          <li>You get at least a few hundred website visits a week. Below that the signal is too thin to route.</li>
+          <li>You have a pricing page, a demo page, or a product page that means "I'm shopping" when someone reads it.</li>
+          <li>Your reps live in Slack. If they don't, swap the last step for email or a CRM task; the rest holds.</li>
+          <li>You have a named-account list or territories, so "the right rep" is a rule, not a judgment call.</li>
+        </ul>
+        <p>At Curve Dental this was the first signal I wired into the AI SDR. The AI SDR came later; the Slack message came first and paid for itself in week two.</p>
+
+        <h2>The build</h2>
+        <div class="flow">
+          <div><b>1. Identify</b><small>Script on the site turns a visit into a company (and sometimes a person)</small></div>
+          <div><b>2. Filter</b><small>Only the pages that mean intent, only companies that fit</small></div>
+          <div><b>3. Enrich</b><small>Headcount, industry, and whether they're in the CRM already</small></div>
+          <div><b>4. Route</b><small>A rule picks the rep: owner in CRM, else territory, else round robin</small></div>
+          <div><b>5. Notify</b><small>One Slack message with the context and a claim button</small></div>
+        </div>
+        <div class="play-stack">
+          <h3>Stack</h3>
+          <table>
+            <tr><td>Identify</td><td>RB2B (free tier, US person-level), or Warmly, Vector, Leadfeeder, Clearbit Reveal for company-level. Whichever you pick, you need a webhook or a Slack output.</td></tr>
+            <tr><td>Filter and route</td><td>A Google Sheet for the rules, and n8n (free, self-hosted) or Zapier or Clay to run them. The mock below runs the rules in 30 lines of Python so you can read them.</td></tr>
+            <tr><td>Enrich</td><td>Clay if you have it. Apollo's free API if you don't. Skip it entirely for version one.</td></tr>
+            <tr><td>Notify</td><td>A Slack incoming webhook. Free, five minutes to set up, no app approval.</td></tr>
+          </table>
+        </div>
+        <ol>
+          <li><strong>Put the identification script on the site.</strong> Every tool gives you one tag. Put it on the whole site, not just the pricing page; you filter later, and you want the full session path.</li>
+          <li><strong>Define "intent" as a list of URLs.</strong> Pricing, demo, integrations, a specific product page. Two or more intent pages in one session, or the pricing page alone, counts. The homepage never counts.</li>
+          <li><strong>Define "fit" in a spreadsheet.</strong> Headcount range, industries, countries, and a list of domains to always ignore (your own, competitors, agencies, universities). Keep it in a sheet so sales can edit it without you.</li>
+          <li><strong>Write the routing rule in order.</strong> If the company has an owner in the CRM, that rep. Else, if a territory matches, that rep. Else, round robin across the SDRs. Write the fallback first; it's the one that fires most.</li>
+          <li><strong>Design the Slack message before you wire anything.</strong> Company, how we know (person or company level), pages viewed with timestamps, headcount and industry, CRM status, and the rep it's routed to. Two buttons: Claim, and Not a fit. Post it to a channel the rep is in, and tag them.</li>
+          <li><strong>Wire it with a webhook chain.</strong> Visitor ID tool fires a webhook on a session end; n8n catches it, runs the filter against the sheet, looks up the CRM owner, picks the rep, posts to Slack. Thirty minutes in n8n once the rules exist.</li>
+          <li><strong>Suppress repeats.</strong> One message per company per 7 days unless a new person shows up. Without this, the channel is noise in a week and reps mute it. This is the step everyone skips.</li>
+          <li><strong>Log every message to the sheet.</strong> Company, rep, timestamp, and whether it was claimed. In 30 days you'll know your claim rate and which pages predict a meeting.</li>
+        </ol>
+
+        <h2>The mock</h2>
+        <p>Same made-up company as Play 1: Zebrawood, scheduling software for multi-location businesses. Below is a week of fake visitor sessions run through the real rules. The sessions, the rules, and the script are in the folder; the Slack message is what the script prints.</p>
+        <h3>The routing rules (from the sheet)</h3>
+        <table class="rules">
+          <tr><th>Rule</th><th>Condition</th><th>Result</th></tr>
+          <tr><td>Ignore</td><td>Domain in the ignore list, or headcount under 10, or outside US and Canada</td><td>Drop silently</td></tr>
+          <tr><td>Intent</td><td>Visited /pricing, or two or more of /demo, /integrations, /product/*</td><td>Continue, else drop</td></tr>
+          <tr><td>Owner</td><td>Company has an owner in the CRM</td><td>Route to owner</td></tr>
+          <tr><td>Territory</td><td>State is in a rep's territory</td><td>Route to that rep</td></tr>
+          <tr><td>Fallback</td><td>Nothing matched</td><td>Round robin across SDRs</td></tr>
+          <tr><td>Repeat</td><td>Same company messaged in the last 7 days and no new person</td><td>Drop</td></tr>
+        </table>
+        <h3>What the rep sees</h3>
+        <div class="slack">
+          <div class="who"><div class="bot">Z</div><div><span class="name">Zebrawood Signals</span><span class="app">APP</span><span class="ts">10:42 AM</span></div></div>
+          <div><strong>Marigold Dental Partners</strong> is shopping. Routed to <strong>@priya</strong> (CRM owner).</div>
+          <div class="row"><b>Who</b><span>Office Manager, identified by RB2B (person-level)</span></div>
+          <div class="row"><b>Pages</b><span>/product/calendar, /demo in the last 14 minutes</span></div>
+          <div class="row"><b>Company</b><span>Dental group, 14 locations, about 180 employees, Atlanta GA</span></div>
+          <div class="row"><b>CRM</b><span>Open deal, owner @priya. Last touch 12 days ago.</span></div>
+          <div class="btns"><span class="pri">Claim</span><span>Not a fit</span><span>Snooze 7 days</span></div>
+        </div>
+        <p>Out of 38 fake sessions in the sample week, the rules produced 8 messages. Ten dropped as no intent, eight as ignored domains (your own staff and a competitor poking around), six as no fit, six as repeats. About one in five sessions becoming a message is the high end of right. If it's more than a quarter, your intent rule is too loose.</p>
+        <p>The files:</p>
+        <ul>
+          <li><a href="/plays/visitor-id-to-slack/sessions.csv">sessions.csv</a>, a week of fake visits</li>
+          <li><a href="/plays/visitor-id-to-slack/rules.csv">rules.csv</a>, the ignore list, territories, and CRM owners</li>
+          <li><a href="/plays/visitor-id-to-slack/route.py">route.py</a>, the routing logic, prints the Slack messages</li>
+        </ul>
+<pre><code>python3 route.py
+# 38 sessions, 8 messages
+# dropped: 10 no intent, 8 ignored domain, 6 no fit, 6 repeat
+
+-&gt; @marcus  Cobblestone Freight &amp; Co.  /pricing, /demo, /about
+   who: company-level (IP match) | freight brokerage, 95 employees, TX | routed by territory: TX
+-&gt; @priya   Marigold Dental Partners  /product/calendar, /demo
+   who: Office Manager, person-level | dental group, 180 employees, GA | routed by CRM owner
+...</code></pre>
+
+        <h2>What breaks</h2>
+        <p><strong>The channel gets muted.</strong> Every team that skips the repeat suppression ends up here within two weeks. One message per company per week, and a Snooze button, are the whole fix.</p>
+        <p><strong>Company-level ID is wrong about 10 to 20 percent of the time.</strong> IP-to-company lookups misfire on VPNs, shared offices, and ISPs. The message says how the company was identified, and a "Not a fit" click feeds the ignore list, so the tool gets quieter and more accurate every week.</p>
+        <p><strong>The rep claims it and does nothing.</strong> Claim writes to the log sheet with a timestamp. A weekly summary of claimed-but-untouched signals, sent to the sales lead, fixes this faster than any process doc.</p>
+        <p><strong>Legal.</strong> Person-level identification is a US-only product for a reason, and your privacy policy needs to say you use it. Company-level is fine almost everywhere. Ask whoever handles your privacy page before turning on person-level.</p>
+
+        <h2>Copy it</h2>
+        <p>Take the three files, replace the fake sessions with a webhook from your visitor ID tool, put the rules in a sheet, and move the Python into n8n or Zapier. If you want the version with Clay enrichment and the claim-rate report, that's the <a href="/offers/ai-sdr">AI SDR install</a>, where this is the first of the four signals.</p>
+
+        <div class="play-cta">
+          <h2>One play like this, every week.</h2>
+          <p>The email gets the build files and the mock before they go on the site. No pitch in it.</p>
+          <a class="btn" href="/newsletter/">Get the weekly play →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Dan Westmoreland</p>
+    <p>
+      <a href="/services/">Services</a> ·
+      <a href="/work/">Work</a> ·
+      <a href="/pricing/">Pricing</a> ·
+      <a href="/writing/">Writing</a> ·
+      <a href="/plays/">Plays</a> ·
+      <a href="/newsletter/">Newsletter</a> ·
+      <a href="https://www.linkedin.com/in/danwestmoreland/">LinkedIn</a> ·
+      <a href="mailto:dan@danwestmoreland.com">Email</a>
+    </p>
+  </footer>
+
+  <script src="/assets/site.js" defer></script>
+<script>(function(){var h=document.querySelector('.site-header');if(!h)return;var t=false;function u(){var s=window.scrollY>24;if(s!==t){t=s;h.classList.toggle('is-stuck',s);}}window.addEventListener('scroll',u,{passive:true});u();})();</script>
+</body>
+</html>
