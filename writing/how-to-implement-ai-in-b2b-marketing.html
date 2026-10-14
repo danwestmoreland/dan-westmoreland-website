@@ -199,6 +199,28 @@
   .site-header nav .nav-dd-menu a { padding: 0; white-space: nowrap; font-size: 14px; color: var(--ink-soft); }
   .site-header nav .nav-dd-menu a span { display: none; }
 }
+
+/* Mobile menu */
+.nav-toggle { display: none; }
+@media (max-width: 800px) {
+  .site-header { flex-wrap: wrap; position: relative; }
+  .nav-toggle { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin: -8px -10px -8px auto; background: none; border: 0; cursor: pointer; color: var(--ink); border-radius: 10px; }
+  .nav-toggle svg { width: 24px; height: 24px; }
+  .nav-toggle .ic-close, .site-header.menu-open .nav-toggle .ic-open { display: none; }
+  .site-header.menu-open .nav-toggle .ic-close { display: block; }
+  .site-header nav { display: none; width: 100%; flex-direction: column; align-items: stretch; gap: 0; overflow: visible; padding: 8px 0 4px; margin-top: 16px; border-top: 1px solid var(--rule); }
+  .site-header.menu-open nav { display: flex; }
+  .site-header nav a, .site-header nav .nav-dd-menu a { font-size: 17px; padding: 14px 0; border-bottom: 1px solid var(--rule); white-space: normal; color: var(--ink); }
+  .site-header nav a.nav-cta { margin: 14px 0 0; padding: 14px 0; border: 0; text-align: center; background: var(--ink); color: var(--bg-elev); border-radius: 999px; }
+  .site-header nav a[href$="#ai"], .site-header nav a[href$="#about"] { display: block; }
+  .nav-dd { display: block; }
+  .nav-dd-btn { display: block; pointer-events: none; padding: 16px 0 6px; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); }
+  .nav-dd-btn svg { display: none; }
+  .nav-dd-menu { display: flex; flex-direction: column; position: static; transform: none; min-width: 0; background: none; border: 0; box-shadow: none; padding: 0; }
+  .nav-dd-menu::before { display: none; }
+  .site-header nav .nav-dd-menu a { flex-direction: row; gap: 8px; align-items: baseline; padding: 14px 0; border-radius: 0; }
+  .site-header nav .nav-dd-menu a span { display: inline; font-size: 14px; }
+}
 </style>
   <script type="application/ld+json">
 {
@@ -263,6 +285,7 @@
 
   <header class="site-header">
     <a class="wordmark" href="/">Dan Westmoreland</a>
+    <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var h=this.closest('.site-header');h.classList.toggle('menu-open');this.setAttribute('aria-expanded',h.classList.contains('menu-open'))"><svg class="ic-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><svg class="ic-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     <nav>
       <a href="/services/">Services</a>
       <a href="/work/">Work</a>
