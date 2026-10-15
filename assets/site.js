@@ -108,7 +108,7 @@ var SITE_CONFIG = {
   if (yr) yr.textContent = new Date().getFullYear();
 })();
 
-/* Motion: inject gutter orbs and hero orbs, reveal sections on scroll. Homepage has its own markup, so skip there. */
+/* Motion: inject gutter orbs and hero orbs, reveal sections on scroll with stagger, count-up numbers, highlight accent phrases. Homepage has its own markup, so skip there. */
 (function(){
   document.documentElement.classList.add('js');
   if (document.querySelector('.gutter-orbs')) return;
@@ -117,9 +117,26 @@ var SITE_CONFIG = {
   document.body.insertBefore(layer, document.body.firstChild);
   var hero = document.querySelector('.page-hero');
   if (hero && !hero.querySelector('.orbs')) { var o = document.createElement('div'); o.className = 'orbs'; o.setAttribute('aria-hidden', 'true'); o.innerHTML = '<div class="orb o o1"></div><div class="orb g o2"></div>'; hero.insertBefore(o, hero.firstChild); }
-  var targets = document.querySelectorAll('main > section > *:not(.orbs), .card, .play-item, .talk, .tier, .step, .faq-item');
+  /* Accent phrases that get the highlight sweep */
+  document.querySelectorAll('.page-hero h1 em, .band h2 em, .section-title em, .play-article > p:first-of-type strong, .lede strong').forEach(function(el){ el.classList.add('hl'); });
+  var targets = document.querySelectorAll('main > section > *:not(.orbs), .card, .play-item, .talk, .tier, .step, .faq-item, .stat, .check-list li, .compare tbody tr, .band-inner > *');
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!('IntersectionObserver' in window) || reduce) return;
-  var io = new IntersectionObserver(function(entries){ entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }); }, { threshold: 0.05 });
-  targets.forEach(function(el){ if (el.closest('.site-header')) return; el.classList.add('rv'); io.observe(el); });
+  function countUp(el){
+    var m = /^([^\d]*)([\d,]*\.?\d+)(.*)$/.exec(el.textContent.trim()); if (!m) return;
+    var pre = m[1], num = m[2], post = m[3]; var dec = (num.split('.')[1] || '').length; var comma = num.indexOf(',') > -1;
+    var end = parseFloat(num.replace(/,/g, '')); if (isNaN(end)) return;
+    var t0 = null, dur = 1100;
+    function fmt(v){ var s = v.toFixed(dec); if (comma) s = s.replace(/\B(?=(\d{3})+(?!\d))/g, ','); return pre + s + post; }
+    function step(ts){ if (!t0) t0 = ts; var p = Math.min(1, (ts - t0) / dur); var e = 1 - Math.pow(1 - p, 3); el.textContent = fmt(end * e); if (p < 1) requestAnimationFrame(step); else el.textContent = fmt(end); }
+    requestAnimationFrame(step);
+  }
+  var io = new IntersectionObserver(function(entries){ entries.forEach(function(en){ if (en.isIntersecting) { var el = en.target; el.classList.add('in'); io.unobserve(el); el.querySelectorAll('.stat-num').forEach(countUp); if (el.classList.contains('stat-num')) countUp(el); } }); }, { threshold: 0.05 });
+  targets.forEach(function(el){
+    if (el.closest('.site-header')) return;
+    el.classList.add('rv');
+    var sib = el.parentNode ? Array.prototype.filter.call(el.parentNode.children, function(c){ return c.matches('.card, .play-item, .talk, .tier, .step, .faq-item, .stat, li, tr'); }) : [];
+    var i = sib.indexOf(el); if (i > 0) el.style.setProperty('--i', Math.min(i, 8));
+    io.observe(el);
+  });
 })();

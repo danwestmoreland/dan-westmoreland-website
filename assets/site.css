@@ -348,3 +348,38 @@ a.card:hover, a.play-item:hover { transform: translateY(-3px); }
 @media (prefers-reduced-motion: reduce) { .gorb, .orb { animation: none; } .rv { opacity: 1; transform: none; transition: none; } }
 @media (max-width: 1100px) { .gutter-orbs { display: none; } }
 @media (max-width: 800px) { .orb { filter: blur(44px); } .o1 { width: 320px; height: 320px; } .o2 { width: 260px; height: 260px; } }
+/* Motion, emphasis layer: stagger, count-up, title rules, highlight sweeps, step numbers, table tint, button lift */
+html.js .rv { transition-delay: calc(var(--i, 0) * 90ms); }
+.section-title { position: relative; }
+.section-title::after { content: ""; position: absolute; left: 0; bottom: -14px; height: 3px; width: 44px; background: var(--accent); border-radius: 2px; transform: scaleX(0); transform-origin: left; }
+html.js .section-title::after { transition: transform .7s cubic-bezier(.2,.7,.2,1) .35s; }
+html.js .section-title.in::after { transform: scaleX(1); }
+.band .section-title::after { background: var(--accent-bright); }
+html.js .eyebrow.rv { letter-spacing: .3em; transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1), letter-spacing 1.1s cubic-bezier(.2,.7,.2,1); }
+html.js .eyebrow.rv.in { letter-spacing: .12em; }
+.hl { background-image: linear-gradient(transparent 64%, rgba(240,138,98,.38) 64%, rgba(240,138,98,.38) 94%, transparent 94%); background-repeat: no-repeat; background-size: 100% 100%; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.band .hl { background-image: linear-gradient(transparent 64%, rgba(240,138,98,.28) 64%, rgba(240,138,98,.28) 94%, transparent 94%); }
+html.js .rv .hl, html.js .rv.hl { background-size: 0% 100%; transition: background-size .8s cubic-bezier(.2,.7,.2,1) .5s; }
+html.js .rv.in .hl, html.js .rv.in.hl { background-size: 100% 100%; }
+html.js .step::before { opacity: 0; transform: translateX(-10px); transition: opacity .5s ease .25s, transform .5s cubic-bezier(.2,.7,.2,1) .25s; }
+html.js .step.in::before { opacity: 1; transform: none; }
+html.js .check-list li::before { width: 0; transition: width .45s cubic-bezier(.2,.7,.2,1) .4s; }
+html.js .check-list li.in::before { width: 12px; }
+html.js .stat .stat-num { display: inline-block; transform: scale(.9); transform-origin: left bottom; transition: transform .9s cubic-bezier(.2,.7,.2,1) .1s; }
+html.js .stat.in .stat-num { transform: none; }
+html.js .compare td:nth-child(3) { background: transparent; transition: background .9s ease .45s, color .9s ease .45s; }
+html.js .compare tr.in td:nth-child(3) { background: rgba(31,61,54,.06); }
+html.js .compare tbody tr:last-child.in td:nth-child(3) { color: var(--trust); font-weight: 600; }
+@keyframes lift { 0%, 100% { transform: none; } 45% { transform: translateY(-4px) scale(1.03); } }
+html.js .rv.in .btn, html.js .rv.in.btn { animation: lift .8s cubic-bezier(.2,.7,.2,1) .75s 1; }
+@media (prefers-reduced-motion: reduce) {
+  html.js .rv { transition-delay: 0s; }
+  html.js .section-title::after { transform: scaleX(1); transition: none; }
+  html.js .eyebrow.rv { letter-spacing: .12em; transition: none; }
+  html.js .rv .hl, html.js .rv.hl { background-size: 100% 100%; transition: none; }
+  html.js .step::before, html.js .step.in::before { opacity: 1; transform: none; transition: none; }
+  html.js .check-list li::before { width: 12px; transition: none; }
+  html.js .stat .stat-num { transform: none; transition: none; }
+  html.js .compare td:nth-child(3) { transition: none; }
+  html.js .rv.in .btn, html.js .rv.in.btn { animation: none; }
+}
