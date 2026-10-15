@@ -671,6 +671,26 @@
     @media (prefers-reduced-motion: reduce) { .orb { animation: none; } }
     @media (max-width: 800px) { .orb { filter: blur(44px); } .o1 { width: 320px; height: 320px; } .o2 { width: 260px; height: 260px; } .o3 { display: none; } }
 
+    /* Gutter orbs: fixed layer, float in the margins outside the content column */
+    .gutter-orbs { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+    .gorb { position: absolute; border-radius: 50%; filter: blur(48px); will-change: transform; animation: gfloat var(--d, 28s) ease-in-out infinite alternate; animation-delay: var(--dl, 0s); }
+    .gorb.o { background: radial-gradient(circle at 35% 35%, #F08A62, #B8431F 70%); opacity: .26; }
+    .gorb.g { background: radial-gradient(circle at 35% 35%, #4C8C78, #1F3D36 70%); opacity: .2; }
+    .gorb.p { background: radial-gradient(circle at 35% 35%, #F6D7C9, #F08A62 70%); opacity: .3; }
+    /* left gutter: right edge of the orb sits at the content column's left edge */
+    .gL { right: calc(50% + 470px); }
+    .gR { left: calc(50% + 470px); }
+    .g1 { width: 360px; height: 360px; top: 6vh; --d: 30s; }
+    .g2 { width: 260px; height: 260px; top: 48vh; --d: 36s; --dl: -14s; }
+    .g3 { width: 300px; height: 300px; top: 78vh; --d: 26s; --dl: -6s; }
+    .g4 { width: 320px; height: 320px; top: 18vh; --d: 34s; --dl: -20s; }
+    .g5 { width: 240px; height: 240px; top: 60vh; --d: 24s; --dl: -9s; }
+    .g6 { width: 380px; height: 380px; top: 86vh; --d: 40s; --dl: -27s; }
+    @keyframes gfloat { 0% { transform: translate3d(0, 0, 0) scale(1); } 50% { transform: translate3d(28px, -90px, 0) scale(1.07); } 100% { transform: translate3d(-24px, 70px, 0) scale(.95); } }
+    main, .site-header, .site-footer { position: relative; z-index: 1; }
+    @media (prefers-reduced-motion: reduce) { .gorb { animation: none; } }
+    @media (max-width: 1100px) { .gutter-orbs { display: none; } }
+
     @media (max-width: 800px) {
       .site-header { flex-wrap: wrap; row-gap: 14px; }
       .site-header nav { gap: 14px; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 4px; scrollbar-width: none; }
@@ -798,7 +818,11 @@
   </script>
 </head>
 <body>
-
+  <div class="gutter-orbs" aria-hidden="true">
+    <div class="gorb o gL g1"></div><div class="gorb g gL g2"></div><div class="gorb p gL g3"></div>
+    <div class="gorb g gR g4"></div><div class="gorb o gR g5"></div><div class="gorb p gR g6"></div>
+  </div>
+  
   <header class="site-header">
     <a class="wordmark" href="/"><svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><g id="m" transform="translate(14 81) scale(0.044286 -0.044286) translate(19 0)"><path d="M-19 7Q-19 11 -16.5 13.0Q-14 15 -7 16L79 26Q98 28 108.5 34.0Q119 40 126.0 51.0Q133 62 137 79Q154 137 176.5 220.0Q199 303 226.5 402.0Q254 501 283.0 607.0Q312 713 340.5 818.5Q369 924 395.5 1020.0Q422 1116 443.0 1194.0Q464 1272 477 1324Q484 1348 477.0 1358.5Q470 1369 445 1372L356 1384Q346 1386 342.5 1388.0Q339 1390 339 1394Q339 1397 342.0 1398.5Q345 1400 351 1400H879Q1005 1400 1107.0 1358.0Q1209 1316 1276.5 1231.5Q1344 1147 1367.5 1021.0Q1391 895 1361 726Q1332 566 1259.0 433.5Q1186 301 1074.5 204.0Q963 107 818.5 53.5Q674 0 501 0H-8Q-14 0 -16.5 2.0Q-19 4 -19 7ZM510 18Q607 18 699.5 62.0Q792 106 872.5 195.5Q953 285 1014.5 421.0Q1076 557 1113 739Q1146 908 1141.0 1030.0Q1136 1152 1101.0 1230.5Q1066 1309 1007.5 1346.5Q949 1384 873 1384H791Q763 1384 740.5 1364.5Q718 1345 706 1300Q690 1243 668.5 1165.0Q647 1087 622.0 995.5Q597 904 571.0 807.0Q545 710 518.5 612.5Q492 515 468.0 426.0Q444 337 424.0 261.5Q404 186 390 133Q374 76 388.0 47.0Q402 18 446 18Z" fill="currentColor"/></g><circle cx="83" cy="75" r="7.5" fill="var(--accent)"/></svg><span>Dan Westmoreland</span></a>
     <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var h=this.closest('.site-header');h.classList.toggle('menu-open');this.setAttribute('aria-expanded',h.classList.contains('menu-open'))"><svg class="ic-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><svg class="ic-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
