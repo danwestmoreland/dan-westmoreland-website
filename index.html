@@ -653,6 +653,24 @@
       .ai-inner { grid-template-columns: 1fr; gap: 36px; padding: 64px var(--gutter); }
     }
 
+    /* Background orbs */
+    .orbs { position: absolute; top: 0; bottom: 0; left: 50%; width: 100vw; transform: translateX(-50%); overflow: hidden; pointer-events: none; z-index: 0; }
+    html, body { overflow-x: hidden; }
+    .orb { position: absolute; border-radius: 50%; filter: blur(60px); opacity: .5; will-change: transform; animation: drift 26s ease-in-out infinite alternate; }
+    .orb.o { background: radial-gradient(circle at 35% 35%, #F08A62, #B8431F 70%); }
+    .orb.g { background: radial-gradient(circle at 35% 35%, #4C8C78, #1F3D36 70%); }
+    .orb.p { background: radial-gradient(circle at 35% 35%, #F6D7C9, #F08A62 70%); }
+    .o1 { width: 620px; height: 620px; right: -120px; top: -220px; opacity: .3; }
+    .o2 { width: 520px; height: 520px; left: -200px; bottom: -220px; opacity: .2; animation-duration: 34s; animation-delay: -12s; }
+    .o3 { width: 300px; height: 300px; left: 38%; top: -120px; opacity: .22; animation-duration: 30s; animation-delay: -6s; }
+    @keyframes drift { 0% { transform: translate(0, 0) scale(1); } 50% { transform: translate(60px, 40px) scale(1.08); } 100% { transform: translate(-40px, 70px) scale(.96); } }
+    .hero, .contact { position: relative; }
+    .hero > *:not(.orbs), .contact > *:not(.orbs) { position: relative; z-index: 1; }
+    .contact .o1 { right: auto; left: -120px; top: -140px; }
+    .contact .o2 { left: auto; right: -160px; bottom: -200px; }
+    @media (prefers-reduced-motion: reduce) { .orb { animation: none; } }
+    @media (max-width: 800px) { .orb { filter: blur(44px); } .o1 { width: 320px; height: 320px; } .o2 { width: 260px; height: 260px; } .o3 { display: none; } }
+
     @media (max-width: 800px) {
       .site-header { flex-wrap: wrap; row-gap: 14px; }
       .site-header nav { gap: 14px; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 4px; scrollbar-width: none; }
@@ -798,6 +816,7 @@
   <main>
 
     <section class="hero">
+      <div class="orbs" aria-hidden="true"><div class="orb o o1"></div><div class="orb g o2"></div><div class="orb p o3"></div></div>
       <div class="hero-copy rv">
         <div class="avail"><span class="dot"></span>Taking two clients for Q1</div>
         <h1>I build the inbound engine your company is <em>missing</em>.</h1>
@@ -1013,6 +1032,7 @@
     </section>
 
     <section id="contact" class="contact">
+      <div class="orbs" aria-hidden="true"><div class="orb o o1"></div><div class="orb g o2"></div><div class="orb p"></div></div>
       <h2 class="section-title">Got something stuck?</h2>
       <p>
         Grab 30 minutes or send a note. Tell me what's not working and what you've already tried -
