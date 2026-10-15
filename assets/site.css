@@ -383,3 +383,7 @@ html.js .rv.in .btn, html.js .rv.in.btn { animation: lift .8s cubic-bezier(.2,.7
   html.js .compare td:nth-child(3) { transition: none; }
   html.js .rv.in .btn, html.js .rv.in.btn { animation: none; }
 }
+/* Recommendations: stacked quotes, initials disc when there is no photo */
+.quote-grid { display: grid; gap: 40px; max-width: 760px; }
+.quote-initials { width: 64px; height: 64px; border-radius: 50%; background: var(--trust); color: var(--on-trust); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-weight: 600; font-size: 22px; letter-spacing: -0.02em; }
+@media (max-width: 720px) { .quote-initials { width: 48px; height: 48px; font-size: 17px; } }
