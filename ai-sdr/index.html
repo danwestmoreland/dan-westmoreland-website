@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What an AI SDR Actually Is (With Numbers From Two Companies) - Dan Westmoreland</title>
+  <meta name="description" content="An AI SDR is not an email bot. It is the system that notices buying intent, enriches it, routes it to a human in minutes, and drafts the first touch. Here is what one did at two companies, with the real conversion rates, and what happened when the team tried an off-the-shelf agent instead." />
+  <meta property="og:title" content="What an AI SDR Actually Is (With Numbers From Two Companies)" />
+  <meta property="og:description" content="Not an email bot. The system that notices intent, enriches it, routes it, and drafts the first touch. Real conversion rates from two builds, and what an off-the-shelf agent did instead." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://danwestmoreland.com/ai-sdr/" />
+  <meta property="og:image" content="https://danwestmoreland.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://danwestmoreland.com/og-image.png" />
+  <link rel="canonical" href="https://danwestmoreland.com/ai-sdr/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="/assets/site.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What an AI SDR actually is, with numbers from two companies",
+  "description": "An AI SDR is the system that notices buying intent, enriches it, routes it to a human in minutes, and drafts the first touch. Real conversion rates from two builds, and what an off-the-shelf agent did instead.",
+  "url": "https://danwestmoreland.com/ai-sdr/",
+  "datePublished": "2026-10-15",
+  "dateModified": "2026-10-15",
+  "author": { "@id": "https://danwestmoreland.com/#dan" },
+  "publisher": { "@id": "https://danwestmoreland.com/#dan" },
+  "mainEntityOfPage": "https://danwestmoreland.com/ai-sdr/",
+  "about": ["AI SDR", "AI BDR", "GTM engineering", "Outbound sales automation"]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an AI SDR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An AI SDR is a system that does the research and first-touch work of a sales development rep: it notices buying signals (a pricing-page visit, a new hire, a funding round), enriches the account and the person, decides whether they fit, routes the ones that do to a human within minutes, and drafts the first message. The email-sending bot that vendors demo is the last ten percent of that system."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does an AI SDR replace human SDRs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In practice, no. At both companies where I built one, the SDR team stayed the same size and booked more. The AI took over list building, research, enrichment, and first drafts, and the humans took over the conversations. Cold outreach run fully by the bot converted about 0.8% of contacts to opportunities, which is roughly what a human gets on a cold list, at a fraction of the cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What results should you expect from an AI SDR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "From the fully automated outbound piece alone: roughly 1% of enriched contacts become opportunities, and a normal win rate on those. From the whole system, with intent signals feeding inbound and a small SDR team working the routed leads: at one company deal creation tripled in two quarters and the average won deal nearly doubled; at another, inbound demos went from 60 a month to over 200 and an AI workflow added 6 to 10 demos a month with no new headcount."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should you build an AI SDR or buy one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Buy one if you have no CRM discipline and no signals, because the bot is all you can use. Build one if you have a CRM, a sequencer, and a data tool like Clay, because the parts that produce pipeline are the signals and the routing, and those have to be built on your data anyway. When one team I worked with switched on an off-the-shelf prospecting agent, three out of four enrollments errored out and six finished."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What tools does an AI SDR run on?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Clay for enrichment and scoring, a CRM (HubSpot or Salesforce) for the record of truth and the sequences, a sending tool on warmed secondary domains for cold outbound, a visitor identification tool for website intent, Slack for routing, and a model like Claude for research and drafting. The tool costs run in the hundreds of dollars a month, not thousands. The cost is the build."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to build an AI SDR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Four to six weeks for a working system, most of it spent on the signals and the handoff into the CRM, not on the email copy. Results show up in the second and third quarter, when the inbound and routed leads have had time to become deals."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://danwestmoreland.com/" },
+    { "@type": "ListItem", "position": 2, "name": "AI SDR", "item": "https://danwestmoreland.com/ai-sdr/" }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://danwestmoreland.com/#dan",
+  "name": "Dan Westmoreland",
+  "url": "https://danwestmoreland.com/",
+  "image": "https://danwestmoreland.com/dan-westmoreland.jpg",
+  "jobTitle": "Fractional marketing leader and GTM engineer",
+  "description": "Fractional marketing leader and GTM engineer for B2B software companies. Ten years running demand generation as a VP and Head of at software companies. Builds inbound engines, outbound systems, and AI SDRs. Based in Atlanta, Georgia.",
+  "address": { "@type": "PostalAddress", "addressLocality": "Atlanta", "addressRegion": "GA", "addressCountry": "US" },
+  "email": "mailto:dan@danwestmoreland.com",
+  "sameAs": ["https://www.linkedin.com/in/danwestmoreland/"],
+  "knowsAbout": ["GTM engineering", "Demand generation", "AI SDR", "Outbound email systems", "Clay", "HubSpot", "B2B SaaS marketing"],
+  "alumniOf": [
+    { "@type": "Organization", "name": "Marketo" },
+    { "@type": "Organization", "name": "Deputy" },
+    { "@type": "Organization", "name": "Fountain" },
+    { "@type": "Organization", "name": "Northpass" },
+    { "@type": "Organization", "name": "Movable Ink" },
+    { "@type": "Organization", "name": "Curve Dental" }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="wordmark" href="/"><svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><g id="m" transform="translate(14 81) scale(0.044286 -0.044286) translate(19 0)"><path d="M-19 7Q-19 11 -16.5 13.0Q-14 15 -7 16L79 26Q98 28 108.5 34.0Q119 40 126.0 51.0Q133 62 137 79Q154 137 176.5 220.0Q199 303 226.5 402.0Q254 501 283.0 607.0Q312 713 340.5 818.5Q369 924 395.5 1020.0Q422 1116 443.0 1194.0Q464 1272 477 1324Q484 1348 477.0 1358.5Q470 1369 445 1372L356 1384Q346 1386 342.5 1388.0Q339 1390 339 1394Q339 1397 342.0 1398.5Q345 1400 351 1400H879Q1005 1400 1107.0 1358.0Q1209 1316 1276.5 1231.5Q1344 1147 1367.5 1021.0Q1391 895 1361 726Q1332 566 1259.0 433.5Q1186 301 1074.5 204.0Q963 107 818.5 53.5Q674 0 501 0H-8Q-14 0 -16.5 2.0Q-19 4 -19 7ZM510 18Q607 18 699.5 62.0Q792 106 872.5 195.5Q953 285 1014.5 421.0Q1076 557 1113 739Q1146 908 1141.0 1030.0Q1136 1152 1101.0 1230.5Q1066 1309 1007.5 1346.5Q949 1384 873 1384H791Q763 1384 740.5 1364.5Q718 1345 706 1300Q690 1243 668.5 1165.0Q647 1087 622.0 995.5Q597 904 571.0 807.0Q545 710 518.5 612.5Q492 515 468.0 426.0Q444 337 424.0 261.5Q404 186 390 133Q374 76 388.0 47.0Q402 18 446 18Z" fill="currentColor"/></g><circle cx="83" cy="75" r="7.5" fill="var(--accent)"/></svg><span>Dan Westmoreland</span></a>
+    <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var h=this.closest('.site-header');h.classList.toggle('menu-open');this.setAttribute('aria-expanded',h.classList.contains('menu-open'))"><svg class="ic-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><svg class="ic-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    <nav>
+      <a href="/services/">Services</a>
+      <a href="/work/">Work</a>
+      <a href="/pricing/">Pricing</a>
+      <div class="nav-dd"><button type="button" class="nav-dd-btn" aria-haspopup="true" aria-expanded="false" onclick="var p=this.parentNode;p.classList.toggle('open');this.setAttribute('aria-expanded',p.classList.contains('open'))">Resources <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3.5 5 7.5 9 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-menu"><a href="/plays/">Plays <span>One built system a week</span></a><a href="/writing/">Writing <span>Essays on GTM and AI</span></a><a href="/newsletter/">Newsletter <span>Get the weekly play by email</span></a><a href="/speaking/">Speaking <span>Keynotes, podcasts, team sessions</span></a></div></div>
+      <a href="/book/" class="nav-cta">Book a call</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <p class="eyebrow">AI SDR</p>
+      <h1>An AI SDR is not an email bot. <em>Here's what one actually did.</em></h1>
+      <p class="lede">I've built one at two companies and watched a third team buy one off the shelf. This page is the definition I'd give a CEO, the real conversion rates from both builds, and the numbers from the off-the-shelf attempt. No vendor wrote it.</p>
+      <div class="cta-row">
+        <a class="btn" href="/book/">Talk through yours →</a>
+        <a class="btn-ghost" href="/plays/visitor-id-to-slack/">See a piece of the build</a>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">The short answer</h2>
+      <div class="play-article">
+        <p><strong>An AI SDR is a system that does the research and first-touch work of a sales development rep.</strong> It notices buying signals (a pricing-page visit, a new VP of Sales, a funding round, a job posting for the role your product replaces), enriches the account and the person, decides whether they fit, routes the ones that do to a human within minutes, and drafts the first message with the research already done.</p>
+        <p>The email-sending bot that vendors demo is the last ten percent of that. It's also the part that matters least, because a bot sending to a cold list converts like a human sending to a cold list. What changes the numbers is everything upstream: knowing who to talk to today, and getting them to a person while they're still looking.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">What's inside one</h2>
+      <div class="steps">
+        <div class="step"><h3>1. Signals</h3><p>Website visitor identification, job postings, funding, hiring, tech installs, content downloads. Each one is a reason to reach out this week instead of some week.</p></div>
+        <div class="step"><h3>2. Enrichment and fit</h3><p>Clay (or similar) turns a signal into a named account and a named person, checks them against the ICP, and checks the CRM so nobody emails a customer or an open deal.</p></div>
+        <div class="step"><h3>3. Routing</h3><p>The ones that pass land in Slack and the CRM with the reason attached, assigned to a rep, inside minutes. This is where most of the pipeline comes from.</p></div>
+        <div class="step"><h3>4. Drafting and sending</h3><p>A model drafts the first touch from the research. Warm leads go to a human to send. Cold ones go through a sequencer on secondary domains. Replies get triaged back to a person.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <p class="eyebrow">Receipts</p>
+      <h2 class="section-title">Two companies, same build, honest numbers.</h2>
+      <div class="stat-row" style="margin-bottom:40px">
+        <div class="stat"><p class="stat-num">3x</p><p class="stat-label">Deals created per quarter, two quarters after the system went in (company A)</p></div>
+        <div class="stat"><p class="stat-num">19%</p><p class="stat-label">Inbound form contacts that became opportunities, once signals fed inbound (company A)</p></div>
+        <div class="stat"><p class="stat-num">0.8%</p><p class="stat-label">Cold enriched contacts that became opportunities through the fully automated outbound piece alone (company A)</p></div>
+        <div class="stat"><p class="stat-num">200+</p><p class="stat-label">Inbound demos a month, up from 60, with an AI workflow adding 6 to 10 more and no new headcount (Curve Dental)</p></div>
+      </div>
+      <div class="play-article">
+        <h3>Company A: a venture-backed software company selling to healthcare operators</h3>
+        <p>A small SDR team, a pipeline that ran almost entirely on cold outbound from imported lists, and inbound that was a rounding error. In the quarter before the build, the team created about 60 deals, and the average won deal was in the mid $30Ks.</p>
+        <p>I didn't start with the bot. I started by wiring the company to notice who was already paying attention: a visitor identification tool pointed at the site and piped into Clay, every identified visitor enriched and scored against the ICP, the ones that passed dropped into a Slack channel the reps lived in. Conference registrant lists got the same treatment. A whitepaper campaign landed its downloads in the same pipe. Then the sequencer, which had sat idle for two months, got three lanes with three messages, each fed by Clay with the research already done. Within a quarter the team was enrolling about 600 contacts a month, and roughly half of all new deals that year touched one of those sequences.</p>
+        <p>The fully automated piece, cold contacts enriched by Clay and worked without a human picking them, pushed about 5,000 contacts into the CRM. Forty became opportunities, roughly $1.5M in pipeline, and a handful closed at about $80K each with most still open. That's 0.8% contact to opportunity. A human on the same list does about the same. The difference is the human cost a salary.</p>
+        <p>What moved the company was inbound. Form fills went from under twenty a month to over a hundred, and the quality held: 19% of form contacts became opportunities, which is a demo-request rate, not a content-download rate. Two quarters in, deal creation had tripled and the average won deal had nearly doubled, because the signals were surfacing bigger accounts. Same reps.</p>
+        <h3>Curve Dental: the version I can name</h3>
+        <p>Dental practice management software, where I ran growth from 2024 to 2026. The build was the same shape: intent signals into Clay, routing into HubSpot and Slack, an AI workflow drafting first touches. Inbound demos went from 60 a month to over 200, marketing-sourced pipeline went from 20% to 70% of the total, and the AI workflow added 6 to 10 demos a month at roughly $40K of pipeline each, with no SDR hired. The case study is <a href="/work/curve">here</a>.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Build or buy</h2>
+      <div class="play-article">
+        <p>While the system above was running, the same team tried the other path: an off-the-shelf prospecting agent, the kind sold as an AI SDR in a box, switched on inside the CRM. It enrolled about 2,200 contacts. Three out of four errored out. Six finished the sequence. Some of that is configuration and some of it is the product, and from where the reps sat it didn't matter which; the bought version of the thing did a fraction of what the built version did, on the same contacts, in the same CRM.</p>
+      </div>
+      <div class="compare-wrap" style="margin-top:28px">
+        <table class="compare">
+          <thead><tr><th></th><th>Off-the-shelf agent</th><th>Built on your stack</th></tr></thead>
+          <tbody>
+            <tr><th>What it knows</th><td>Whatever the vendor's data says about the contact</td><td>Your CRM, your signals, your customer list, your ICP rules</td></tr>
+            <tr><th>Where leads come from</th><td>A list you upload or the vendor's database</td><td>Website intent, job postings, funding, content, events, plus lists</td></tr>
+            <tr><th>Who gets the warm ones</th><td>The bot, same as the cold ones</td><td>A human, in Slack, inside minutes</td></tr>
+            <tr><th>Setup</th><td>An afternoon</td><td>Four to six weeks</td></tr>
+            <tr><th>Running cost</th><td>Per-seat or per-contact, forever</td><td>Tool costs in the hundreds a month; you own it</td></tr>
+            <tr><th>What we saw</th><td>3 in 4 enrollments errored; 6 finished</td><td>Deal creation 3x in two quarters</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="lede" style="margin-top:28px;max-width:none;font-size:17px">Buy one if you have no CRM discipline and no signals, because the bot is all you can use. Build one if you have a CRM, a sequencer, and Clay or something like it, because the parts that produce pipeline have to be built on your data anyway.</p>
+    </section>
+
+    <section>
+      <h2 class="section-title">What it runs on</h2>
+      <div class="card-grid">
+        <div class="card"><h3>Enrichment and scoring</h3><p>Clay. Waterfall enrichment, ICP scoring, CRM lookups, the Slack and CRM pushes. The center of the system.</p></div>
+        <div class="card"><h3>Record of truth</h3><p>HubSpot or Salesforce. Sequences for the human lanes, properties for the signal and the reason, reporting that doesn't lie.</p></div>
+        <div class="card"><h3>Signals</h3><p>A visitor identification tool for website intent, public job boards for hiring signals, funding and tech-install data where it's worth paying for.</p></div>
+        <div class="card"><h3>Sending and drafting</h3><p>A sequencer on warmed secondary domains for cold outbound, never the main domain. A model like Claude for research and first drafts.</p></div>
+      </div>
+      <p class="lede" style="margin-top:28px;max-width:none;font-size:17px">The tools cost hundreds a month, not thousands. The expense is the build, which is why I sell it as a <a href="/offers/ai-sdr">fixed-price install</a> and hand it over documented.</p>
+    </section>
+
+    <section>
+      <p class="eyebrow">Frequently asked</p>
+      <h2 class="section-title">About AI SDRs.</h2>
+      <div class="faq-list">
+        <div class="faq-item"><h3>What is an AI SDR?</h3><p>An AI SDR is a system that does the research and first-touch work of a sales development rep: it notices buying signals, enriches the account and the person, decides whether they fit, routes the ones that do to a human within minutes, and drafts the first message. The email-sending bot that vendors demo is the last ten percent of that system.</p></div>
+        <div class="faq-item"><h3>Does an AI SDR replace human SDRs?</h3><p>In practice, no. At both companies where I built one, the SDR team stayed the same size and booked more. The AI took over list building, research, enrichment, and first drafts, and the humans took over the conversations. Cold outreach run fully by the bot converted about 0.8% of contacts to opportunities, which is roughly what a human gets on a cold list, at a fraction of the cost.</p></div>
+        <div class="faq-item"><h3>What results should you expect?</h3><p>From the fully automated outbound piece alone: roughly 1% of enriched contacts become opportunities, and a normal win rate on those. From the whole system, with signals feeding inbound and a small SDR team working the routed leads: at one company deal creation tripled in two quarters and the average won deal nearly doubled; at another, inbound demos went from 60 a month to over 200 and an AI workflow added 6 to 10 demos a month with no new headcount.</p></div>
+        <div class="faq-item"><h3>Should you build or buy?</h3><p>Buy one if you have no CRM discipline and no signals, because the bot is all you can use. Build one if you have a CRM, a sequencer, and a data tool like Clay, because the parts that produce pipeline are the signals and the routing, and those have to be built on your data anyway. When one team I worked with switched on an off-the-shelf prospecting agent, three out of four enrollments errored out and six finished.</p></div>
+        <div class="faq-item"><h3>What tools does it run on?</h3><p>Clay for enrichment and scoring, a CRM (HubSpot or Salesforce) for the record of truth and the sequences, a sending tool on warmed secondary domains for cold outbound, a visitor identification tool for website intent, Slack for routing, and a model like Claude for research and drafting. The tool costs run in the hundreds of dollars a month, not thousands. The cost is the build.</p></div>
+        <div class="faq-item"><h3>How long does it take to build?</h3><p>Four to six weeks for a working system, most of it spent on the signals and the handoff into the CRM, not on the email copy. Results show up in the second and third quarter, when the inbound and routed leads have had time to become deals.</p></div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="band-inner">
+        <h2>Want one built on your data? <em>Bring your numbers.</em></h2>
+        <p>Thirty minutes. If buying is the right call for you, I'll say so.</p>
+        <a class="btn" href="/book/">Book a 30-minute call →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Dan Westmoreland</p>
+    <p>
+      <a href="/services/">Services</a> ·
+      <a href="/work/">Work</a> ·
+      <a href="/pricing/">Pricing</a> ·
+      <a href="/writing/">Writing</a> ·
+      <a href="/plays/">Plays</a> ·
+      <a href="/newsletter/">Newsletter</a> ·
+      <a href="https://www.linkedin.com/in/danwestmoreland/">LinkedIn</a> ·
+      <a href="mailto:dan@danwestmoreland.com">Email</a>
+    </p>
+  </footer>
+
+  <script src="/assets/site.js" defer></script>
+<script>(function(){var h=document.querySelector('.site-header');if(!h)return;var t=false;function u(){var s=window.scrollY>24;if(s!==t){t=s;h.classList.toggle('is-stuck',s);}}window.addEventListener('scroll',u,{passive:true});u();})();</script>
+</body>
+</html>
