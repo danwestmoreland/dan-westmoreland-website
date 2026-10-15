@@ -107,3 +107,18 @@ var SITE_CONFIG = {
   var yr = document.getElementById("year");
   if (yr) yr.textContent = new Date().getFullYear();
 })();
+
+/* Motion: inject gutter orbs and hero orbs, reveal sections on scroll. Homepage has its own markup, so skip there. */
+(function(){
+  if (document.querySelector('.gutter-orbs')) return;
+  var layer = document.createElement('div'); layer.className = 'gutter-orbs'; layer.setAttribute('aria-hidden', 'true');
+  layer.innerHTML = '<div class="gorb o gL g1"></div><div class="gorb g gL g2"></div><div class="gorb p gL g3"></div><div class="gorb g gR g4"></div><div class="gorb o gR g5"></div><div class="gorb p gR g6"></div>';
+  document.body.insertBefore(layer, document.body.firstChild);
+  var hero = document.querySelector('.page-hero');
+  if (hero && !hero.querySelector('.orbs')) { var o = document.createElement('div'); o.className = 'orbs'; o.setAttribute('aria-hidden', 'true'); o.innerHTML = '<div class="orb o o1"></div><div class="orb g o2"></div>'; hero.insertBefore(o, hero.firstChild); }
+  var targets = document.querySelectorAll('main > section > *:not(.orbs), .card, .play-item, .talk, .tier, .step, .faq-item');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!('IntersectionObserver' in window) || reduce) return;
+  var io = new IntersectionObserver(function(entries){ entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }); }, { threshold: 0.05 });
+  targets.forEach(function(el){ if (el.closest('.site-header')) return; el.classList.add('rv'); io.observe(el); });
+})();
