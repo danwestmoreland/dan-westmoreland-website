@@ -37,7 +37,7 @@ body {
 
 /* Header / footer (matches homepage) */
 .site-header {
-  max-width: var(--maxw); margin: 0 auto; padding: 28px var(--gutter) 0;
+  max-width: var(--maxw); margin: 0 auto; padding: 24px var(--gutter) 20px;
   display: flex; align-items: center; justify-content: space-between; gap: 24px;
 }
 .wordmark { font-family: var(--serif); font-weight: 700; font-size: 20px; letter-spacing: -0.01em; text-decoration: none; color: var(--ink); }
