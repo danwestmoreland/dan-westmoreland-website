@@ -584,6 +584,75 @@
     .hero-cta .btn-ghost-pricing { font-weight: 500; font-size: 16px; color: var(--ink-soft); text-decoration: none; }
     .hero-cta .btn-ghost-pricing:hover { color: var(--accent); }
 
+    /* Homepage refresh */
+    .hero { padding-top: 64px; padding-bottom: 56px; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: 56px; align-items: center; }
+    .hero-copy { display: flex; flex-direction: column; gap: 24px; }
+    .hero-copy h1, .hero-copy .lede, .hero-copy .hero-cta { margin: 0; }
+    .hero-copy .lede { max-width: 50ch; }
+    .avail { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); }
+    .avail .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); animation: pulse 2.2s ease-out infinite; }
+    @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(240,138,98,.55); } 50% { box-shadow: 0 0 0 9px rgba(240,138,98,0); } }
+    .hero-visual { position: relative; }
+    .hero-visual > img { display: block; width: 100%; aspect-ratio: 4 / 4.6; object-fit: cover; object-position: 50% 18%; border-radius: 22px; }
+    .hero-tag { position: absolute; left: 18px; bottom: 18px; background: var(--bg-elev); border: 1px solid var(--rule); border-radius: 14px; padding: 12px 16px; display: flex; align-items: center; gap: 12px; box-shadow: 0 10px 30px rgba(21,23,26,.12); }
+    .hero-tag img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+    .hero-tag b { display: block; font-size: 14px; font-weight: 600; }
+    .hero-tag span { font-size: 13px; color: var(--ink-soft); }
+    .numbers { max-width: none; padding: 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); background: var(--bg-elev); }
+    .numbers-inner { max-width: var(--maxw); margin: 0 auto; padding: 44px var(--gutter); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+    .num { font-family: var(--serif); font-weight: 500; font-size: 54px; line-height: 1; letter-spacing: -0.03em; color: var(--accent); font-variant-numeric: tabular-nums; }
+    .num small { font-size: 30px; }
+    .num.pine { color: var(--trust); font-size: 40px; line-height: 1.1; letter-spacing: -0.02em; padding-top: 6px; }
+    .num-label { margin-top: 8px; font-size: 14px; color: var(--ink-soft); line-height: 1.4; }
+    .work-head { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 32px; }
+    .work-head .section-title { margin-bottom: 0; }
+    .work-head a { font-weight: 500; font-size: 15px; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); }
+    .work-head a:hover { color: var(--accent); border-color: var(--accent); }
+    .receipts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .receipt { display: flex; flex-direction: column; gap: 14px; background: var(--bg-elev); border: 1px solid var(--rule); border-radius: 18px; padding: 28px; text-decoration: none; color: inherit; transition: transform .18s ease, border-color .18s ease; }
+    .receipt:hover { transform: translateY(-3px); border-color: var(--accent); }
+    .receipt .co { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); }
+    .receipt .big { font-family: var(--serif); font-weight: 500; font-size: 40px; line-height: 1; color: var(--accent); letter-spacing: -0.02em; }
+    .receipt .big.pine { color: var(--trust); }
+    .receipt p { margin: 0; font-size: 15px; color: var(--ink-soft); line-height: 1.55; }
+    .receipt .more { margin-top: auto; padding-top: 6px; font-weight: 600; font-size: 14px; }
+    .ai { max-width: none; padding: 0; background: var(--trust); color: var(--on-trust); border-top: 0; }
+    .ai-inner { max-width: var(--maxw); margin: 0 auto; padding: 88px var(--gutter); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; align-items: center; }
+    .ai-copy { display: flex; flex-direction: column; gap: 22px; }
+    .ai .eyebrow { color: var(--accent-bright); margin: 0; }
+    .ai .section-title { margin: 0; color: var(--on-trust); font-size: clamp(32px, 4vw, 48px); line-height: 1.06; }
+    .ai .section-title em { color: var(--accent-bright); }
+    .ai .what-lede { margin: 0; color: var(--on-trust); opacity: .85; max-width: 46ch; }
+    .ai .hero-cta { margin: 0; }
+    .ai .btn { background: var(--accent); }
+    .ai .btn:hover { background: var(--accent-bright); color: var(--ink); }
+    .ai .btn-ghost { color: var(--on-trust); border-bottom-color: var(--on-trust); }
+    .ai .btn-ghost:hover { color: var(--accent-bright); border-bottom-color: var(--accent-bright); }
+    .slackcard { background: var(--bg-elev); color: var(--ink); border-radius: 16px; padding: 18px 20px; font-size: 14px; line-height: 1.5; box-shadow: 0 24px 60px rgba(0,0,0,.25); }
+    .slackcard .who { display: flex; gap: 10px; align-items: center; margin-bottom: 10px; }
+    .slackcard .bot { width: 34px; height: 34px; border-radius: 8px; background: var(--trust); color: var(--on-trust); display: flex; align-items: center; justify-content: center; font-weight: 700; }
+    .slackcard .app { font-size: 10px; font-weight: 600; background: var(--rule); border-radius: 4px; padding: 1px 5px; margin-left: 6px; color: var(--ink-soft); }
+    .slackcard .ts { color: var(--ink-soft); font-size: 12px; margin-left: 8px; }
+    .slackcard .row { display: flex; gap: 10px; margin-top: 4px; }
+    .slackcard .row b { min-width: 70px; font-weight: 600; color: var(--ink-soft); }
+    .slackcard .btns { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+    .slackcard .btns span { border: 1px solid var(--rule); border-radius: 6px; padding: 5px 10px; font-size: 13px; font-weight: 600; }
+    .slackcard .btns span.pri { background: #1D7A4A; color: #fff; border-color: #1D7A4A; }
+    .slackcard .note { margin-top: 12px; font-size: 12px; color: var(--ink-soft); }
+    .rv { opacity: 0; transform: translateY(14px); transition: opacity .55s ease, transform .55s ease; }
+    .rv.in { opacity: 1; transform: none; }
+    .btn { transition: background .15s ease, transform .15s ease; }
+    .btn:hover { transform: translateY(-1px); }
+    @media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; transition: none; } .avail .dot { animation: none; } }
+    @media (max-width: 800px) {
+      .hero { grid-template-columns: 1fr; gap: 32px; padding-top: 40px; }
+      .hero-visual > img { aspect-ratio: 4 / 3; }
+      .numbers-inner { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .num { font-size: 44px; }
+      .receipts { grid-template-columns: 1fr; }
+      .ai-inner { grid-template-columns: 1fr; gap: 36px; padding: 64px var(--gutter); }
+    }
+
     @media (max-width: 800px) {
       .site-header { flex-wrap: wrap; row-gap: 14px; }
       .site-header nav { gap: 14px; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 4px; scrollbar-width: none; }
@@ -729,107 +798,37 @@
   <main>
 
     <section class="hero">
-      <div class="hero-avatar"><img src="/dan-westmoreland.jpg" alt="Dan Westmoreland" /></div>
-      <p class="eyebrow">Marketing operator · Creative problem solver</p>
-      <h1>I build the inbound engine your company is <em>missing</em>.</h1>
-      <p class="lede">
-        Done it three times. One ended in a <strong>Gainsight acquisition</strong>.
-      </p>
-      <div class="hero-cta">
-        <a href="/book/" class="btn">Tell me what's stuck →</a>
-        <a href="/work/" class="btn-ghost">See the receipts</a>
-        <a href="/pricing/" class="btn-ghost-pricing">Pricing from $2,500 →</a>
+      <div class="hero-copy rv">
+        <div class="avail"><span class="dot"></span>Taking two clients for Q1</div>
+        <h1>I build the inbound engine your company is <em>missing</em>.</h1>
+        <p class="lede">Senior marketing leadership on a retainer, plus the AI and outbound systems built by hand. Done it three times. One ended in a <strong>Gainsight acquisition</strong>.</p>
+        <div class="hero-cta">
+          <a href="/book/" class="btn">Tell me what's stuck →</a>
+          <a href="/pricing/" class="btn-ghost">See every price</a>
+        </div>
       </div>
-      <div class="proof-strip">
-        <span class="label">Growth engines built at</span>
-        <span class="co">Marketo</span><span class="co">Deputy</span><span class="co">Fountain</span>
-        <span class="co">Northpass <small>acquired by Gainsight</small></span><span class="co">Movable Ink</span><span class="co">Curve Dental</span>
+      <div class="hero-visual rv">
+        <img src="/dan-atlanta-united.jpg" alt="Dan in an Atlanta United jersey outside the stadium on matchday" />
+        <div class="hero-tag"><img src="/dan-westmoreland.jpg" alt="" /><div><b>Atlanta, GA</b><span>Works with software companies anywhere in the US</span></div></div>
+      </div>
+    </section>
+
+    <section class="numbers">
+      <div class="numbers-inner">
+        <div class="rv"><div class="num"><span data-count="200">0</span><small>+</small></div><div class="num-label">Inbound demos a month, up from 60, at Curve Dental</div></div>
+        <div class="rv"><div class="num"><span data-count="100">0</span><small>K</small></div><div class="num-label">Monthly blog visitors, from zero, at Deputy</div></div>
+        <div class="rv"><div class="num"><span data-count="70">0</span><small>%</small></div><div class="num-label">Marketing-sourced pipeline, up from 20%, at Curve Dental</div></div>
+        <div class="rv"><div class="num pine">Acquired</div><div class="num-label">Northpass, by Gainsight, after the repositioning I led</div></div>
       </div>
     </section>
 
     <section id="work" class="work">
-      <h2 class="section-title">The receipts</h2>
-
-      <article class="win">
-        <div class="win-meta">
-          <span class="win-company">Deputy</span>
-          <span class="win-role">Inbound &amp; growth</span>
-          <div class="win-stat">
-            <span class="stat-num">0 → 100K</span>
-            <span class="stat-label">monthly blog visitors</span>
-          </div>
-          <div class="stat-connector">retargeting</div>
-          <div class="win-stat">
-            <span class="stat-num">800</span>
-            <span class="stat-label">inbound trial requests/mo</span>
-          </div>
-        </div>
-        <div class="win-story">
-          <p>
-            Australian workforce-management SaaS that had just launched into the American market.
-            They had an inbound engine running in APAC. The Americas needed one from scratch.
-          </p>
-          <p>
-            I built it. SEO targeting the people who actually hire hourly workers - fast-food
-            franchisees, retail ops, anyone running hourly labor. Top-of-funnel searches the ICP
-            was already typing into Google. <span class="quoted">"How to manage retail
-            inventory."</span> That kind of thing.
-          </p>
-          <p>
-            Win the searches, cookie everyone who lands, retarget into a trial. Most people at the
-            company didn't see what I was building until it was working. By then, the Americas had
-            its inbound engine.
-          </p>
-          <p class="case-link"><a href="/work/deputy">Read the full case study →</a></p>
-        </div>
-      </article>
-
-      <article class="win">
-        <div class="win-meta">
-          <span class="win-company">Northpass</span>
-          <span class="win-role">Marketing, positioning, exec team</span>
-          <div class="win-stat">
-            <span class="stat-num">Acquired by Gainsight</span>
-            <span class="stat-label">after a full pandemic-era repositioning</span>
-          </div>
-        </div>
-        <div class="win-story">
-          <p>
-            COVID hit. Our customers - gig-economy operators - couldn't afford software anymore.
-            The obvious move was to wait it out. The move we made instead was to repoint the
-            entire company at a different buyer.
-          </p>
-          <p>
-            We repositioned the product, the website, and the GTM motion to sell
-            <em>customer education software</em> into the customer success departments of software
-            companies. It worked. Gainsight bought the company.
-          </p>
-          <p class="case-link"><a href="/work/northpass">Read the full case study →</a></p>
-        </div>
-      </article>
-
-      <article class="win">
-        <div class="win-meta">
-          <span class="win-company">Curve</span>
-          <span class="win-role">Head of growth</span>
-          <div class="win-stat">
-            <span class="stat-num">200 inbound demos/mo</span>
-            <span class="stat-label">a first in the company's history</span>
-          </div>
-        </div>
-        <div class="win-story">
-          <p>
-            Started as their consultant. They hired me full-time. Same playbook, sharper tools -
-            Clay integration campaigns wired into the funnel, content tuned to the ICP, every
-            channel measured against the only number that matters: qualified pipeline.
-          </p>
-          <p>
-            Got them from mostly-outbound to mostly-inbound. Record revenue. Healthy spend.
-            Tight headcount.
-          </p>
-          <p class="case-link"><a href="/work/curve">Read the full case study →</a></p>
-        </div>
-      </article>
+      <div class="work-head"><h2 class="section-title">The receipts.</h2><a href="/work/">All three case studies</a></div>
+      <div class="receipts">
+        <a href="/work/curve" class="receipt rv"><span class="co">Curve Dental · Head of growth</span><span class="big">60 → 200+</span><p>Inbound demos a month, and an AI SDR that added pipeline without adding headcount.</p><span class="more">Read it →</span></a>
+        <a href="/work/northpass" class="receipt rv"><span class="co">Northpass · Head of demand gen</span><span class="big pine">Acquired</span><p>A pandemic-era repositioning from gig economy to customer education that ended in a Gainsight acquisition.</p><span class="more">Read it →</span></a>
+        <a href="/work/deputy" class="receipt rv"><span class="co">Deputy · Director of demand gen</span><span class="big">0 → 100K</span><p>Monthly blog visitors in a new market, turned into 800 trial requests a month.</p><span class="more">Read it →</span></a>
+      </div>
     </section>
 
     <section class="testimonial">
@@ -883,38 +882,26 @@
     </section>
 
     <section id="ai" class="ai">
-      <p class="eyebrow">AI implementation</p>
-      <h2 class="section-title">AI doesn't replace your team. It <em>up-levels</em> them.</h2>
-      <p class="what-lede">
-        Every AI vendor is selling fewer humans. I implement the opposite: agents that come
-        alongside the team you already have and raise their ceiling - across sales, marketing,
-        and customer success. Not a white-labeled chatbot. Real GTM agents wired into the work.
-      </p>
-
-      <div class="ai-pillars">
-        <div class="ai-pillar">
-          <h3>Sales agents</h3>
-          <p>Call analysis that surfaces the language that closes. Playbooks that adapt to who's
-          in the room. Pattern recognition for the AHA moments from AE calls. Follow-up that
-          goes out faster and sharper than a human alone.</p>
+      <div class="ai-inner">
+        <div class="ai-copy rv">
+          <p class="eyebrow">AI implementation</p>
+          <h2 class="section-title">AI doesn't replace your team. It <em>up-levels</em> them.</h2>
+          <p class="what-lede">Every AI vendor is selling fewer humans. I build agents that sit alongside the team you have and raise their ceiling: sales, marketing, and outbound, wired into your CRM. Not a white-labeled chatbot.</p>
+          <div class="hero-cta">
+            <a href="/offers/ai-sdr" class="btn">See the AI SDR install →</a>
+            <a href="/plays/" class="btn-ghost">Read the plays</a>
+          </div>
         </div>
-        <div class="ai-pillar">
-          <h3>Marketing agents</h3>
-          <p>Content, demand gen, and conversion-rate work where AI handles the scale and the
-          operator handles the judgment. Personalization at real volume - not &ldquo;Hi
-          {first_name}&rdquo; theater.</p>
-        </div>
-        <div class="ai-pillar">
-          <h3>GTM &amp; outbound agents</h3>
-          <p>Signal-driven outbound, built at scale, personalized to the prospect's actual
-          situation. Where GTM engineering meets your AEs and lifts the whole motion.</p>
+        <div class="slackcard rv" aria-label="Example of a Slack alert produced by a system Dan builds">
+          <div class="who"><div class="bot">Z</div><div><strong>Zebrawood Signals</strong><span class="app">APP</span><span class="ts">10:42 AM</span></div></div>
+          <div><strong>Marigold Dental Partners</strong> is shopping. Routed to <strong>@priya</strong> (CRM owner).</div>
+          <div class="row"><b>Who</b><span>Office Manager, identified by RB2B</span></div>
+          <div class="row"><b>Pages</b><span>/pricing (2x), /demo in the last 14 min</span></div>
+          <div class="row"><b>CRM</b><span>Open deal, last touch 12 days ago</span></div>
+          <div class="btns"><span class="pri">Claim</span><span>Not a fit</span><span>Snooze</span></div>
+          <div class="note">A real system I build, shown on a made-up company. <a href="/plays/visitor-id-to-slack/">How it works</a>.</div>
         </div>
       </div>
-
-      <p class="what-tag">
-        Built for funded SaaS founders with a hungry team and no CMO yet - senior
-        pattern-recognition plus AI leverage punches well above headcount.
-      </p>
     </section>
 
     <section id="about" class="about">
@@ -951,8 +938,7 @@
           </p>
         </div>
         <aside class="about-side">
-          <img class="about-photo" src="/dan-atlanta-united.jpg" width="840" height="1050" loading="lazy"
-            alt="Dan in an Atlanta United jersey on matchday, red smoke behind him" />
+          <img class="about-photo" src="/dan-westmoreland.jpg" alt="Dan Westmoreland" loading="lazy" />
           <div>
           <h3>Outside the work</h3>
           <ul>
@@ -1050,5 +1036,12 @@
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   <script src="/assets/site.js" defer></script>
 <script>(function(){var h=document.querySelector('.site-header');if(!h)return;var t=false;function u(){var s=window.scrollY>24;if(s!==t){t=s;h.classList.toggle('is-stuck',s);}}window.addEventListener('scroll',u,{passive:true});u();})();</script>
+<script>(function(){
+var els=document.querySelectorAll('.rv');var counted=false;
+function count(){if(counted)return;counted=true;document.querySelectorAll('[data-count]').forEach(function(el){var end=+el.getAttribute('data-count'),t0=null;function step(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/1200),e=1-Math.pow(1-p,3);el.textContent=Math.round(end*e);if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);});}
+if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')});document.querySelectorAll('[data-count]').forEach(function(el){el.textContent=el.getAttribute('data-count')});return;}
+var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');if(en.target.closest('.numbers'))count();io.unobserve(en.target);}});},{rootMargin:'0px 0px -8% 0px',threshold:0.12});
+els.forEach(function(e){io.observe(e)});
+})();</script>
 </body>
 </html>
