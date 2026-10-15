@@ -340,9 +340,9 @@ a.play-item:hover h3 { color: var(--accent); }
 @keyframes drift { 0% { transform: translate(0,0) scale(1); } 25% { transform: translate(-120px,90px) scale(1.1); } 50% { transform: translate(60px,200px) scale(.94); } 75% { transform: translate(180px,40px) scale(1.06); } 100% { transform: translate(0,0) scale(1); } }
 .page-hero { position: relative; } .page-hero > *:not(.orbs) { position: relative; z-index: 1; }
 main, .site-header, .site-footer { position: relative; z-index: 1; }
-html, body { overflow-x: hidden; }
-.rv { opacity: 0; transform: translateY(10px); transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
-.rv.in { opacity: 1; transform: none; }
+html, body { overflow-x: clip; }
+html.js .rv { opacity: 0; transform: translateY(10px); transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
+html.js .rv.in { opacity: 1; transform: none; }
 .card, .receipt, .tier, .play-item, .talk, .step { transition: transform .18s ease, border-color .18s ease; }
 a.card:hover, a.play-item:hover { transform: translateY(-3px); }
 @media (prefers-reduced-motion: reduce) { .gorb, .orb { animation: none; } .rv { opacity: 1; transform: none; transition: none; } }

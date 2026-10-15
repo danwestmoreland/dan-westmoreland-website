@@ -639,8 +639,8 @@
     .slackcard .btns span { border: 1px solid var(--rule); border-radius: 6px; padding: 5px 10px; font-size: 13px; font-weight: 600; }
     .slackcard .btns span.pri { background: #1D7A4A; color: #fff; border-color: #1D7A4A; }
     .slackcard .note { margin-top: 12px; font-size: 12px; color: var(--ink-soft); }
-    .rv { opacity: 0; transform: translateY(10px); transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
-    .rv.in { opacity: 1; transform: none; }
+    html.js .rv { opacity: 0; transform: translateY(10px); transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
+    html.js .rv.in { opacity: 1; transform: none; }
     .btn { transition: background .15s ease, transform .15s ease; }
     .btn:hover { transform: translateY(-1px); }
     @media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; transition: none; } .avail .dot { animation: none; } }
@@ -655,7 +655,7 @@
 
     /* Background orbs */
     .orbs { position: absolute; top: 0; bottom: 0; left: 50%; width: 100vw; transform: translateX(-50%); overflow: hidden; pointer-events: none; z-index: 0; }
-    html, body { overflow-x: hidden; }
+    html, body { overflow-x: clip; }
     .orb { position: absolute; border-radius: 50%; filter: blur(56px); opacity: .5; will-change: transform; animation: drift 22s ease-in-out infinite; }
     .orb.o { background: radial-gradient(circle at 35% 35%, #F08A62, #B8431F 70%); }
     .orb.g { background: radial-gradient(circle at 35% 35%, #4C8C78, #1F3D36 70%); }
@@ -858,9 +858,9 @@
 
     <section class="numbers">
       <div class="numbers-inner">
-        <div class="rv"><div class="num"><span data-count="200">0</span><small>+</small></div><div class="num-label">Inbound demos a month, up from 60, at Curve Dental</div></div>
-        <div class="rv"><div class="num"><span data-count="100">0</span><small>K</small></div><div class="num-label">Monthly blog visitors, from zero, at Deputy</div></div>
-        <div class="rv"><div class="num"><span data-count="70">0</span><small>%</small></div><div class="num-label">Marketing-sourced pipeline, up from 20%, at Curve Dental</div></div>
+        <div class="rv"><div class="num"><span data-count="200">200</span><small>+</small></div><div class="num-label">Inbound demos a month, up from 60, at Curve Dental</div></div>
+        <div class="rv"><div class="num"><span data-count="100">100</span><small>K</small></div><div class="num-label">Monthly blog visitors, from zero, at Deputy</div></div>
+        <div class="rv"><div class="num"><span data-count="70">70</span><small>%</small></div><div class="num-label">Marketing-sourced pipeline, up from 20%, at Curve Dental</div></div>
         <div class="rv"><div class="num pine">Acquired</div><div class="num-label">Northpass, by Gainsight, after the repositioning I led</div></div>
       </div>
     </section>
@@ -1081,8 +1081,9 @@
   <script src="/assets/site.js" defer></script>
 <script>(function(){var h=document.querySelector('.site-header');if(!h)return;var t=false;function u(){var s=window.scrollY>24;if(s!==t){t=s;h.classList.toggle('is-stuck',s);}}window.addEventListener('scroll',u,{passive:true});u();})();</script>
 <script>(function(){
+document.documentElement.classList.add('js');
 var els=document.querySelectorAll('.rv');var counted=false;
-function count(){if(counted)return;counted=true;document.querySelectorAll('[data-count]').forEach(function(el){var end=+el.getAttribute('data-count'),t0=null;function step(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/1200),e=1-Math.pow(1-p,3);el.textContent=Math.round(end*e);if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);});}
+function count(){if(counted)return;counted=true;document.querySelectorAll('[data-count]').forEach(function(el){var end=+el.getAttribute('data-count'),t0=null;el.textContent='0';function step(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/1200),e=1-Math.pow(1-p,3);el.textContent=Math.round(end*e);if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);});}
 if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')});document.querySelectorAll('[data-count]').forEach(function(el){el.textContent=el.getAttribute('data-count')});return;}
 var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');if(en.target.closest('.numbers'))count();io.unobserve(en.target);}});},{rootMargin:'0px 0px 0px 0px',threshold:0.05});
 els.forEach(function(e){io.observe(e)});

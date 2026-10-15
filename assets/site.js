@@ -110,6 +110,7 @@ var SITE_CONFIG = {
 
 /* Motion: inject gutter orbs and hero orbs, reveal sections on scroll. Homepage has its own markup, so skip there. */
 (function(){
+  document.documentElement.classList.add('js');
   if (document.querySelector('.gutter-orbs')) return;
   var layer = document.createElement('div'); layer.className = 'gutter-orbs'; layer.setAttribute('aria-hidden', 'true');
   layer.innerHTML = '<div class="gorb o gL g1"></div><div class="gorb g gL g2"></div><div class="gorb p gL g3"></div><div class="gorb g gR g4"></div><div class="gorb o gR g5"></div><div class="gorb p gR g6"></div>';
