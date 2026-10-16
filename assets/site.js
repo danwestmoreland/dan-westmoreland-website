@@ -123,6 +123,7 @@ var SITE_CONFIG = {
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!('IntersectionObserver' in window) || reduce) return;
   function countUp(el){
+    if (el.dataset.counted) return; el.dataset.counted = '1';
     var m = /^([^\d]*)([\d,]*\.?\d+)(.*)$/.exec(el.textContent.trim()); if (!m) return;
     var pre = m[1], num = m[2], post = m[3]; var dec = (num.split('.')[1] || '').length; var comma = num.indexOf(',') > -1;
     var end = parseFloat(num.replace(/,/g, '')); if (isNaN(end)) return;
