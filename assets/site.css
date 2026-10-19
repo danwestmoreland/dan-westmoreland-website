@@ -313,6 +313,22 @@ a.play-item:hover h3 { color: var(--accent); }
   .site-header nav .nav-dd-menu a span { display: inline; font-size: 14px; }
 }
 
+/* Who I help: two-column persona panel in the header */
+.nav-mega .nav-dd-menu.mega { min-width: 760px; display: none; grid-template-columns: 1fr 1fr; gap: 4px; padding: 10px; left: 0; transform: none; }
+.nav-mega:hover .nav-dd-menu.mega, .nav-mega.open .nav-dd-menu.mega, .nav-mega:focus-within .nav-dd-menu.mega { display: grid; }
+.site-header nav .nav-dd-menu.mega a { padding: 14px; gap: 6px; }
+.site-header nav .nav-dd-menu.mega a b { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 17px; letter-spacing: -0.01em; }
+.site-header nav .nav-dd-menu.mega a span { font-size: 13.5px; line-height: 1.45; }
+.site-header nav .nav-dd-menu.mega a em { font-style: normal; font-size: 13px; color: var(--accent); font-weight: 500; margin-top: 2px; }
+.site-header nav .nav-dd-menu.mega a:hover { background: var(--bg); }
+@media (max-width: 860px) {
+  .nav-mega .nav-dd-menu.mega, .nav-mega:hover .nav-dd-menu.mega, .nav-mega.open .nav-dd-menu.mega { display: flex; min-width: 0; grid-template-columns: none; padding: 0; }
+  .site-header nav .nav-dd-menu.mega a { flex-direction: column; align-items: flex-start; gap: 4px; padding: 14px 0; }
+  .site-header nav .nav-dd-menu.mega a b { font-size: 17px; }
+  .site-header nav .nav-dd-menu.mega a span { display: block; font-size: 14px; }
+  .site-header nav .nav-dd-menu.mega a em { display: none; }
+}
+
 /* Wordmark with mark, sticky header */
 .wordmark { display: inline-flex; align-items: center; gap: 10px; }
 .wordmark .mark { width: 30px; height: 30px; flex: none; color: var(--ink); }
