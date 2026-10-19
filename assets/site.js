@@ -141,3 +141,13 @@ var SITE_CONFIG = {
     io.observe(el);
   });
 })();
+
+/* RB2B website visitor identification (production only). Key: 7N850HKY28N1 */
+(function(key){
+  if (location.hostname !== 'danwestmoreland.com' && location.hostname !== 'www.danwestmoreland.com') return;
+  if (window.reb2b) return;
+  window.reb2b = {loaded: true};
+  var s = document.createElement('script'); s.async = true;
+  s.src = 'https://ddwl4m2hdecbv.cloudfront.net/b/' + key + '/' + key + '.js.gz';
+  var f = document.getElementsByTagName('script')[0]; f.parentNode.insertBefore(s, f);
+})('7N850HKY28N1');
