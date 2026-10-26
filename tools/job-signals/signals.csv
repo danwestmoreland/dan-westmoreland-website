@@ -1,20 +1,21 @@
 company,domain,signal,lane,title,location,posted,first_seen,new_this_run,url
 Brex,brex.com,ops,1 gap,"Director, Revenue Operations","New York, New York, United States",2026-10-06,2026-10-14,,https://www.brex.com/careers/8716945002?gh_jid=8716945002
-Brex,brex.com,sdr,1 gap,"Manager, Sales Development","Salt Lake City, Utah, United States",2026-10-12,2026-10-14,,https://www.brex.com/careers/8477492002?gh_jid=8477492002
+Brex,brex.com,sdr,1 gap,"Manager, Sales Development","Vancouver, British Columbia, Canada",2026-10-12,2026-10-14,,https://www.brex.com/careers/8477507002?gh_jid=8477507002
 Brex,brex.com,sdr,1 gap,Outbound Sales Development Representative,"Vancouver, British Columbia, Canada",2026-09-30,2026-10-14,,https://www.brex.com/careers/8814626002?gh_jid=8814626002
 Brex,brex.com,ops,1 gap,Senior Marketing Operations Manager,"San Francisco, California, United States",2026-10-08,2026-10-14,,https://www.brex.com/careers/8786673002?gh_jid=8786673002
 Drata,drata.com,ops,1 gap,Senior Marketing Operations Manager,Hybrid - San Francisco,2026-08-26,2026-10-14,,https://jobs.ashbyhq.com/drata/6f8d57db-1008-4c54-90f5-64028ab767a3
 Drata,drata.com,ops,1 gap,Revenue Operations Manager,Hybrid - San Francisco,2026-09-22,2026-10-14,,https://jobs.ashbyhq.com/drata/7ee6086a-3d73-427a-a5e0-2a768d9595ef
+Drata,drata.com,sdr,1 gap,"Sales Development Representative, Emerging",Hybrid - San Diego,2026-10-20,2026-10-26,yes,https://jobs.ashbyhq.com/drata/a74be52a-72df-404f-bf0f-be3f65b65004
 FullStory,fullstory.com,sdr,1 gap,Sales Development Representative ,Atlanta,2026-10-01,2026-10-14,,https://jobs.ashbyhq.com/fullstory/9085db0e-2fb8-48b0-a01f-ad2aabe40b6c
-Greenhouse,greenhouse.io,sdr,1 gap,Enterprise Sales Development Representative,Anywhere in the United States,2026-10-14,2026-10-14,,https://job-boards.greenhouse.io/greenhouse/jobs/8234044?gh_jid=8234044
-Greenhouse,greenhouse.io,sdr,1 gap,Mid-Market Sales Development Representative,Anywhere in the United States,2026-10-14,2026-10-14,,https://job-boards.greenhouse.io/greenhouse/jobs/6180015?gh_jid=6180015
-Greenhouse,greenhouse.io,sdr,1 gap,Sales Development Representative,Anywhere in Ireland,2026-10-16,2026-10-19,yes,https://job-boards.greenhouse.io/greenhouse/jobs/8280039?gh_jid=8280039
-Hex,hex.tech,ops,1 gap,Revenue Operations Director,Remote - US,2026-10-19,2026-10-19,yes,https://jobs.ashbyhq.com/hex/25b3a855-0ab2-493b-aa5f-d4f266784cde
+Greenhouse,greenhouse.io,sdr,1 gap,Enterprise Sales Development Representative,Anywhere in the United States,2026-10-21,2026-10-14,,https://job-boards.greenhouse.io/greenhouse/jobs/8234044?gh_jid=8234044
+Greenhouse,greenhouse.io,sdr,1 gap,Mid-Market Sales Development Representative,Anywhere in the United States,2026-10-19,2026-10-14,,https://job-boards.greenhouse.io/greenhouse/jobs/6180015?gh_jid=6180015
+Greenhouse,greenhouse.io,sdr,1 gap,Sales Development Representative,Anywhere in Ireland,2026-10-16,2026-10-19,,https://job-boards.greenhouse.io/greenhouse/jobs/8280039?gh_jid=8280039
 Hex,hex.tech,sdr,1 gap,Sales Development Representative,San Francisco,2025-01-24,2026-10-14,,https://jobs.ashbyhq.com/hex/93be0230-02b0-422c-95f2-128a430e5673
-Intercom,intercom.com,sdr,1 gap,Sales Development Representative,"Chicago, Illinois",2026-09-16,2026-10-14,,https://job-boards.greenhouse.io/intercom/jobs/7994073
+Hex,hex.tech,ops,1 gap,Revenue Operations Director,Remote - US,2026-10-23,2026-10-19,,https://jobs.ashbyhq.com/hex/25b3a855-0ab2-493b-aa5f-d4f266784cde
 Intercom,intercom.com,ops,1 gap,Senior Sales Operations Manager,"San Francisco, California",2026-09-29,2026-10-14,,https://job-boards.greenhouse.io/intercom/jobs/8196135
 Mercury,mercury.com,sdr,1 gap,Sales Development Representative,"San Francisco, CA, New York, NY, Portland, OR, or Remote within United States",2026-09-30,2026-10-14,,https://job-boards.greenhouse.io/mercury/jobs/6167220004
 Notion,notion.so,sdr,1 gap,"Manager, Sales Development","New York, New York",2026-10-13,2026-10-14,,https://jobs.ashbyhq.com/notion/d02d5ff4-fea3-4be8-b142-cb120e966399
+Notion,notion.so,ops,1 gap,Ecosystem Growth Engineer,"New York, New York",2026-10-21,2026-10-26,yes,https://jobs.ashbyhq.com/notion/45f60d0e-e44f-40c5-985e-4096a8966860
 Ramp,ramp.com,sdr,1 gap,"Sales Development Representative, Mid-Market","New York, NY (HQ)",2026-09-03,2026-10-14,,https://jobs.ashbyhq.com/ramp/83eec8f4-c37d-43c9-860b-27223eee3643
 Ramp,ramp.com,sdr,1 gap,"Sales Development Representative, SMB","New York, NY (HQ)",2026-09-03,2026-10-14,,https://jobs.ashbyhq.com/ramp/60d6aef5-b60d-4163-82b7-00bad89c6d3f
 Ramp,ramp.com,sdr,1 gap,"Manager, Sales Development | SMB","New York, NY (HQ)",2026-09-17,2026-10-14,,https://jobs.ashbyhq.com/ramp/f1ebd439-56ed-4d12-a8fd-979c74604eca
@@ -22,12 +23,11 @@ Ramp,ramp.com,sdr,1 gap,"Enterprise Manager, Sales Development","New York, NY (H
 Ramp,ramp.com,sdr,1 gap,"Sales Development Representative, Strategic Accounts","New York, NY (HQ)",2026-09-25,2026-10-14,,https://jobs.ashbyhq.com/ramp/7c55aa7c-90a5-46af-9ce7-134fbf370284
 Ramp,ramp.com,sdr,1 gap,"Manager, Sales Development, Public Sector ","New York, NY (HQ)",2026-10-09,2026-10-14,,https://jobs.ashbyhq.com/ramp/530d1596-c1bf-41aa-9915-548a692ed66e
 Unify,unify.com,sdr,1 gap,Sales Development Representative,San Francisco Office,2026-09-29,2026-10-14,,https://jobs.ashbyhq.com/unify/9ba552ad-dc0c-44ce-be05-b28c12b27018
-Vanta,vanta.com,sdr,1 gap,"Sales Development Representative, Enterprise","San Francisco, CA",2026-10-15,2026-10-19,yes,https://jobs.ashbyhq.com/vanta/c4652ceb-a50d-4dad-ab08-a386617a53f5
+Vanta,vanta.com,sdr,1 gap,"Sales Development Representative, Enterprise","San Francisco, CA",2026-10-15,2026-10-19,,https://jobs.ashbyhq.com/vanta/c4652ceb-a50d-4dad-ab08-a386617a53f5
 Vanta,vanta.com,ops,1 gap,Sr. AI GTM Engineer,Remote U.S.,2026-07-10,2026-10-14,,https://jobs.ashbyhq.com/vanta/91c73485-5d0c-4272-9643-401ebcfff9d1
 Vector,vector.co,ops,1 gap,"Director, Revenue Operations",Remote,2026-10-07,2026-10-14,,https://jobs.ashbyhq.com/vector/c3930e1e-21df-4f8f-a32c-f88c9075eada
-Brex,brex.com,marketing_leader,2 empty seat,"Director, Marketing Operations","New York, New York, United States",2026-10-16,2026-10-19,yes,https://www.brex.com/careers/8895333002?gh_jid=8895333002
+Brex,brex.com,marketing_leader,2 empty seat,"Director, Marketing Operations","San Francisco, California, United States",2026-10-16,2026-10-19,,https://www.brex.com/careers/8882037002?gh_jid=8882037002
 Drata,drata.com,marketing_leader,2 empty seat,"Senior Director, Demand Generation",Remote - US ,2026-07-08,2026-10-14,,https://jobs.ashbyhq.com/drata/1f9f0aff-d60f-4e0d-8d6f-333551826251
 Gusto,gusto.com,marketing_leader,2 empty seat,Head of Marketing - Symmetry,"Denver, CO - Hybrid; San Francisco, CA - Hybrid; Scottsdale, AZ - Hybrid",2026-10-05,2026-10-14,,https://job-boards.greenhouse.io/gusto/jobs/8224182
 Notion,notion.so,marketing_leader,2 empty seat,Head of Demand Engine,"San Francisco, California",2026-07-28,2026-10-14,,https://jobs.ashbyhq.com/notion/adb34b7e-89f3-4365-9f8f-4c98d50cc0fd
-Pendo,pendo.io,marketing_leader,2 empty seat,"VP, Growth Marketing","Remote / San Francisco, CA / New York, NY / Raleigh, NC ",2026-10-15,2026-10-14,,https://job-boards.greenhouse.io/pendo/jobs/8853992002
 Reprise,reprise.com,marketing_leader,2 empty seat,Director of Marketing,United States,2026-05-05,2026-10-14,,https://jobs.ashbyhq.com/reprise/4d6b5343-170f-4ed0-8488-440acac01f32
