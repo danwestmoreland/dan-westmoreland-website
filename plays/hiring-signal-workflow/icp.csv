@@ -1,0 +1,10 @@
+rule,value
+signal_titles,"Revenue Operations|RevOps|Sales Operations|Sales Ops|GTM Operations|Marketing Operations"
+exclude_title_words,"Analyst|Senior|Coordinator|Intern|Development Representative"
+headcount_min,40
+headcount_max,500
+industries,"B2B SaaS|Fintech SaaS|HR SaaS|Edtech SaaS|Healthcare software|Security software|Developer tools|Legal software|Hospitality software|Energy software|Manufacturing SaaS|Insurtech SaaS"
+countries,"US|CA"
+max_posting_age_days,30
+skip_crm_status,"customer|open deal"
+followup_days_after_posting,45

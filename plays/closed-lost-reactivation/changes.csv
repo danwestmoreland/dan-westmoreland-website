@@ -1,0 +1,35 @@
+deal_id,change_type,detail,new_contact,source,change_date
+D-1040,new_leader,hired your first COO after 12 years owner-led,Renee Whitaker,https://news.example/harrow-lane-coo,2026-09-30
+D-1041,new_locations,opened 3 clinics in Kentucky in the last two months,,https://news.example/bluegrass-vet-expansion,2026-10-02
+D-1042,new_leader,brought in a new VP of Operations in September,,https://people.example/tidewater-pt-vp-ops,2026-09-15
+D-1043,new_person_in_role,a new Practice Administrator started in August,Omar Fischer,https://people.example/copperleaf-practice-admin,2026-08-18
+D-1044,new_website,launched a redesigned website,,https://www.redfernhomehealth.example/,2026-09-01
+D-1045,funding,took a growth investment to add 10 branches over two years,,https://news.example/juniper-ridge-growth-round,2026-10-09
+D-1046,new_locations,added 2 terminals in Texas,,https://news.example/stillwater-freight-terminals,2026-08-27
+D-1047,award,named a top workplace in its region,,https://news.example/larkspur-top-workplace,2026-09-12
+D-1048,new_person_in_role,a new Regional Manager over the clubs started in October,Hannah Osei,https://people.example/foxglove-regional-manager,2026-10-06
+D-1050,funding,were bought by a private equity group that owns two other car wash brands,,https://news.example/sycamore-car-wash-acquired,2026-09-22
+D-1051,new_leader,hired a Director of Pharmacy Operations,,https://people.example/wren-oak-director-ops,2026-10-14
+D-1052,funding,raised a round to double its center count,,https://news.example/hollis-early-learning-round,2026-10-01
+D-1053,new_person_in_role,a new Practice Administrator started in July,Kavita Reyes,https://people.example/pepperbrook-practice-admin,2026-07-07
+D-1054,hiring,posted a job for a front-desk coordinator,,https://jobs.example/greystone-front-desk,2026-10-11
+D-1055,new_locations,opened 4 clinics across North Carolina,,https://news.example/canefield-pt-clinics,2026-09-08
+D-1056,new_leader,brought in a new Director of Operations in September,,https://people.example/meadowlark-director-ops,2026-09-02
+D-1058,new_person_in_role,a new Head of People started in September,Derek Brandt,https://people.example/clearwater-head-of-people,2026-09-09
+D-1059,new_locations,added 5 terminals through an acquisition,,https://news.example/ashby-freight-acquisition,2026-10-13
+D-1060,funding,took on a new investor to fund 3 more dealerships,,https://news.example/saddleback-auto-investor,2026-08-20
+D-1062,competitor_contract_ending,its scheduling contract was signed in October 2025 on a 12-month term,,https://notes.example/cedar-hollow-contract,2026-10-07
+D-1064,new_leader,promoted a new COO from within,,https://people.example/lantern-row-coo,2026-10-16
+D-1066,new_locations,opened 2 offices in Florida,,https://news.example/coral-bend-dental-offices,2026-09-25
+D-1067,hiring,hiring veterinary technicians at 3 locations,,https://jobs.example/oyster-point-vet-techs,2026-10-05
+D-1069,new_locations,opened 3 urgent care centers in Ohio,,https://news.example/marlowe-urgent-care-centers,2026-10-10
+D-1071,new_leader,hired your first VP of Operations,,https://people.example/driftline-vp-ops,2026-09-19
+D-1072,new_leader,brought in a new COO in August,,https://people.example/kettle-creek-coo,2026-08-11
+D-1073,new_person_in_role,a new Director of Operations started in September,Grace Ng,https://people.example/bramble-hill-director-ops,2026-09-23
+D-1074,new_website,launched a new website and brand,,https://www.hawthornefit.example/,2026-10-03
+D-1076,new_leader,hired a Director of Operations,,https://people.example/ridgeline-director-ops,2026-10-01
+D-1077,funding,raised money to add 6 stores,,https://news.example/pinecone-pharmacy-round,2026-09-28
+D-1079,funding,sold a majority stake to a dental support organization,,https://news.example/sunfield-dso-deal,2026-10-12
+D-1081,new_locations,opened 3 clinics in Tennessee,,https://news.example/hickory-flats-pt-clinics,2026-10-15
+D-1083,new_person_in_role,a new Director of Operations started in October,Jill Dubois,https://people.example/seabright-director-ops,2026-10-05
+D-1084,hiring,posted 12 recruiter openings,,https://jobs.example/westbrook-recruiters,2026-10-19
