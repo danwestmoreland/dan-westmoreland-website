@@ -1,0 +1,61 @@
+deal_id,company,industry,locations,state,owner,contact,contact_title,contact_still_there,closed_date,loss_reason,amount,last_touch
+D-1040,Harrow Lane Dental Partners,dental group,16,CO,Priya,Victor Nakamura,VP Operations,no,2025-09-06,no decision,41000,2025-11-05
+D-1041,Bluegrass Veterinary Group,veterinary group,27,IL,Marcus,Beth Moreno,Scheduling Manager,yes,2025-08-06,timing,18000,2025-09-05
+D-1042,Tidewater Physical Therapy,physical therapy clinics,19,MI,Dana,Tom Dubois,Scheduling Manager,yes,2026-02-12,competitor,33000,2026-02-12
+D-1043,Copperleaf Urgent Care,urgent care,22,GA,Priya,Victor Patel,Director of Operations,no,2025-06-14,champion left,9600,2026-09-27
+D-1044,Red Fern Home Health,home health agency,22,GA,Marcus,Hannah Kowalski,Scheduling Manager,yes,2026-01-18,no decision,26400,2026-01-18
+D-1045,Juniper Ridge Staffing,staffing agency,9,VA,Dana,Nora Alvarez,Director of Operations,yes,2026-01-15,budget,33000,2026-03-16
+D-1046,Stillwater Freight,freight brokerage,27,TN,Priya,Omar Osei,COO,yes,2026-03-13,timing,33000,2026-04-12
+D-1047,Larkspur Auto Group,auto dealer group,9,PA,Marcus,Nora Okafor,COO,yes,2025-12-16,no decision,26400,2025-12-16
+D-1048,Foxglove Fitness,fitness clubs,6,WA,Dana,Nora Dubois,COO,no,2026-03-01,champion left,9600,2026-03-31
+D-1049,Mill Creek Hospitality Group,restaurant group,9,NC,Priya,Tom Alvarez,Head of People,no,2025-05-10,no decision,33000,2025-05-10
+D-1050,Sycamore Car Wash,car wash chain,6,IL,Marcus,Sam Sullivan,Owner,yes,2025-10-04,budget,9600,2025-11-03
+D-1051,Wren & Oak Pharmacy,pharmacy chain,5,AZ,Dana,Jordan Chen,Regional Manager,yes,2025-11-17,timing,33000,2025-11-17
+D-1052,Hollis Early Learning,child care centers,5,CO,Priya,Grace Whitaker,Regional Manager,yes,2026-03-05,competitor,21600,2026-03-05
+D-1053,Pepperbrook Dental Partners,dental group,31,MI,Marcus,Miguel Fischer,Head of People,no,2025-08-08,champion left,9600,2025-08-08
+D-1054,Greystone Veterinary Group,veterinary group,9,GA,Dana,Derek Reyes,Director of Operations,yes,2025-10-05,no decision,14400,2025-11-04
+D-1055,Canefield Physical Therapy,physical therapy clinics,22,VA,Priya,Jordan Lindqvist,VP Operations,yes,2026-01-20,budget,14400,2026-02-19
+D-1056,Meadowlark Urgent Care,urgent care,5,MI,Marcus,Paul Reyes,Head of People,yes,2025-09-11,timing,9600,2025-09-11
+D-1057,Birchwood Home Health,home health agency,22,VA,Dana,Kavita Okafor,Owner,yes,2026-03-18,competitor,18000,2026-09-21
+D-1058,Clearwater Staffing,staffing agency,8,IL,Priya,Grace Chen,Head of People,no,2025-06-11,champion left,14400,2025-07-11
+D-1059,Ashby Freight,freight brokerage,11,MO,Marcus,Kavita Brandt,Regional Manager,yes,2025-06-08,no decision,14400,2025-06-08
+D-1060,Saddleback Auto Group,auto dealer group,9,VA,Dana,Chris Alvarez,COO,yes,2025-06-07,budget,21600,2025-08-06
+D-1061,Ironwood Fitness,fitness clubs,6,GA,Priya,Victor Sullivan,Regional Manager,yes,2026-04-01,no decision,33000,2026-04-01
+D-1062,Cedar Hollow Hospitality Group,restaurant group,14,WA,Marcus,Grace Reyes,VP Operations,yes,2025-10-07,competitor,33000,2025-10-07
+D-1063,Tanager Car Wash,car wash chain,9,CO,Dana,Jill Patel,Practice Administrator,no,2026-03-21,champion left,14400,2026-03-21
+D-1064,Lantern Row Pharmacy,pharmacy chain,5,TX,Priya,Derek Fischer,Scheduling Manager,yes,2026-01-11,no decision,14400,2026-07-30
+D-1065,Whitfield Early Learning,child care centers,8,TN,Marcus,Lena Bennett,VP Operations,yes,2026-03-26,budget,9600,2026-03-26
+D-1066,Coral Bend Dental Partners,dental group,16,OH,Dana,Victor Chen,Director of Operations,yes,2025-10-22,timing,9600,2025-10-22
+D-1067,Oyster Point Veterinary Group,veterinary group,31,TN,Priya,Tom Okafor,COO,no,2025-08-25,competitor,21600,2025-08-25
+D-1068,Thornbury Physical Therapy,physical therapy clinics,11,OH,Marcus,Miguel Patel,COO,yes,2026-03-22,no decision,21600,2026-10-08
+D-1069,Marlowe Urgent Care,urgent care,31,GA,Dana,Miguel Kowalski,Owner,yes,2025-07-20,no decision,9600,2025-07-20
+D-1070,Silverleaf Home Health,home health agency,14,MI,Priya,Alicia Alvarez,Director of Operations,yes,2025-05-10,budget,26400,2026-10-08
+D-1071,Driftline Staffing,staffing agency,14,IL,Marcus,Alicia Patel,COO,yes,2025-05-21,timing,9600,2025-06-20
+D-1072,Kettle Creek Freight,freight brokerage,11,MO,Dana,Omar Kowalski,Head of People,yes,2025-06-02,competitor,33000,2025-06-02
+D-1073,Bramble Hill Auto Group,auto dealer group,16,CO,Priya,Hannah Osei,COO,no,2025-05-05,champion left,26400,2025-07-04
+D-1074,Hawthorne Fitness,fitness clubs,11,IL,Marcus,Renee Alvarez,Director of Operations,yes,2025-08-05,no decision,14400,2025-08-05
+D-1075,Quail Run Hospitality Group,restaurant group,22,VA,Dana,Grace Sullivan,Director of Operations,yes,2026-02-27,no decision,18000,2026-03-29
+D-1076,Ridgeline Car Wash,car wash chain,27,IL,Priya,Sam Bennett,VP Operations,no,2025-11-22,timing,41000,2025-11-22
+D-1077,Pinecone Pharmacy,pharmacy chain,16,CO,Marcus,Kavita Kowalski,Head of People,yes,2025-11-01,competitor,33000,2026-05-20
+D-1078,Alder Early Learning,child care centers,27,AZ,Dana,Sam Nakamura,Head of People,no,2025-12-18,champion left,14400,2025-12-18
+D-1079,Sunfield Dental Partners,dental group,9,FL,Priya,Miguel Alvarez,Owner,yes,2025-07-01,no decision,41000,2025-07-01
+D-1080,Goldenrod Veterinary Group,veterinary group,6,TN,Marcus,Beth Moreno,Scheduling Manager,yes,2026-04-05,budget,21600,2026-10-22
+D-1081,Hickory Flats Physical Therapy,physical therapy clinics,14,AZ,Dana,Victor Alvarez,Owner,yes,2025-12-06,timing,33000,2025-12-06
+D-1082,Blue Heron Urgent Care,urgent care,12,TX,Priya,Tom Sullivan,Director of Operations,yes,2025-06-10,no decision,33000,2025-07-10
+D-1083,Seabright Home Health,home health agency,12,TN,Marcus,Alicia Chen,Head of People,no,2025-12-03,champion left,21600,2026-02-01
+D-1084,Westbrook Staffing,staffing agency,11,NC,Dana,Miguel Lindqvist,COO,yes,2026-01-18,no decision,21600,2026-01-18
+D-1085,Caldera Freight,freight brokerage,19,VA,Priya,Lena Patel,Regional Manager,no,2026-03-01,budget,14400,2026-09-17
+D-1086,Elm Street Auto Group,auto dealer group,8,SC,Marcus,Alicia Alvarez,Director of Operations,yes,2026-06-08,timing,14400,2026-06-08
+D-1087,Highfield Fitness,fitness clubs,12,PA,Dana,Victor Bennett,VP Operations,yes,2026-08-11,competitor,21600,2026-08-11
+D-1088,Northwind Hospitality Group,restaurant group,14,MO,Priya,Chris Chen,Scheduling Manager,no,2026-08-11,champion left,21600,2026-08-11
+D-1089,Orchard Row Car Wash,car wash chain,5,AZ,Marcus,Jill Bennett,Owner,yes,2026-08-18,no decision,21600,2026-10-27
+D-1090,Bayline Pharmacy,pharmacy chain,9,TX,Dana,Jordan Nakamura,Regional Manager,yes,2026-07-16,budget,21600,2026-10-27
+D-1091,Riverbend Early Learning,child care centers,19,MI,Priya,Paul Sullivan,Director of Operations,yes,2026-09-15,timing,18000,2026-09-15
+D-1092,Stonebridge Dental Partners,dental group,5,CO,Marcus,Paul Osei,Head of People,yes,2026-05-31,competitor,41000,2026-05-31
+D-1093,Willow Park Veterinary Group,veterinary group,5,NC,Dana,Renee Fischer,Director of Operations,no,2026-07-29,champion left,14400,2026-08-28
+D-1094,Fairhaven Physical Therapy,physical therapy clinics,27,MI,Priya,Miguel Alvarez,VP Operations,no,2024-11-30,no decision,26400,2024-11-30
+D-1095,Magnolia Urgent Care,urgent care,19,WA,Marcus,Hannah Alvarez,COO,yes,2024-08-28,budget,41000,2025-03-16
+D-1096,Prairie Home Health,home health agency,19,PA,Dana,Nora Osei,VP Operations,yes,2025-02-18,no decision,26400,2025-03-20
+D-1097,Summit Staffing,staffing agency,11,TN,Priya,Chris Nakamura,Practice Administrator,yes,2024-12-05,competitor,41000,2025-02-03
+D-1098,Cobalt Freight,freight brokerage,19,TN,Marcus,Grace Nakamura,Head of People,no,2025-03-10,champion left,26400,2025-05-09
+D-1099,Timberline Auto Group,auto dealer group,5,IL,Dana,Chris Okafor,Director of Operations,yes,2025-03-17,no decision,26400,2025-05-16

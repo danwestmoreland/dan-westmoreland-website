@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The hiring-signal workflow - GTM Play No. 3 - Dan Westmoreland</title>
+  <meta name="description" content="A SaaS company posting its first RevOps or GTM ops job is about to buy tools. A Clay workflow that catches the posting, reads it, and writes two emails: one to the hiring manager now, one to the new hire later. With the rules and a mock you can run." />
+  <meta property="og:title" content="The hiring-signal workflow - GTM Play No. 3 - Dan Westmoreland" />
+  <meta property="og:description" content="A SaaS company posting its first RevOps job is about to buy tools. A Clay workflow that catches the posting, reads it, and writes the outreach. Rules and mock included." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://danwestmoreland.com/plays/hiring-signal-workflow/" />
+  <meta property="og:image" content="https://danwestmoreland.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://danwestmoreland.com/og-image.png" />
+  <link rel="canonical" href="https://danwestmoreland.com/plays/hiring-signal-workflow/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="/assets/site.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://danwestmoreland.com/#dan",
+  "name": "Dan Westmoreland",
+  "url": "https://danwestmoreland.com/",
+  "image": "https://danwestmoreland.com/dan-westmoreland.jpg",
+  "jobTitle": "Fractional marketing leader and GTM engineer",
+  "description": "Fractional marketing leader and GTM engineer for B2B software companies. Ten years running demand generation as a VP and Head of at software companies. Builds inbound engines, outbound systems, and AI SDRs. Based in Atlanta, Georgia.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Atlanta",
+    "addressRegion": "GA",
+    "addressCountry": "US"
+  },
+  "email": "mailto:dan@danwestmoreland.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/danwestmoreland/"
+  ],
+  "knowsAbout": [
+    "GTM engineering",
+    "Demand generation",
+    "Fractional CMO",
+    "AI SDR",
+    "Outbound email systems",
+    "Clay",
+    "HubSpot",
+    "B2B SaaS marketing"
+  ],
+  "alumniOf": [
+    {
+      "@type": "Organization",
+      "name": "Marketo"
+    },
+    {
+      "@type": "Organization",
+      "name": "Deputy"
+    },
+    {
+      "@type": "Organization",
+      "name": "Fountain"
+    },
+    {
+      "@type": "Organization",
+      "name": "Northpass"
+    },
+    {
+      "@type": "Organization",
+      "name": "Movable Ink"
+    },
+    {
+      "@type": "Organization",
+      "name": "Curve Dental"
+    }
+  ]
+}
+  </script>
+  <style>
+    .flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin: 0 0 24px; }
+    .flow div { background: var(--bg-elev); border: 1px solid var(--rule); border-radius: 12px; padding: 14px 12px; font-size: 14px; }
+    .flow b { display: block; font-weight: 600; margin-bottom: 4px; }
+    .flow small { color: var(--ink-soft); }
+    .rules { width: 100%; border-collapse: collapse; font-size: 15px; margin: 0 0 22px; }
+    .rules th, .rules td { text-align: left; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+    .rules th { font-weight: 600; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
+    .posting { background: #FDFDFB; border: 1px solid var(--rule); border-radius: 14px; padding: 18px 20px; font-size: 15px; line-height: 1.55; margin: 0 0 22px; }
+    .posting .t { font-weight: 700; font-size: 17px; margin-bottom: 2px; }
+    .posting .m { color: var(--ink-soft); font-size: 13px; margin-bottom: 12px; }
+    .posting mark { background: #F7E2D8; color: var(--ink); padding: 0 3px; border-radius: 3px; }
+    .mail { border-left: 3px solid var(--accent); padding: 4px 0 4px 16px; margin: 0 0 22px; font-size: 15px; line-height: 1.55; }
+    .mail .h { font-size: 13px; color: var(--ink-soft); margin-bottom: 6px; }
+    @media (max-width: 760px) { .flow { grid-template-columns: 1fr; } .rules { font-size: 14px; } }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="wordmark" href="/"><svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><g id="m" transform="translate(14 81) scale(0.044286 -0.044286) translate(19 0)"><path d="M-19 7Q-19 11 -16.5 13.0Q-14 15 -7 16L79 26Q98 28 108.5 34.0Q119 40 126.0 51.0Q133 62 137 79Q154 137 176.5 220.0Q199 303 226.5 402.0Q254 501 283.0 607.0Q312 713 340.5 818.5Q369 924 395.5 1020.0Q422 1116 443.0 1194.0Q464 1272 477 1324Q484 1348 477.0 1358.5Q470 1369 445 1372L356 1384Q346 1386 342.5 1388.0Q339 1390 339 1394Q339 1397 342.0 1398.5Q345 1400 351 1400H879Q1005 1400 1107.0 1358.0Q1209 1316 1276.5 1231.5Q1344 1147 1367.5 1021.0Q1391 895 1361 726Q1332 566 1259.0 433.5Q1186 301 1074.5 204.0Q963 107 818.5 53.5Q674 0 501 0H-8Q-14 0 -16.5 2.0Q-19 4 -19 7ZM510 18Q607 18 699.5 62.0Q792 106 872.5 195.5Q953 285 1014.5 421.0Q1076 557 1113 739Q1146 908 1141.0 1030.0Q1136 1152 1101.0 1230.5Q1066 1309 1007.5 1346.5Q949 1384 873 1384H791Q763 1384 740.5 1364.5Q718 1345 706 1300Q690 1243 668.5 1165.0Q647 1087 622.0 995.5Q597 904 571.0 807.0Q545 710 518.5 612.5Q492 515 468.0 426.0Q444 337 424.0 261.5Q404 186 390 133Q374 76 388.0 47.0Q402 18 446 18Z" fill="currentColor"/></g><circle cx="83" cy="75" r="7.5" fill="var(--accent)"/></svg><span>Dan Westmoreland</span></a>
+    <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var h=this.closest('.site-header');h.classList.toggle('menu-open');this.setAttribute('aria-expanded',h.classList.contains('menu-open'))"><svg class="ic-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><svg class="ic-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    <nav>
+      <div class="nav-dd nav-mega"><button type="button" class="nav-dd-btn" aria-haspopup="true" aria-expanded="false" onclick="var p=this.parentNode;p.classList.toggle('open');this.setAttribute('aria-expanded',p.classList.contains('open'))">Who I help <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3.5 5 7.5 9 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-menu mega"><a href="/for/founders/"><b>Founders and CEOs</b><span>You're running marketing yourself and the pipeline number doesn't wait. I take the seat until your hire starts.</span><em>Operator retainer →</em></a><a href="/for/sales-leaders/"><b>Sales leaders</b><span>Eight years carrying a bag, then I built the inbound engine. Signals your reps can call today.</span><em>AI SDR Install →</em></a><a href="/for/growth-marketers/"><b>Demand gen and growth</b><span>I've had your job at five companies. Clay, HubSpot, and AI workflows built with you, not for you.</span><em>Builds and audits →</em></a><a href="/for/revops/"><b>RevOps</b><span>Outbound infrastructure, CRM sync, and intent routing that your sales team actually uses.</span><em>Outbound Engine →</em></a></div></div>
+      <a href="/services/">Services</a>
+      <a href="/work/">Work</a>
+      <a href="/pricing/">Pricing</a>
+      <div class="nav-dd"><button type="button" class="nav-dd-btn" aria-haspopup="true" aria-expanded="false" onclick="var p=this.parentNode;p.classList.toggle('open');this.setAttribute('aria-expanded',p.classList.contains('open'))">Resources <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3.5 5 7.5 9 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-menu"><a href="/plays/">Plays <span>One built system a week</span></a><a href="/writing/">Writing <span>Essays on GTM and AI</span></a><a href="/newsletter/">Newsletter <span>Get the weekly play by email</span></a><a href="/speaking/">Speaking <span>Keynotes, podcasts, team sessions</span></a></div></div>
+      <a href="/book/" class="nav-cta">Book a call</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-hero" style="padding-bottom:40px">
+      <p class="eyebrow"><a href="/plays/">Plays</a> · No. 3</p>
+      <h1>The hiring-signal <em>workflow</em>.</h1>
+      <p class="lede">A SaaS company posting its first RevOps or GTM ops job is telling you it's about to buy tools. The posting says which ones, what hurts, and who the hire reports to. This play reads it and writes two emails: one to the hiring manager now, one to the new hire six weeks later.</p>
+      <div class="play-meta"><span><b>For:</b> B2B software companies selling to SaaS companies with 40 to 500 employees</span><span><b>Stack:</b> Clay Workflows and Claygent, a job-postings source, HubSpot free, Smartlead</span><span><b>Cost:</b> free to test, about $190/month to run</span><span><b>Build time:</b> one day</span></div>
+    </section>
+
+    <section style="padding-top:0;border-top:0">
+      <div class="play-article">
+        <h2>The play</h2>
+        <p>Every GTM tool with a "signals" tab will show you job postings. Most teams use them as a list filter: companies hiring for X, sorted by headcount, exported to a sequence that says "I noticed you're hiring." That email gets deleted because it reads like recruiting spam, and because it is about the posting instead of the problem.</p>
+        <p>The posting is not the signal. The posting is the brief. A company's first Revenue Operations hire has a budget, a mandate, and 90 days to show something. The job description tells you what the something is ("own quota and comp"), which systems it has to happen in ("HubSpot, Gong, Apollo"), what is broken today ("commission statements are built by hand and late every month"), and who is going to be the buyer's boss. Nobody writes that much about their own pain anywhere else in public.</p>
+        <p>So the play has two windows. Before the hire starts, you talk to the hiring manager about what the new person will need on day one. Six weeks after the posting, you talk to whoever got the job, who is now looking for a quick win and has read the same posting you did. Everything in between is plumbing.</p>
+
+        <h2>Who it's for</h2>
+        <ul>
+          <li>You sell to SaaS companies, and a specific hire means they have your problem. For a quota and comp tool it's the first RevOps hire. For a content tool it's the first content marketer. Pick the title that means "about to buy."</li>
+          <li>Your buyer is between 40 and 500 employees. Below that the hire is a founder doing it on Sundays. Above that it's a team, and the posting is a backfill.</li>
+          <li>You can write two short emails that are about the reader's first 90 days, not about your product.</li>
+          <li>You're fine sending 5 to 15 emails a day from this, not 200. The signal is narrow on purpose.</li>
+        </ul>
+
+        <h2>The build</h2>
+        <div class="flow">
+          <div><b>1. Watch</b><small>A job-postings source runs daily for the titles that mean "about to buy"</small></div>
+          <div><b>2. Qualify</b><small>Fit, first hire of its kind, not already a customer, posted in the last 30 days</small></div>
+          <div><b>3. Read</b><small>Claygent pulls the stack, the pain line, the first duty, and the reporting line out of the posting</small></div>
+          <div><b>4. Write</b><small>Two first lines from the posting's own words: hiring manager now, new hire later</small></div>
+          <div><b>5. Send and log</b><small>Smartlead sends, HubSpot records the signal, the company is quiet for 90 days</small></div>
+        </div>
+        <div class="play-stack">
+          <h3>Stack</h3>
+          <table>
+            <tr><td>Watch</td><td>Clay's job-postings source inside a Workflow (beta, included in a Clay plan; free plan to test, Starter is about $149/month). Free version: n8n polling a job board's search feed for the same titles.</td></tr>
+            <tr><td>Qualify</td><td>A rules file (headcount band, industries, countries, titles to include and exclude). The "first hire" test is a Clay people search for the same title at the company, expecting zero. The "already a customer" test is a HubSpot free lookup.</td></tr>
+            <tr><td>Read</td><td>Claygent, with a prompt that returns JSON: tools named, first responsibility listed, the one sentence of pain, who the role reports to. Runs only after qualification, because it costs credits and qualification is free.</td></tr>
+            <tr><td>Write</td><td>A template with four slots filled from that JSON. No generative copy. The mock below shows why.</td></tr>
+            <tr><td>Send and log</td><td>Smartlead ($39/month) with the slots as custom fields. HubSpot free gets a contact, a "hiring signal" source property, and the follow-up date.</td></tr>
+          </table>
+        </div>
+        <ol>
+          <li><strong>Pick the title that means "about to buy."</strong> Write the include list (Revenue Operations, RevOps, Sales Operations, GTM Operations, Marketing Operations) and the exclude list (Analyst, Senior, Coordinator, Intern). A Senior RevOps Manager posting means a team exists. An Analyst posting means the budget is spent.</li>
+          <li><strong>Put the fit rules in a file sales can edit.</strong> Headcount 40 to 500, the industries you win in, US and Canada, nothing older than 30 days. Keep it as a sheet or a CSV, not as settings buried in a tool.</li>
+          <li><strong>Set the postings source to run daily.</strong> In Clay, that's a Workflow trigger on new postings matching the title list. Clay added a way to send previewed signal results straight into a Workflow trigger on October 19, which is the piece that makes this a loop instead of a weekly export.</li>
+          <li><strong>Qualify before you spend a credit.</strong> Title, headcount, industry, country, age, and the HubSpot check (skip customers and open deals) are all free. Dedupe on company so a reposted job doesn't send twice.</li>
+          <li><strong>Run the "first hire" test.</strong> Search people at the company for the same title family. Zero results is the signal. One or two means a growing team: still a lead, different message, lower priority. Five means it's a backfill, drop it.</li>
+          <li><strong>Read the posting with Claygent.</strong> The prompt asks for four things and nothing else: the tools named, the first responsibility in the list, the one sentence that describes what is broken today, and who the role reports to. If the posting has no pain sentence, the workflow stops. A posting with no pain in it gives you nothing to say.</li>
+          <li><strong>Write both emails from those four slots.</strong> The hiring manager gets one now: "You're hiring your first RevOps Manager and the posting says commission statements are built by hand every month." The new hire gets one 45 days after the posting date: "From the posting, it looks like forecasting and comp administration is job one." Neither mentions your product in the first line.</li>
+          <li><strong>Send, log, and suppress.</strong> Smartlead sends the first; HubSpot stores the follow-up date and the posting URL; a daily n8n or Clay run picks up contacts whose date has arrived, checks that someone with the title now exists at the company, and sends the second. The company is suppressed for 90 days after either send.</li>
+        </ol>
+
+        <h2>The mock</h2>
+        <p>Marlstone is a made-up quota and commission tool for SaaS sales teams. The hire that means "about to buy" is the first RevOps, sales ops, or GTM ops person. Below are 30 fake job postings at 28 fake companies, run through the real rules. The postings, the rules, and the script are in the folder.</p>
+        <h3>A posting, as the workflow reads it</h3>
+        <div class="posting">
+          <div class="t">Revenue Operations Lead</div>
+          <div class="m">Bramblewick · 62 people · B2B SaaS · Toronto · reports to the <mark>COO</mark> · posted Oct 18</div>
+          <div>You will <mark>stand up forecasting and comp administration for a 9-person sales team</mark>, working in <mark>HubSpot and Apollo</mark>. Today, <mark>commission statements are built by hand every month and are late every month</mark>. You'll be the first person in this seat.</div>
+        </div>
+        <h3>The rules (from icp.csv)</h3>
+        <table class="rules">
+          <tr><th>Rule</th><th>Condition</th><th>Result</th></tr>
+          <tr><td>Title</td><td>Contains Revenue Operations, RevOps, Sales Ops, GTM Ops, or Marketing Ops; does not contain Analyst, Senior, Coordinator, Intern</td><td>Continue, else drop</td></tr>
+          <tr><td>Fit</td><td>40 to 500 employees, listed industries, US or Canada</td><td>Continue, else drop</td></tr>
+          <tr><td>Fresh</td><td>Posted in the last 30 days, company not seen before</td><td>Continue, else drop</td></tr>
+          <tr><td>CRM</td><td>Not a customer, no open deal</td><td>Continue, else drop</td></tr>
+          <tr><td>First</td><td>Zero people with an ops title at the company today</td><td>Continue, else drop</td></tr>
+          <tr><td>Quotable</td><td>The posting has a sentence about what is broken</td><td>Write, else drop</td></tr>
+        </table>
+        <h3>What the script writes</h3>
+        <div class="mail">
+          <div class="h">Now, to the COO at Bramblewick</div>
+          <div>You're hiring your first Revenue Operations Lead and the posting says commission statements are built by hand every month and are late every month. The first 90 days of that hire usually go to standing up forecasting and comp administration for a 9-person sales team, in HubSpot and Apollo.</div>
+        </div>
+        <div class="mail">
+          <div class="h">December 2, to whoever gets the job</div>
+          <div>Congrats on the new role. From the posting, it looks like standing up forecasting and comp administration for a 9-person sales team is job one.</div>
+        </div>
+        <p>Out of 30 fake postings, 12 qualified. Three were already in the CRM, three were the wrong size, three were stale, three had a title that only looked like the signal (Chief of Staff, Growth Marketing Manager, an SDR), two were Senior or Analyst variants, two were reposts, one was outside the US and Canada, one was a design agency. Twelve out of thirty is the high end; the fake set is stacked. On a real feed expect one in ten.</p>
+        <p>The files:</p>
+        <ul>
+          <li><a href="/plays/hiring-signal-workflow/postings.csv">postings.csv</a>, 30 fake job postings with the four slots already extracted</li>
+          <li><a href="/plays/hiring-signal-workflow/icp.csv">icp.csv</a>, the rules</li>
+          <li><a href="/plays/hiring-signal-workflow/match.py">match.py</a>, applies the rules and prints both emails for each qualified posting</li>
+        </ul>
+<pre><code>python3 match.py 2026-10-27
+# 30 postings, 12 qualified
+# dropped: 3 already in the CRM, 3 headcount out of band, 3 posting older than 30 days,
+#          3 title is not the signal, 2 junior or senior variant, 2 duplicate company,
+#          1 country not a fit, 1 industry not a fit
+
+-&gt; Fernhollow  (140 people, B2B SaaS, US)  posted 2026-10-14, reports to VP Sales
+   now, to the VP Sales:
+   "You're hiring your first Revenue Operations Manager and the posting says our pipeline
+    reporting lives in four spreadsheets and nobody trusts the number. ..."
+   2026-11-28, to whoever gets the job:
+   "Congrats on the new role. From the posting, it looks like owning the lead-to-cash
+    process across marketing, sales, and CS is job one."
+...</code></pre>
+
+        <h2>What breaks</h2>
+        <p><strong>It reads like a recruiter.</strong> "I saw you're hiring" is the most deleted opening line in B2B. The fix is structural, not clever: the first line quotes the pain the posting describes, and the second line is about the hire's first 90 days. Your product shows up in the third line or not at all.</p>
+        <p><strong>The grammar of a template.</strong> A slot filled from a posting is a verb phrase in whatever form the posting used. "Own the lead-to-cash process" drops into "it looks like own the lead-to-cash process is job one," and now you sound like a bot. The fix is in the read step, not the write step: Claygent is told to return the duty as a gerund ("owning the lead-to-cash process"), the pain line as a complete sentence in the company's own words, and nothing in title case. The mock's CSV is already in that shape. A human still reads every email the first week.</p>
+        <p><strong>Ghost postings.</strong> Agencies repost evergreen roles, and some companies leave a job up for a year. The 30-day cutoff and the per-company dedupe catch most of it. For the rest, the "first hire" test fails after the role is filled, which is the point of running it again before the second email.</p>
+        <p><strong>Credits.</strong> Claygent reads cost money; everything before it is free. Qualify first, read second, and never run the read on the full feed to "see what's there." That order is the whole difference between $30 a month and $300.</p>
+        <p><strong>The second email fires at nobody.</strong> Forty-five days after the posting, the role may not be filled. Before sending, search for a person with that title who started in the last 60 days. None found, push the date 30 days and try again, up to twice. Then give up.</p>
+
+        <h2>Copy it</h2>
+        <p>Take the three files, change the title list in icp.csv to the hire that means your buyer, and rewrite the two templates around their first 90 days. Then move the rules into a Clay Workflow with a postings trigger and point the output at Smartlead. If you'd rather I look at how your Clay tables are spending credits before you add another workflow, that's the <a href="/offers/clay-audit">Clay credit audit</a>.</p>
+
+        <div class="play-cta">
+          <h2>One play like this, every week.</h2>
+          <p>The email gets the build files and the mock before they go on the site. No pitch in it.</p>
+          <a class="btn" href="/newsletter/">Get the weekly play →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Dan Westmoreland</p>
+    <p>
+      <a href="/services/">Services</a> ·
+      <a href="/work/">Work</a> ·
+      <a href="/pricing/">Pricing</a> ·
+      <a href="/writing/">Writing</a> ·
+      <a href="/plays/">Plays</a> ·
+      <a href="/newsletter/">Newsletter</a> ·
+      <a href="https://www.linkedin.com/in/danwestmoreland/">LinkedIn</a> ·
+      <a href="mailto:dan@danwestmoreland.com">Email</a> ·
+      <a href="/privacy/">Privacy</a>
+    </p>
+  </footer>
+
+  <script src="/assets/site.js" defer></script>
+<script>(function(){var h=document.querySelector('.site-header');if(!h)return;var t=false;function u(){var s=window.scrollY>24;if(s!==t){t=s;h.classList.toggle('is-stuck',s);}}window.addEventListener('scroll',u,{passive:true});u();})();</script>
+</body>
+</html>
