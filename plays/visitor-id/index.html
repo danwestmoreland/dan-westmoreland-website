@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Visitor-ID Play That Emailed You - GTM Play No. 5 - Dan Westmoreland</title>
+  <meta name="description" content="How a visit to danwestmoreland.com turned into the email in your inbox: RB2B, Slack, Make, HubSpot and Smartlead wired together for about $50 a month, with the six build steps, screenshots of the live system, and the free version you can run this week." />
+  <meta property="og:title" content="The Visitor-ID Play That Emailed You - GTM Play No. 5 - Dan Westmoreland" />
+  <meta property="og:description" content="How a visit to my site became an email in your inbox. RB2B, Slack, Make, HubSpot and Smartlead for about $50 a month, with screenshots of the live system." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://danwestmoreland.com/plays/visitor-id/" />
+  <meta property="og:image" content="https://danwestmoreland.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://danwestmoreland.com/og-image.png" />
+  <link rel="canonical" href="https://danwestmoreland.com/plays/visitor-id/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="/assets/site.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://danwestmoreland.com/#dan",
+  "name": "Dan Westmoreland",
+  "url": "https://danwestmoreland.com/",
+  "image": "https://danwestmoreland.com/dan-westmoreland.jpg",
+  "jobTitle": "Fractional marketing leader and GTM engineer",
+  "description": "Fractional marketing leader and GTM engineer for B2B software companies. Ten years running demand generation as a VP and Head of at software companies. Builds inbound engines, outbound systems, and AI SDRs. Based in Atlanta, Georgia.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Atlanta",
+    "addressRegion": "GA",
+    "addressCountry": "US"
+  },
+  "email": "mailto:dan@danwestmoreland.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/danwestmoreland/"
+  ],
+  "knowsAbout": [
+    "GTM engineering",
+    "Demand generation",
+    "Fractional CMO",
+    "AI SDR",
+    "Outbound email systems",
+    "Clay",
+    "HubSpot",
+    "B2B SaaS marketing"
+  ],
+  "alumniOf": [
+    {
+      "@type": "Organization",
+      "name": "Marketo"
+    },
+    {
+      "@type": "Organization",
+      "name": "Deputy"
+    },
+    {
+      "@type": "Organization",
+      "name": "Fountain"
+    },
+    {
+      "@type": "Organization",
+      "name": "Northpass"
+    },
+    {
+      "@type": "Organization",
+      "name": "Movable Ink"
+    },
+    {
+      "@type": "Organization",
+      "name": "Curve Dental"
+    }
+  ]
+}
+  </script>
+  <style>
+    .slack { background: #FDFDFB; border: 1px solid var(--rule); border-radius: 14px; padding: 16px 18px; font-size: 15px; line-height: 1.5; margin: 0 0 22px; }
+    .slack .who { display: flex; gap: 10px; align-items: center; margin-bottom: 8px; }
+    .slack .bot { width: 36px; height: 36px; border-radius: 8px; background: var(--trust); color: var(--on-trust); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
+    .slack .name { font-weight: 700; }
+    .slack .app { font-size: 11px; font-weight: 600; background: var(--rule); border-radius: 4px; padding: 1px 5px; margin-left: 6px; color: var(--ink-soft); }
+    .slack .ts { color: var(--ink-soft); font-size: 13px; margin-left: 8px; }
+    .slack .row { display: flex; gap: 10px; margin: 4px 0; }
+    .slack .row b { min-width: 120px; font-weight: 600; color: var(--ink-soft); }
+    .flow { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin: 0 0 24px; }
+    .flow div { background: var(--bg-elev); border: 1px solid var(--rule); border-radius: 12px; padding: 14px 12px; font-size: 14px; }
+    .flow b { display: block; font-weight: 600; margin-bottom: 4px; }
+    .flow small { color: var(--ink-soft); }
+    .shot { margin: 0 0 26px; }
+    .shot img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 12px; background: #fff; }
+    .shot figcaption { font-size: 14px; color: var(--ink-soft); margin-top: 8px; }
+    .cost { width: 100%; border-collapse: collapse; font-size: 15px; margin: 0 0 22px; }
+    .cost th, .cost td { text-align: left; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+    .cost th { font-weight: 600; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
+    .cost td.n { white-space: nowrap; font-weight: 600; }
+    @media (max-width: 760px) { .flow { grid-template-columns: 1fr 1fr; } .cost { font-size: 14px; } .slack .row { flex-direction: column; gap: 0; } }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="wordmark" href="/"><svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><g id="m" transform="translate(14 81) scale(0.044286 -0.044286) translate(19 0)"><path d="M-19 7Q-19 11 -16.5 13.0Q-14 15 -7 16L79 26Q98 28 108.5 34.0Q119 40 126.0 51.0Q133 62 137 79Q154 137 176.5 220.0Q199 303 226.5 402.0Q254 501 283.0 607.0Q312 713 340.5 818.5Q369 924 395.5 1020.0Q422 1116 443.0 1194.0Q464 1272 477 1324Q484 1348 477.0 1358.5Q470 1369 445 1372L356 1384Q346 1386 342.5 1388.0Q339 1390 339 1394Q339 1397 342.0 1398.5Q345 1400 351 1400H879Q1005 1400 1107.0 1358.0Q1209 1316 1276.5 1231.5Q1344 1147 1367.5 1021.0Q1391 895 1361 726Q1332 566 1259.0 433.5Q1186 301 1074.5 204.0Q963 107 818.5 53.5Q674 0 501 0H-8Q-14 0 -16.5 2.0Q-19 4 -19 7ZM510 18Q607 18 699.5 62.0Q792 106 872.5 195.5Q953 285 1014.5 421.0Q1076 557 1113 739Q1146 908 1141.0 1030.0Q1136 1152 1101.0 1230.5Q1066 1309 1007.5 1346.5Q949 1384 873 1384H791Q763 1384 740.5 1364.5Q718 1345 706 1300Q690 1243 668.5 1165.0Q647 1087 622.0 995.5Q597 904 571.0 807.0Q545 710 518.5 612.5Q492 515 468.0 426.0Q444 337 424.0 261.5Q404 186 390 133Q374 76 388.0 47.0Q402 18 446 18Z" fill="currentColor"/></g><circle cx="83" cy="75" r="7.5" fill="var(--accent)"/></svg><span>Dan Westmoreland</span></a>
+    <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var h=this.closest('.site-header');h.classList.toggle('menu-open');this.setAttribute('aria-expanded',h.classList.contains('menu-open'))"><svg class="ic-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><svg class="ic-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    <nav>
+      <div class="nav-dd nav-mega"><button type="button" class="nav-dd-btn" aria-haspopup="true" aria-expanded="false" onclick="var p=this.parentNode;p.classList.toggle('open');this.setAttribute('aria-expanded',p.classList.contains('open'))">Who I help <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3.5 5 7.5 9 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-menu mega"><a href="/for/founders/"><b>Founders and CEOs</b><span>You're running marketing yourself and the pipeline number doesn't wait. I take the seat until your hire starts.</span><em>Operator retainer →</em></a><a href="/for/sales-leaders/"><b>Sales leaders</b><span>Eight years carrying a bag, then I built the inbound engine. Signals your reps can call today.</span><em>AI SDR Install →</em></a><a href="/for/growth-marketers/"><b>Demand gen and growth</b><span>I've had your job at five companies. Clay, HubSpot, and AI workflows built with you, not for you.</span><em>Builds and audits →</em></a><a href="/for/revops/"><b>RevOps</b><span>Outbound infrastructure, CRM sync, and intent routing that your sales team actually uses.</span><em>Outbound Engine →</em></a></div></div>
+      <a href="/services/">Services</a>
+      <a href="/work/">Work</a>
+      <a href="/pricing/">Pricing</a>
+      <div class="nav-dd"><button type="button" class="nav-dd-btn" aria-haspopup="true" aria-expanded="false" onclick="var p=this.parentNode;p.classList.toggle('open');this.setAttribute('aria-expanded',p.classList.contains('open'))">Resources <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3.5 5 7.5 9 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-menu"><a href="/plays/">Plays <span>One built system a week</span></a><a href="/writing/">Writing <span>Essays on GTM and AI</span></a><a href="/newsletter/">Newsletter <span>Get the weekly play by email</span></a><a href="/speaking/">Speaking <span>Keynotes, podcasts, team sessions</span></a></div></div>
+      <a href="/book/" class="nav-cta">Book a call</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-hero" style="padding-bottom:40px">
+      <p class="eyebrow"><a href="/plays/">Plays</a> · No. 5</p>
+      <h1>The visitor-ID play <em>that emailed you</em>.</h1>
+      <p class="lede">If you got here from an email that said "you were on danwestmoreland.com last week," this is the system that sent it. A visit to my site became a company name, a Slack post, a HubSpot record, and a three-email sequence, and nobody touched it. Here is the whole build, with screenshots of the live version.</p>
+      <div class="play-meta"><span><b>For:</b> B2B software teams with a website, a CRM, and no SDR</span><span><b>Stack:</b> RB2B, Slack, Make, HubSpot, Smartlead, Clay</span><span><b>Cost:</b> about $50 a month, $200 with Clay</span><span><b>Build time:</b> two afternoons, then an hour a week</span></div>
+    </section>
+
+    <section style="padding-top:0;border-top:0">
+      <div class="play-article">
+        <h2>What it does</h2>
+        <p>A script on the site identifies the company behind a visit, and often the person. That hit posts to a Slack channel. An automation reads the channel four times a day, checks the company against a list of 2,600 companies that fit the work I do, and does one of three things: stamps the matching HubSpot record with the visit, creates a new record and marks it a good fit, or creates a record and marks it no fit so I never see it again. Good fits with an email go into a sequence that says exactly what just happened. The email you got is email one of three.</p>
+        <p>Every piece is a product you can buy today, and four of the five are free at my volume. The play is the wiring, and the wiring is below.</p>
+
+        <h2>The stack and what it costs</h2>
+        <table class="cost">
+          <tr><th>Piece</th><th>What it does here</th><th>Monthly</th></tr>
+          <tr><td>RB2B</td><td>Turns a visit into a company, and a person when it can. Free tier gives 150 identifications a month and a Slack alert for each.</td><td class="n">$0</td></tr>
+          <tr><td>Slack</td><td>The pipe. RB2B posts to a channel; everything downstream reads from it. A free workspace is enough.</td><td class="n">$0</td></tr>
+          <tr><td>Make</td><td>Reads the channel, parses the post, searches HubSpot, routes by fit, writes the records. About 120 operations a month of the 1,000 free.</td><td class="n">$0</td></tr>
+          <tr><td>HubSpot Starter</td><td>Holds the 2,600-company list and the visitor stamps. The active segments feed the sequence.</td><td class="n">$10</td></tr>
+          <tr><td>Smartlead</td><td>Three warmed inboxes and the sequence. Plain text, no tracking, stops on reply.</td><td class="n">$39</td></tr>
+          <tr><td>Clay Starter</td><td>Built the list once, and finds a person plus email when RB2B only gives me the company. The one line you can skip if you already have a list.</td><td class="n">about $150</td></tr>
+        </table>
+        <p>Without Clay that is $49 a month. The list took 2,071 Clay credits to build, which is most of one month's allowance, and it does not need rebuilding.</p>
+
+        <h2>The build in six steps</h2>
+        <div class="flow">
+          <div><b>1. Identify</b><small>RB2B script on the site, alerts to Slack</small></div>
+          <div><b>2. Parse</b><small>Make reads the post and pulls out domain, person, page</small></div>
+          <div><b>3. Match</b><small>Search HubSpot for the domain in the list</small></div>
+          <div><b>4. Triage</b><small>No match? Score the firmographics in the post</small></div>
+          <div><b>5. Stamp</b><small>Write the visit to the company and contact</small></div>
+          <div><b>6. Sequence</b><small>Good fits with an email go to Smartlead</small></div>
+        </div>
+        <ol>
+          <li><strong>Put the visitor-ID script on the site and point the alerts at Slack.</strong> RB2B gives you one tag. I gate it to the production hostname so preview deploys do not burn the free identifications. Create a channel for the alerts and nothing else; the automation reads that channel and does not want noise in it.</li>
+          <li><strong>Parse the Slack post with a regex, not a parser you pay for.</strong> RB2B posts in two shapes, person-level and company-level, and one pattern with an optional person block handles both. Out come name, title, company, email, LinkedIn, the page visited, and the domain. Make's text parser does this for one operation.</li>
+          <li><strong>Search your CRM for the domain.</strong> The list of 2,600 fit companies lives in HubSpot as company records with the domain as the unique key. One search per visit tells you whether this is a company you already decided you want.</li>
+          <li><strong>If there is no match, triage on what the post already contains.</strong> RB2B includes employee band, industry, and revenue band. A router sends software and internet companies with 11 to 200 people and revenue over $1M down the good-fit route; everything else gets a record marked no fit, which costs one operation and means I never evaluate it twice. The rule lives in two filters you can read in the screenshot.</li>
+          <li><strong>Stamp the record.</strong> Last visit date, last page, and the firmographics go on the company. If the post named a person with an email, the contact is created or updated with the same stamps and associated by domain. An active segment, "visited site," fills itself.</li>
+          <li><strong>Sequence the good fits.</strong> A weekly export of the good-fit segment goes into a Smartlead campaign on three warmed inboxes. Email one names the visit and explains this system. Email two links here. Email three gives the free version below. Replies come to me; "nope" ends it; "plays" gets the newsletter instead.</li>
+        </ol>
+
+        <h2>The live system</h2>
+        <h3>1. What lands in Slack</h3>
+        <p>A company-level hit, lightly edited. Person-level posts add name, title, email, and LinkedIn above the same tail. The tail is what the triage step reads.</p>
+        <div class="slack">
+          <div class="who"><div class="bot">R</div><div><span class="name">RB2B</span><span class="app">APP</span><span class="ts">9:14 AM</span></div></div>
+          <div><strong>Keen</strong></div>
+          <div class="row"><b>Company</b><span>Keen</span></div>
+          <div class="row"><b>LinkedIn</b><span>linkedin.com/company/keen</span></div>
+          <div class="row"><b>First identified visiting</b><span>danwestmoreland.com/services/</span></div>
+          <div class="row"><b>Website</b><span>keenapps.co</span></div>
+          <div class="row"><b>Est. Employees</b><span>1-10</span></div>
+          <div class="row"><b>Industry</b><span>Real Estate</span></div>
+          <div class="row"><b>Est. Revenue</b><span>Below $500k</span></div>
+        </div>
+        <p>That one went down the no-fit route: wrong industry, too small, too little revenue. It got a record and nothing else, which is the point.</p>
+
+        <h3>2. The Make scenario</h3>
+        <figure class="shot">
+          <img src="/assets/plays/visitor-id/make-scenario.webp" width="1400" height="612" loading="lazy" alt="Make scenario canvas: Slack watch channel, text parser, HubSpot search, a router with an ICP match route that updates the company and contact, and a no-match route with a second text parser and a second router that creates a good-fit or no-fit company record." />
+          <figcaption>Twelve modules. The top route is a company already on the list. The bottom route is the triage for everyone else, with a good-fit branch and a fallback that marks no fit.</figcaption>
+        </figure>
+
+        <h3>3. The HubSpot segment</h3>
+        <figure class="shot">
+          <img src="/assets/plays/visitor-id/hubspot-segment.webp" width="1400" height="564" loading="lazy" alt="HubSpot active contact segment named ICP: visited site (RB2B), filtered on RB2B last visit is known, showing the overview with size and created date." />
+          <figcaption>One filter: RB2B last visit is known. The automation writes the date; the segment does the rest. A second segment holds good-fit visitors with an email for the sequence.</figcaption>
+        </figure>
+
+        <h3>4. The sequence</h3>
+        <figure class="shot">
+          <img src="/assets/plays/visitor-id/smartlead-lane5.webp" width="1400" height="436" loading="lazy" alt="Smartlead sequence editor showing email one of the Lane 5 campaign with the subject line the play that got me to email you, a four day wait, then emails two and three in the same thread." />
+          <figcaption>Three plain-text emails in one thread, four and five days apart, Tuesday to Thursday mornings, fifteen a day per inbox. Open and click tracking off.</figcaption>
+        </figure>
+
+        <h2>What breaks</h2>
+        <p><strong>The free identification quota.</strong> 150 a month sounds like a lot until a bot crawls your site. Gate the script to real pages on the production domain and watch the count in the first week.</p>
+        <p><strong>The post format changes.</strong> The whole chain hangs on a regex against a Slack message. When the tool changes a label, the parser returns nothing and the run looks fine. Make the parser continue on no match and route empty results to the no-fit record so you notice.</p>
+        <p><strong>Company-level hits with no person.</strong> About half of hits are company only. Those need a person before they can get an email, which is the Clay step, and it is the only step that costs credits. Do it weekly in a batch, not per hit.</p>
+        <p><strong>Writing to the CRM from an automation.</strong> HubSpot Starter needs the connected app granted write scope on companies before anything lands, and date fields want a timestamp, not a string. Both cost me an hour. Budget it.</p>
+        <p><strong>The email itself.</strong> Naming the visit is direct, and a few people will not like it. The softer opener is "a company that looks a lot like yours was on my site last week." I chose the direct one because the people I want to work with are the ones who ask how it works.</p>
+
+        <h2>The free version</h2>
+        <p>You do not need the list, the CRM, or the sequencer to get most of the value. Put the visitor-ID script on your pricing page only. Send every hit to a Slack channel your sales team watches. That is one afternoon and $0, and in a month you will know whether the full build is worth it, because you will have a count of fit companies that read your pricing page and a record of what sales did about them.</p>
+        <p>The longer version of that, with routing rules and a mock you can run, is <a href="/plays/visitor-id-to-slack/">Play No. 2</a>.</p>
+
+        <h2>Want it on your site</h2>
+        <p>This is the <a href="/offers/ai-sdr">AI SDR Install</a>: your list, your CRM, your Slack, your sending domains, about two weeks, fixed price. If you would rather talk it through first, <a href="/book/">book 30 minutes</a>.</p>
+
+        <div class="play-cta">
+          <h2>One play like this, every week.</h2>
+          <p>The email gets the build files and the mock before they go on the site. No pitch in it.</p>
+          <a class="btn" href="/newsletter/">Get the weekly play →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Dan Westmoreland</p>
+    <p>
+      <a href="/services/">Services</a> ·
+      <a href="/work/">Work</a> ·
+      <a href="/pricing/">Pricing</a> ·
+      <a href="/writing/">Writing</a> ·
+      <a href="/plays/">Plays</a> ·
+      <a href="/newsletter/">Newsletter</a> ·
+      <a href="https://www.linkedin.com/in/danwestmoreland/">LinkedIn</a> ·
+      <a href="mailto:dan@danwestmoreland.com">Email</a> ·
+      <a href="/privacy/">Privacy</a>
+    </p>
+  </footer>
+
+  <script src="/assets/site.js" defer></script>
+<script>(function(){var h=document.querySelector('.site-header');if(!h)return;var t=false;function u(){var s=window.scrollY>24;if(s!==t){t=s;h.classList.toggle('is-stuck',s);}}window.addEventListener('scroll',u,{passive:true});u();})();</script>
+</body>
+</html>

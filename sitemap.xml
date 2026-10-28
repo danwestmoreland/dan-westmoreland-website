@@ -56,6 +56,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://danwestmoreland.com/plays/visitor-id/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://danwestmoreland.com/newsletter/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
