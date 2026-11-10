@@ -1,0 +1,11 @@
+rule,value
+cap_credits_per_account,2.0
+stage1_question,"Does this company take internal purchase requests by email or spreadsheet rather than through a procurement system? Answer yes, no, or unknown, and give the URL you based it on."
+cost_stage1_small_model,0.2
+cost_stage1_mid_model,0.5
+cost_tech_lookup,0.4
+cost_stage2_brief,1.3
+cost_flat_brief_everyone,4.0
+procurement_suites,"Coupa|Ariba|Jaggaer|Ivalua|Zip|Procurify|GEP"
+sender,Marta
+booking_link,cal.example/ironvale/marta

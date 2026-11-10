@@ -1,0 +1,10 @@
+rule,value
+buyer_titles,"Controller|VP Finance|VP of Finance|CFO|Chief Financial Officer|Head of Finance|Finance Director|Director of Finance|Accounts Payable Manager|AP Manager|Director of Accounting"
+exclude_title_words,"Student|Intern|Assistant|Clerk|Bookkeeper|Consultant|Advisor|Recruiter|Founder of"
+employees_min,200
+employees_max,2000
+industries,"Professional services|Healthcare|Construction|Logistics|Manufacturing|Nonprofit|Staffing|Hospitality|Software"
+countries,"US|CA"
+reply_within_minutes,5
+pause_below_fit_rate,0.20
+booking_link,cal.example/copperline/ava
