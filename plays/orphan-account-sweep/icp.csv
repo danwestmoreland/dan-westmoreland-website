@@ -1,0 +1,10 @@
+rule,value
+employees_min,200
+employees_max,2000
+industries,"Insurance|Financial services|Healthcare|Legal|Logistics|Manufacturing|Staffing|Education|Nonprofit|Professional services"
+countries,"US|CA"
+too_new_days,30
+buyer_titles,"CISO|Chief Information Security Officer|VP Information Security|Director of Information Security|Head of Security|IT Director|Director of IT|VP IT|Compliance Officer|Chief Compliance Officer|Security Awareness Manager"
+sender,Ava
+old_rep,Jordan
+booking_link,cal.example/saltmarsh/ava

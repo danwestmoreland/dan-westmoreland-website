@@ -1,0 +1,41 @@
+company,domain,employees,segment,country,erp,buyer,title
+Northgate Castings,northgatecastings.example,640,Metal casting,US,Epicor,Luis Ferreira,VP Operations
+Dunmore Fasteners,dunmorefasteners.example,380,Fasteners,US,NetSuite,Karen Whitlow,Director of Purchasing
+Vale Ridge Plastics,valeridgeplastics.example,520,Injection molding,US,SAP Business One,Tom Adebayo,Plant Controller
+Harrowgate Precision,harrowgate.example,210,CNC machining,US,JobBOSS,Priya Menon,Operations Manager
+Cobalt Falls Steel,cobaltfalls.example,1800,Steel fabrication,US,SAP,Dana Kowalczyk,Chief Procurement Officer
+Linwood Packaging,linwoodpkg.example,760,Corrugated packaging,US,Infor,Marcus Bell,Director of Supply Chain
+Sable Creek Foods,sablecreek.example,950,Food processing,US,Microsoft Dynamics,Helena Ruiz,Procurement Manager
+Ashford Aerospace Components,ashfordaero.example,1200,Aerospace parts,US,SAP,Omar Haddad,VP Supply Chain
+Birchfield Furniture,birchfieldfurn.example,430,Furniture,US,NetSuite,Grace Lindqvist,Controller
+Quarry Lane Textiles,quarrylanetex.example,290,Textiles,US,QuickBooks,Ben Okoro,Owner
+Redstone Pumps,redstonepumps.example,580,Industrial pumps,US,Epicor,Nora Vance,Purchasing Manager
+Ironwood Trailers,ironwoodtrailers.example,340,Trailer manufacturing,US,Plex,Felix Tran,Operations Director
+Meadowbrook Dairy Equipment,meadowbrookeq.example,260,Agricultural equipment,CA,Sage,Isla Campbell,Finance Director
+Stonehaven Composites,stonehavencomp.example,470,Composites,US,NetSuite,Caleb Osei,VP Operations
+Westmere Electronics,westmereelec.example,890,Electronics assembly,US,Oracle,Yuki Tanaka,Director of Procurement
+Pinecrest Cabinetry,pinecrestcab.example,220,Cabinetry,US,QuickBooks,Sam Whitaker,General Manager
+Greyhawk Valves,greyhawkvalves.example,610,Valves and fittings,US,Infor,Renata Olsen,Supply Chain Manager
+Fallowfield Brewing Supply,fallowfield.example,180,Brewing equipment,US,NetSuite,Diego Marin,Operations Lead
+Thornwood Lumber,thornwoodlumber.example,540,Lumber,US,Epicor,Amara Singh,Controller
+Kestrel Marine Engines,kestrelmarine.example,720,Marine engines,US,SAP Business One,Ethan Brooks,Director of Purchasing
+Hollins Wire & Cable,hollinswire.example,830,Wire and cable,US,Microsoft Dynamics,Beth Nakamura,Procurement Director
+Alderman Glassworks,aldermanglass.example,310,Glass,US,Sage,Jonah Price,Plant Manager
+Copperline Tooling,copperlinetooling.example,250,Tooling,US,JobBOSS,Mei Zhang,Operations Manager
+Larkspur Medical Devices,larkspurmed.example,990,Medical devices,US,Oracle,Victor Adeyemi,VP Supply Chain
+Ridgeway Conveyors,ridgewayconv.example,410,Material handling,US,Epicor,Lauren Petrov,Purchasing Manager
+Bramble Hill Ceramics,bramblehill.example,230,Ceramics,US,QuickBooks,Hank Ostrowski,Owner
+Silverbrook Pharma Packaging,silverbrookpp.example,670,Pharma packaging,US,SAP,Nadia Kowalski,Director of Procurement
+Oakfield Tractor Parts,oakfieldtp.example,360,Agricultural parts,US,NetSuite,George Abernathy,Controller
+Tidewell Boats,tidewellboats.example,480,Boat building,US,Plex,Sophie Tremblay,Operations Director
+Marlow Signage,marlowsignage.example,270,Signage,US,Sage,Imani Clarke,Finance Manager
+Fenwick Bearings,fenwickbearings.example,1500,Bearings,US,SAP,Ray Donnelly,Chief Procurement Officer
+Harlow Specialty Chemicals,harlowchem.example,780,Specialty chemicals,US,Oracle,Lucy Fairbanks,Procurement Manager
+Dunhill Precision Optics,dunhilloptics.example,330,Optics,US,NetSuite,Paulo Ferreira,VP Operations
+Wrenfield Doors,wrenfielddoors.example,560,Doors and windows,CA,Microsoft Dynamics,Kim Larsen,Director of Purchasing
+Saltmarsh Foundry,saltmarshfoundry.example,290,Foundry,US,Epicor,Alicia Moreno,Controller
+Elmcroft Battery Systems,elmcroftbattery.example,440,Batteries,US,NetSuite,Marcus Lindqvist,Head of Supply Chain
+Goldcrest Labels,goldcrestlabels.example,240,Labels,US,QuickBooks,Anika Sorensen,General Manager
+Blackwater Hydraulics,blackwaterhyd.example,690,Hydraulics,US,Infor,Dev Patel,Purchasing Director
+Cedar Point Playgrounds,cedarpointplay.example,310,Recreation equipment,US,Sage,Thomas Reilly,Operations Manager
+Northam Filtration,northamfilt.example,850,Filtration,US,SAP,Renée Dubois,VP Procurement

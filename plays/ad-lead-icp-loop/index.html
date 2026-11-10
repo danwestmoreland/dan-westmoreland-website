@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The ad-lead ICP loop - GTM Play No. 5 - Dan Westmoreland</title>
+  <meta name="description" content="LinkedIn lead-gen form leads scored against the ICP and replied to inside five minutes if they fit, nurtured if they half fit, stopped if not. Then a Friday report that grades each ad campaign by fit rate and flags which to pause. The rules, the reply, and 36 fake leads run through the real script." />
+  <meta property="og:title" content="The ad-lead ICP loop - GTM Play No. 5 - Dan Westmoreland" />
+  <meta property="og:description" content="Ad leads replied to inside five minutes if they fit the ICP, and a weekly report that tells you which campaign to pause. Built on free tools, with a mock." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://danwestmoreland.com/plays/ad-lead-icp-loop/" />
+  <meta property="og:image" content="https://danwestmoreland.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://danwestmoreland.com/og-image.png" />
+  <link rel="canonical" href="https://danwestmoreland.com/plays/ad-lead-icp-loop/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="/assets/site.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://danwestmoreland.com/#dan",
+  "name": "Dan Westmoreland",
+  "url": "https://danwestmoreland.com/",
+  "image": "https://danwestmoreland.com/dan-westmoreland.jpg",
+  "jobTitle": "Fractional marketing leader and GTM engineer",
+  "description": "Fractional marketing leader and GTM engineer for B2B software companies. Ten years running demand generation as a VP and Head of at software companies. Builds inbound engines, outbound systems, and AI SDRs. Based in Atlanta, Georgia.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Atlanta",
+    "addressRegion": "GA",
+    "addressCountry": "US"
+  },
+  "email": "mailto:dan@danwestmoreland.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/danwestmoreland/"
+  ],
+  "knowsAbout": [
+    "GTM engineering",
+    "Demand generation",
+    "Fractional CMO",
+    "AI SDR",
+    "Outbound email systems",
+    "Clay",
+    "HubSpot",
+    "B2B SaaS marketing"
+  ],
+  "alumniOf": [
+    {
+      "@type": "Organization",
+      "name": "Marketo"
+    },
+    {
+      "@type": "Organization",
+      "name": "Deputy"
+    },
+    {
+      "@type": "Organization",
+      "name": "Fountain"
+    },
+    {
+      "@type": "Organization",
+      "name": "Northpass"
+    },
+    {
+      "@type": "Organization",
+      "name": "Movable Ink"
+    },
+    {
+      "@type": "Organization",
+      "name": "Curve Dental"
+    }
+  ]
+}
+  </script>
+  <style>
+    .flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin: 0 0 24px; }
+    .flow div { background: var(--bg-elev); border: 1px solid var(--rule); border-radius: 12px; padding: 14px 12px; font-size: 14px; }
+    .flow b { display: block; font-weight: 600; margin-bottom: 4px; }
+    .flow small { color: var(--ink-soft); }
+    .rules { width: 100%; border-collapse: collapse; font-size: 15px; margin: 0 0 22px; }
+    .rules th, .rules td { text-align: left; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+    .rules th { font-weight: 600; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
+    .rules td.y { color: #1D7A4A; font-weight: 600; }
+    .rules td.n { color: var(--ink-soft); }
+    .rules td.r { color: var(--accent); font-weight: 600; }
+    .mail { border-left: 3px solid var(--accent); padding: 4px 0 4px 16px; margin: 0 0 22px; font-size: 15px; line-height: 1.55; }
+    .mail .h { font-size: 13px; color: var(--ink-soft); margin-bottom: 6px; }
+    .mail.no { border-left-color: var(--rule); color: var(--ink-soft); }
+    .dateline { font-size: 14px; color: var(--ink-soft); margin-top: 14px; }
+    @media (max-width: 760px) { .flow { grid-template-columns: 1fr; } .rules { font-size: 14px; } }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="wordmark" href="/"><svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><g id="m" transform="translate(14 81) scale(0.044286 -0.044286) translate(19 0)"><path d="M-19 7Q-19 11 -16.5 13.0Q-14 15 -7 16L79 26Q98 28 108.5 34.0Q119 40 126.0 51.0Q133 62 137 79Q154 137 176.5 220.0Q199 303 226.5 402.0Q254 501 283.0 607.0Q312 713 340.5 818.5Q369 924 395.5 1020.0Q422 1116 443.0 1194.0Q464 1272 477 1324Q484 1348 477.0 1358.5Q470 1369 445 1372L356 1384Q346 1386 342.5 1388.0Q339 1390 339 1394Q339 1397 342.0 1398.5Q345 1400 351 1400H879Q1005 1400 1107.0 1358.0Q1209 1316 1276.5 1231.5Q1344 1147 1367.5 1021.0Q1391 895 1361 726Q1332 566 1259.0 433.5Q1186 301 1074.5 204.0Q963 107 818.5 53.5Q674 0 501 0H-8Q-14 0 -16.5 2.0Q-19 4 -19 7ZM510 18Q607 18 699.5 62.0Q792 106 872.5 195.5Q953 285 1014.5 421.0Q1076 557 1113 739Q1146 908 1141.0 1030.0Q1136 1152 1101.0 1230.5Q1066 1309 1007.5 1346.5Q949 1384 873 1384H791Q763 1384 740.5 1364.5Q718 1345 706 1300Q690 1243 668.5 1165.0Q647 1087 622.0 995.5Q597 904 571.0 807.0Q545 710 518.5 612.5Q492 515 468.0 426.0Q444 337 424.0 261.5Q404 186 390 133Q374 76 388.0 47.0Q402 18 446 18Z" fill="currentColor"/></g><circle cx="83" cy="75" r="7.5" fill="var(--accent)"/></svg><span>Dan Westmoreland</span></a>
+    <button type="button" class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var h=this.closest('.site-header');h.classList.toggle('menu-open');this.setAttribute('aria-expanded',h.classList.contains('menu-open'))"><svg class="ic-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><svg class="ic-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    <nav>
+      <div class="nav-dd nav-mega"><button type="button" class="nav-dd-btn" aria-haspopup="true" aria-expanded="false" onclick="var p=this.parentNode;p.classList.toggle('open');this.setAttribute('aria-expanded',p.classList.contains('open'))">Who I help <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3.5 5 7.5 9 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-menu mega"><a href="/for/founders/"><b>Founders and CEOs</b><span>You're running marketing yourself and the pipeline number doesn't wait. I take the seat until your hire starts.</span><em>Operator retainer →</em></a><a href="/for/sales-leaders/"><b>Sales leaders</b><span>Eight years carrying a bag, then I built the inbound engine. Signals your reps can call today.</span><em>AI SDR Install →</em></a><a href="/for/growth-marketers/"><b>Demand gen and growth</b><span>I've had your job at five companies. Clay, HubSpot, and AI workflows built with you, not for you.</span><em>Builds and audits →</em></a><a href="/for/revops/"><b>RevOps</b><span>Outbound infrastructure, CRM sync, and intent routing that your sales team actually uses.</span><em>Outbound Engine →</em></a></div></div>
+      <a href="/services/">Services</a>
+      <a href="/work/">Work</a>
+      <a href="/pricing/">Pricing</a>
+      <div class="nav-dd"><button type="button" class="nav-dd-btn" aria-haspopup="true" aria-expanded="false" onclick="var p=this.parentNode;p.classList.toggle('open');this.setAttribute('aria-expanded',p.classList.contains('open'))">Resources <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3.5 5 7.5 9 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-dd-menu"><a href="/plays/">Plays <span>One built system a week</span></a><a href="/writing/">Writing <span>Essays on GTM and AI</span></a><a href="/newsletter/">Newsletter <span>Get the weekly play by email</span></a><a href="/speaking/">Speaking <span>Keynotes, podcasts, team sessions</span></a></div></div>
+      <a href="/book/" class="nav-cta">Book a call</a>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <section class="page-hero" style="padding-bottom:40px">
+      <p class="eyebrow"><a href="/plays/">Plays</a> · No. 5 · October 27, 2026</p>
+      <h1>The ad-lead <em>ICP loop</em>.</h1>
+      <p class="lede">A LinkedIn lead-gen form lead gets a reply from a human inside five minutes if they fit, a nurture if they half fit, and nothing if they are a student who wanted the ebook. Then, every Friday, the same system scores each ad campaign by how many fits it produced and tells you which one to pause. The ads budget finally hears from the pipeline.</p>
+      <div class="play-meta"><span><b>For:</b> B2B software companies spending $2K or more a month on lead-gen form ads</span><span><b>Stack:</b> HubSpot free, LinkedIn Lead Gen Forms, n8n, Apollo free, Cal.com, Smartlead, Slack</span><span><b>Cost:</b> $39 to about $60/month on top of ad spend</span><span><b>Build time:</b> a day, plus a week of watching it</span></div>
+    </section>
+
+    <section style="padding-top:0;border-top:0">
+      <div class="play-article">
+        <h2>The play</h2>
+        <p>Lead-gen form ads are the cheapest leads you will ever buy and the slowest you will ever work. The form fills land in the ad platform, somebody exports them on Thursday, a rep emails on Monday, and the controller who downloaded your checklist a week ago has no idea who you are. At Curve Dental, speed-to-lead on inbound was the single biggest lever in taking demos from 60 a month to 200 and up. Ad leads are inbound. Nobody treats them that way.</p>
+        <p>The second problem is that nobody closes the loop. Marketing reports leads per campaign and cost per lead. Sales says the leads are junk. Both are right, because an ebook about fraud pulls in students and compliance officers at 10,000-person insurers, and a month-end checklist pulls in controllers at 600-person dental groups. Same budget, same dashboard, very different pipeline.</p>
+        <p>So this play does two things with one set of rules. Every new lead is scored against the ICP within minutes of arriving and routed by score. Every week, the scores roll up by campaign, and any campaign producing fits under a threshold gets flagged to pause. The ICP definition that routes the lead is the same one that grades the ad. That is the whole trick.</p>
+
+        <h2>Who it's for</h2>
+        <ul>
+          <li>You run LinkedIn or Google lead-gen form campaigns and get at least 20 leads a week. Below that, a person can do this by hand and should.</li>
+          <li>You have an ICP you can write down in three lines: titles, company size, market. If "we sell to everyone" is the answer, fix that first.</li>
+          <li>Somebody owns the fast reply and has a calendar link. The five minutes only matter if the email comes from a person who will take the call.</li>
+          <li>Marketing and sales share a CRM. HubSpot free is enough. The point is one record with a campaign name and a fit score on it.</li>
+        </ul>
+
+        <h2>The build</h2>
+        <div class="flow">
+          <div><b>1. Land</b><small>LinkedIn Lead Gen Forms sync to HubSpot free as contacts with the campaign name on them</small></div>
+          <div><b>2. Poll</b><small>n8n checks for new paid-social contacts every five minutes</small></div>
+          <div><b>3. Score</b><small>Apollo fills title, size, industry; three yes/no checks give 0 to 3</small></div>
+          <div><b>4. Route</b><small>3 gets a personal email with a booking link now; 1 to 2 goes to nurture; 0 stops</small></div>
+          <div><b>5. Report</b><small>Friday: fit rate and cost per fit lead by campaign, with pause flags, to Slack</small></div>
+        </div>
+        <div class="play-stack">
+          <h3>Stack</h3>
+          <table>
+            <tr><td>Capture</td><td>HubSpot free, with LinkedIn Ads connected so lead-gen form fills become contacts carrying the campaign name. HubSpot's new Ads Leads tab (October 2026, on Marketing Hub Free) shows every form lead in one place and flags broken forms, which is where you check that step 1 is still working.</td></tr>
+            <tr><td>Schedule and route</td><td>n8n, self-hosted (free) or Cloud Starter at about EUR 20/month. HubSpot free has no workflows, so n8n polls the contacts API on a schedule. The mock below runs the same rules in Python so you can read them.</td></tr>
+            <tr><td>Enrich</td><td>Apollo free for title, company size, industry, country. The free plan's credits cover a few hundred lookups a month; at higher volume, enrich only the leads whose title passes.</td></tr>
+            <tr><td>Fast reply</td><td>Gmail from the rep's own inbox, sent by n8n, with a Cal.com (free) link. Not a marketing email. One paragraph, no logo.</td></tr>
+            <tr><td>Nurture</td><td>Smartlead ($39/month), one three-step campaign per offer, for the score 1 and 2 leads.</td></tr>
+            <tr><td>Report</td><td>n8n on a Friday schedule, posting the campaign table to a Slack (free) channel that the person who controls the ad budget actually reads.</td></tr>
+          </table>
+        </div>
+        <ol>
+          <li><strong>Connect the ads to the CRM.</strong> LinkedIn Ads to HubSpot is a native integration. Make sure the campaign name lands on the contact as a property, not just in the original source field. Everything downstream keys on it.</li>
+          <li><strong>Write the ICP as three checks.</strong> Title matches a buyer list and not an exclusion list. Company size inside a band. Industry and country in your market. Each check is one point. Put the lists in a table your team can edit without touching the workflow; in the mock it's a CSV.</li>
+          <li><strong>Poll, don't wait.</strong> n8n fetches contacts created in the last ten minutes with a paid-social source, every five minutes, and skips any contact that already has a score. The skip is what stops double-fires when HubSpot updates the record.</li>
+          <li><strong>Enrich only what you need.</strong> Title comes free from the form. Size, industry, and country come from Apollo by domain. If the title fails outright, you can skip the lookup and save the credit.</li>
+          <li><strong>Route by score.</strong> Three: a personal email from the rep inside five minutes, naming the asset they downloaded and offering a time. One or two: a Smartlead nurture built around the asset. Zero: tag it and stop. Students and 10,000-person companies do not get a sequence.</li>
+          <li><strong>Write the score back.</strong> Fit score, the checks that passed, and the route go on the contact. This is what makes the Friday report a one-line query instead of a project.</li>
+          <li><strong>Report by campaign on Friday.</strong> Leads, fits, fit rate, spend, and cost per fit lead, one row per campaign. Spend comes from a small table you update weekly or from the ads API when you get around to it.</li>
+          <li><strong>Flag the pause.</strong> Any campaign under 20 percent fit rate for two weeks running gets a PAUSE flag in the Slack post. The flag is a recommendation. A human pauses the campaign, and the threshold is a number in the rules table, not an opinion in a meeting.</li>
+        </ol>
+
+        <h2>The mock</h2>
+        <p>Made-up company: Copperline, expense audit software for finance teams at 200 to 2,000 person companies. Three LinkedIn lead-gen campaigns running the week of October 20: a month-end controller checklist, an audit season guide, and an ebook on expense fraud patterns. Thirty-six fake form fills, run through the real script.</p>
+        <h3>The score</h3>
+        <table class="rules">
+          <tr><th>Check</th><th>Passes</th><th>Fails</th></tr>
+          <tr><td>Title</td><td class="y">Controller, VP Finance, CFO, Head of Finance, Finance Director, AP Manager, Director of Accounting</td><td class="n">Student, intern, bookkeeper, consultant, recruiter, anyone with "founder of" a two-person firm</td></tr>
+          <tr><td>Size</td><td class="y">200 to 2,000 employees</td><td class="n">A three-person tax desk; a 12,000-person retailer</td></tr>
+          <tr><td>Market</td><td class="y">Healthcare, construction, logistics, staffing, professional services, hospitality, nonprofit, manufacturing, software, in the US or Canada</td><td class="n">Education, insurance, retail, or anywhere else</td></tr>
+        </table>
+        <h3>One fast reply, two that didn't get one</h3>
+        <div class="mail">
+          <div class="h">Priya, Controller at Hollowell Dental Partners · 640 people, healthcare, US · Controller Checklist · score 3 · sent four minutes after the form fill</div>
+          <div>You just downloaded the 12-point month-end expense audit checklist. If month-end expense review lands on your desk, I can show you how a healthcare team of 640 gets it down to an afternoon. Pick a time: cal.example/copperline/ava</div>
+        </div>
+        <div class="mail no">
+          <div class="h">Jules, Fraud Analyst at Northline Casualty · 5,400 people, insurance · Expense Fraud Guide · score 0</div>
+          <div>No email. Tagged and stopped. The ebook did its job; this is not a buyer.</div>
+        </div>
+        <div class="mail no">
+          <div class="h">Amara, Controller at Wrenfield Logistics · 410 people, logistics, UK · Controller Checklist · score 2 (title, size)</div>
+          <div>Nurture. Right person, right size, wrong market for now. Three emails over two weeks from Smartlead, and the score is on the record if the market list ever changes.</div>
+        </div>
+        <p>Out of 36 leads, 14 got the fast reply, 19 went to nurture, and 3 stopped. The campaign report is the part that pays for the build. The fraud ebook produced 20 of the 36 leads, more than the other two campaigns combined, and 2 of them fit. It cost $950 per fit lead against $200 for the checklist. On a leads-per-campaign dashboard it was the winner.</p>
+        <p>The files:</p>
+        <ul>
+          <li><a href="/plays/ad-lead-icp-loop/leads.csv">leads.csv</a>, 36 fake form fills as HubSpot would hold them</li>
+          <li><a href="/plays/ad-lead-icp-loop/icp.csv">icp.csv</a>, the three checks, the reply window, the pause threshold</li>
+          <li><a href="/plays/ad-lead-icp-loop/campaigns.csv">campaigns.csv</a>, the three campaigns, what each spent, what each offered</li>
+          <li><a href="/plays/ad-lead-icp-loop/loop.py">loop.py</a>, the scoring, the routing, the reply, the Friday report</li>
+        </ul>
+<pre><code>python3 loop.py
+# 36 ad leads this week, 14 booked-path, 19 nurture, 3 stopped
+
+-&gt; Priya, Controller at Hollowell Dental Partners  (640 people, Healthcare, US)  via Controller Checklist  score 3  reply within 5 min
+   "You just downloaded the 12-point month-end expense audit checklist. If month-end expense review lands on your desk,
+    I can show you how a healthcare team of 640 gets it down to an afternoon. Pick a time: cal.example/copperline/ava"
+-&gt; Dana, VP Finance at Kestrel Freight Lines  (1200 people, Logistics, US)  via Controller Checklist  score 3  reply within 5 min
+...
+
+# a few that did not get the fast reply
+   Jules, Fraud Analyst at Northline Casualty  via Expense Fraud Guide  score 0 (nothing)  -&gt; stop
+   Hiro, Student at Westbrook University  via Expense Fraud Guide  score 0 (nothing)  -&gt; stop
+   Nora, Senior Accountant at Harbor Light Nonprofit  via Audit Season  score 2 (size, market)  -&gt; nurture
+   Amara, Controller at Wrenfield Logistics  via Controller Checklist  score 2 (title, size)  -&gt; nurture
+
+# weekly campaign report
+campaign               leads  fit  fit rate   spend  $/fit lead  action
+Controller Checklist       9    7       78%  $1,400        $200  keep
+Audit Season               7    5       71%  $1,150        $230  keep
+Expense Fraud Guide       20    2       10%  $1,900        $950  PAUSE</code></pre>
+
+        <h2>What breaks</h2>
+        <p><strong>The sync is slower than your promise.</strong> LinkedIn to HubSpot can lag 10 to 30 minutes. Your five-minute reply is five minutes from when HubSpot sees the contact, not from the form fill. Say "a few minutes ago" in the email, never a number, and check the Leads tab for form issues weekly.</p>
+        <p><strong>The poll fires twice.</strong> HubSpot updates a contact several times in its first minutes of life, and a naive "created in the last ten minutes" filter will pick it up on two polls. The fit score property is the lock: if it is already set, skip. Set it before you send, not after.</p>
+        <p><strong>The fast reply reads like a sequence.</strong> If it has a logo, a signature block, and "I hope this finds you well," it is a marketing email and gets treated like one. One paragraph, names the asset, offers a time. From the rep's own inbox.</p>
+        <p><strong>The exclusion list is too short.</strong> The first week's fit list will have a student with a grand title and a consultant who sells to your buyers. Every one of those is a word for the exclusion list. The list grows for a month and then stops.</p>
+        <p><strong>Somebody argues with the pause.</strong> The fraud ebook campaign had the most leads and the lowest cost per lead, and the person who built it will defend it. The report shows cost per fit lead next to cost per lead so the argument is about which number matters, which is a better argument to have.</p>
+
+        <h2>Copy it</h2>
+        <p>Take the four files, export a week of your own form leads in the same columns, and run the script. Before you wire anything, the campaign report alone will tell you whether your ad budget is buying pipeline or downloads. Then build the poll in n8n, put the three checks in a table, and give the rep a Cal.com link. If you'd rather have the whole thing built, with the HubSpot properties and the Slack report, it's part of the <a href="/offers/ai-sdr">AI SDR install</a>.</p>
+
+        <div class="play-cta">
+          <h2>One play like this, every week.</h2>
+          <p>The email gets the build files and the mock before they go on the site. No pitch in it.</p>
+          <a class="btn" href="/newsletter/">Get the weekly play →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Dan Westmoreland</p>
+    <p>
+      <a href="/services/">Services</a> ·
+      <a href="/work/">Work</a> ·
+      <a href="/pricing/">Pricing</a> ·
+      <a href="/writing/">Writing</a> ·
+      <a href="/plays/">Plays</a> ·
+      <a href="/newsletter/">Newsletter</a> ·
+      <a href="https://www.linkedin.com/in/danwestmoreland/">LinkedIn</a> ·
+      <a href="mailto:dan@danwestmoreland.com">Email</a> ·
+      <a href="/privacy/">Privacy</a>
+    </p>
+  </footer>
+
+  <script src="/assets/site.js" defer></script>
+<script>(function(){var h=document.querySelector('.site-header');if(!h)return;var t=false;function u(){var s=window.scrollY>24;if(s!==t){t=s;h.classList.toggle('is-stuck',s);}}window.addEventListener('scroll',u,{passive:true});u();})();</script>
+</body>
+</html>
